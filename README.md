@@ -6,7 +6,7 @@ In a simple word, it will get you rid of the Utility class with lots of static m
 
 why I need this? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.
 
-The most basic example can be from this:
+The most basic example can be:
 ```
 int.parse('42')
 ```
