@@ -2,7 +2,7 @@ import 'dart:collection';
 
 extension CollectionsExt<T> on Iterable<T> {
   /// get the first element return null
-  T get firstOrNull => elementAtOrNull(0);
+  T get firstOrNull => _elementAtOrNull(0);
 
   T firstOrNullWhere(bool predicate(T element)) {
     return firstWhere(predicate, orElse: () => null);
@@ -19,10 +19,6 @@ extension CollectionsExt<T> on Iterable<T> {
   /// var name = [].firstOrDefault["nuni"]; // nuni
   T firstOrDefault(T defaultValue) => firstOrNull ?? defaultValue;
 
-  // get an element at specific index or return null
-  T elementAtOrNull(int index) {
-    return _elementOrNull(index, (_) => null);
-  }
 
   /// forEach with an index on collections, will provide [index] and [element] for every iteration,
   /// example:
@@ -111,6 +107,11 @@ extension CollectionsExt<T> on Iterable<T> {
     return list;
   }
 
+  // get an element at specific index or return null
+  T _elementAtOrNull(int index) {
+    return _elementOrNull(index, (_) => null);
+  }
+
   _elementOrNull(int index, T defaultElement(int index)) {
     // if our index is smaller then 0 return the default
     if (index < 0) return defaultElement(index);
@@ -123,5 +124,21 @@ extension CollectionsExt<T> on Iterable<T> {
     }
 
     return defaultElement(index);
+  }
+
+  /// Returns a set containing all elements that are contained by this collection
+  /// and not contained by the specified collection.
+  /// The returned set preserves the element iteration order of the original collection.
+  ///
+  /// example:
+  ///
+  /// [1,2,3,4,5,6].subtract([4,5,6])
+  ///
+  /// result:
+  /// 1,2,3
+  subtract(Iterable<T> other) {
+    final set = this.toSet();
+    set.removeAll(other);
+    return set;
   }
 }
