@@ -16,7 +16,6 @@ To this:
 42'.parseInt()
 ```
 
-
 ## Extentions for Iterables
 
 - firstOrNull
@@ -29,6 +28,8 @@ To this:
 - containsAll
 - count
 - distinctBy
+
+TBD - tests
 
 ## will release soon...
 - Extentions for Date
