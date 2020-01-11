@@ -28,6 +28,7 @@ To this:
 - containsAll
 - count
 - distinctBy
+- subtract
 
 TBD - tests
 
