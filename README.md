@@ -16,7 +16,13 @@ To this:
 42'.parseInt()
 ```
 
-## Extentions for Iterables
+## Extensions for Iterables
+- half
+- take
+- drop
+- firstHalf
+- secondHalf
+- swap
 - getRandom
 - firstOrNull
 - firstOrNullWhere
@@ -30,14 +36,14 @@ To this:
 - distinctBy
 - subtract
 
-## Extentions for Integers
+## Extensions for Integers
 - toMilliseconds
 - toSeconds
 - toMinutes
 - toHours
 - toDays
  
-## Extentions for Date Time
+## Extensions for Date Time
 - addOrRemoveYears
 - addOrRemoveMonth
 - addOrRemoveDay

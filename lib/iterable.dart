@@ -12,9 +12,63 @@
  */
 import 'dart:collection';
 import 'dart:math';
+
 import 'data_stractures/stack.dart';
 
 extension CollectionsExt<T> on Iterable<T> {
+  // return the half size of a list
+  int get halfLength => (this.length / 2).floor();
+
+  /// Returns a list containing all elements except first [n] elements.
+  List<T> take(int n) {
+    if (n == 0) return [];
+
+    var list = List<T>();
+    var thisList = this.toList();
+    if (this is Iterable) {
+      final resultSize = this.length - n;
+      if (resultSize <= 0) return [];
+      if (resultSize == 1) return [this.last];
+
+      List.generate(n, (index) {
+        list.add(thisList[index]);
+      });
+    }
+    return list;
+  }
+
+  /// Returns a list containing all elements except first [n] elements.
+  List<T> drop(int n) {
+    if (n == 0) return [];
+
+    var list = List<T>();
+    var originalList = this.toList();
+    if (this is Iterable) {
+      final resultSize = this.length - n;
+      if (resultSize <= 0) return [];
+      if (resultSize == 1) return [this.last];
+
+      originalList.removeRange(0, n);
+
+      originalList.forEach((element) => list.add(element));
+    }
+    return list;
+  }
+
+  List<T> firstHalf() => take(halfLength);
+
+  List<T> secondHalf() => drop(halfLength);
+
+  /// returns a list with two swapped items
+  /// [i] first item
+  /// [j] second item
+  List<T> swap(int i, int j) {
+    final list = this.toList();
+    final aux = list[i];
+    list[i] = list[j];
+    list[j] = aux;
+    return list;
+  }
 
   T getRandom() {
     Random generator = Random();
@@ -181,8 +235,11 @@ class User {
   final String name;
 
   User(this.age, this.name);
-
 }
-main() {
 
+main() {
+  final arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  final numbers = arr.secondHalf();
+//  user.forEach((u) => print(u));
+  print(numbers);
 }
