@@ -13,6 +13,8 @@
 
 import 'dart:collection';
 
+import 'data_stractures/stack.dart';
+
 extension CollectionsExt<T> on Iterable<T> {
   /// get the first element return null
   T get firstOrNull => _elementAtOrNull(0);
@@ -31,7 +33,6 @@ extension CollectionsExt<T> on Iterable<T> {
   /// var name = [danny, ronny, idan].firstOrDefault["nuni"]; // danny
   /// var name = [].firstOrDefault["nuni"]; // nuni
   T firstOrDefault(T defaultValue) => firstOrNull ?? defaultValue;
-
 
   /// forEach with an index on collections, will provide [index] and [element] for every iteration,
   /// example:
@@ -150,11 +151,25 @@ extension CollectionsExt<T> on Iterable<T> {
   /// result:
   /// 1,2,3
   subtract(Iterable<T> other) {
+    List<String>();
     final set = this.toSet();
     set.removeAll(other);
     return set;
   }
+
+  /// will convert iterable into a Stack data structure
+  /// example:
+  ///  [1,2,3,4].toStack()
+  ///  stack.pop()
+  ///  stack.push(5)
+  ///
+  Stack<T> toStack() {
+    final stack = Stack<T>();
+    stack.addAll(this);
+    return stack;
+  }
 }
 
-// add toStack
+main() {
 
+}

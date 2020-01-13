@@ -11,12 +11,27 @@
  * limitations under the License.
  */
 
-import 'package:flutter_test/flutter_test.dart';
+import 'dart:collection';
 
-import 'package:flutter_extentions/iterable.dart';
+class Stack<T> {
+  final _list = ListQueue<T>();
 
-void main() {
-  test('adds one to input values', () {
+  bool get isEmpty => _list.isEmpty;
 
-  });
+  bool get isNotEmpty => _list.isNotEmpty;
+
+  push(T element) => _list.addLast(element);
+
+  T pop() {
+    final T element = _list.last;
+    _list.removeLast();
+    return element;
+  }
+
+  top() => _list.last;
+
+  addAll(Iterable elements) {
+    _list.addAll(elements);
+    return _list;
+  }
 }
