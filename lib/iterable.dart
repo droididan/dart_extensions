@@ -10,12 +10,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 import 'dart:collection';
-
+import 'dart:math';
 import 'data_stractures/stack.dart';
 
 extension CollectionsExt<T> on Iterable<T> {
+
+  T getRandom() {
+    Random generator = Random();
+    final index = generator.nextInt(this.length);
+    return this.toList()[index];
+  }
+
   /// get the first element return null
   T get firstOrNull => _elementAtOrNull(0);
 
@@ -170,6 +176,13 @@ extension CollectionsExt<T> on Iterable<T> {
   }
 }
 
+class User {
+  final int age;
+  final String name;
+
+  User(this.age, this.name);
+
+}
 main() {
 
 }

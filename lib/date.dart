@@ -11,7 +11,28 @@
  * limitations under the License.
  */
 
-import 'package:flutter/cupertino.dart';
+extension DateString on String {
+  /// Parse string to [DateTime]
+  DateTime toDateTime() {
+    try {
+      return DateTime.tryParse(this);
+    } on Exception catch (_) {
+      return null;
+    }
+  }
+}
+
+extension DateInt on int {
+  Duration toMilliseconds() => Duration(milliseconds: this);
+
+  Duration toSeconds() => Duration(seconds: this);
+
+  Duration toMinutes() => Duration(minutes: this);
+
+  Duration toHours() => Duration(hours: this);
+
+  Duration toDays() => Duration(days: this);
+}
 
 extension DateExt on DateTime {
   /// to add years to a [DateTime] add a positive number
@@ -43,11 +64,36 @@ extension DateExt on DateTime {
   addOrRemoveSeconds(int sec) {
     return DateTime(this.year, this.month, this.day, this.minute, this.second + sec);
   }
+
+  ///  Start time of Date times
+  DateTime startOfDay() => DateTime(year, month, day);
+
+  DateTime startOfMonth() => DateTime(year, month);
+
+  DateTime startOfYear() => DateTime(year);
+
+  /// DateTime `+` operator
+  DateTime operator +(DateTime time) => this.add(Duration(
+      days: time.day, hours: time.hour, minutes: time.minute, seconds: time.second, milliseconds: time.millisecond));
+
+  /// DateTime `-` operator
+  DateTime operator -(DateTime time) => this.subtract(Duration(
+      days: time.day, hours: time.hour, minutes: time.minute, seconds: time.second, milliseconds: time.millisecond));
+
+  /// next day
+  DateTime tomorrow() => DateTime(year, month, day + 1);
+
+  /// last day
+  DateTime yesterday() => DateTime(year, month, day - 1);
+
+
+  /// return the smaller date between
+  DateTime min(DateTime that) => (this.millisecondsSinceEpoch < that.millisecondsSinceEpoch) ? this : that;
+
+  DateTime max(DateTime that) => (this.millisecondsSinceEpoch > that.millisecondsSinceEpoch) ? this : that;
+
 }
 
 main() {
-  final set = Set.from([1,2,3,4]);
-
-
 
 }

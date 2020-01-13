@@ -17,7 +17,7 @@ To this:
 ```
 
 ## Extentions for Iterables
-
+- getRandom
 - firstOrNull
 - firstOrNullWhere
 - firstOrDefault
@@ -30,10 +30,33 @@ To this:
 - distinctBy
 - subtract
 
+## Extentions for Integers
+- toMilliseconds
+- toSeconds
+- toMinutes
+- toHours
+- toDays
+ 
+## Extentions for Date Time
+- addOrRemoveYears
+- addOrRemoveMonth
+- addOrRemoveDay
+- addOrRemoveMinutes
+- addOrRemoveSeconds
+- startOfDay
+- startOfMonth
+- startOfYear
+- operator to add dates
+- operator to subtract dates
+- tomorrow
+- yesterday
+- min
+- max
+
+
 TBD - tests
 
 ## will release soon...
-- Extentions for Date
 - Extentions for Ranges
 - Extentions for Files
 
