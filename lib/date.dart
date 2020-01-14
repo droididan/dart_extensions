@@ -12,6 +12,7 @@
  */
 
 extension DateString on String {
+
   /// Parse string to [DateTime]
   DateTime toDateTime() {
     try {
@@ -21,6 +22,7 @@ extension DateString on String {
     }
   }
 }
+
 
 extension DateInt on int {
   Duration toMilliseconds() => Duration(milliseconds: this);
@@ -35,6 +37,14 @@ extension DateInt on int {
 }
 
 extension DateExt on DateTime {
+
+  /// return true if the date is today
+  bool isToday() {
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    final currentDate = DateTime(this.year, this.month, this.day);
+    return today.isAtSameMomentAs(currentDate);
+  }
   /// to add years to a [DateTime] add a positive number
   /// to remove years pass a negative number
   addOrRemoveYears(int years) {

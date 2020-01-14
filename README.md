@@ -42,8 +42,20 @@ To this:
 - toMinutes
 - toHours
 - toDays
- 
+
+## Extensions for Strings
+- validateEmail
+- removeSurrounding
+- isNullOrEmpty
+- replaceAfter
+- orEmpty
+- ifEmpty
+- lastIndex
+- printThis
+
+
 ## Extensions for Date Time
+- isToday
 - addOrRemoveYears
 - addOrRemoveMonth
 - addOrRemoveDay
@@ -60,7 +72,7 @@ To this:
 - max
 
 
-TBD - tests
+TBD - add tests
 
 ## will release soon...
 - Extentions for Ranges

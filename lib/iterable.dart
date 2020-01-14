@@ -229,17 +229,3 @@ extension CollectionsExt<T> on Iterable<T> {
     return stack;
   }
 }
-
-class User {
-  final int age;
-  final String name;
-
-  User(this.age, this.name);
-}
-
-main() {
-  final arr = [1, 2, 3, 4, 5, 6, 7, 8];
-  final numbers = arr.secondHalf();
-//  user.forEach((u) => print(u));
-  print(numbers);
-}
