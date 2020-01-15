@@ -1,8 +1,7 @@
 name: flutter_extentions
 description: utils for dart &amp; flutter using extention functions
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/droididan/dart_extentions
 
 environment:
   sdk: ">=2.6.0 <3.0.0"
