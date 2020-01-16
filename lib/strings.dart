@@ -14,6 +14,10 @@
 extension StringExtention on String {
   bool validateEmail() => RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(this);
 
+  bool equalsIgnoreCase(String other) =>
+      (this == null && other == null) ||
+          (this != null && other != null && this.toLowerCase() == other.toLowerCase());
+
   /// Return the string only if the delimiter exists in both ends, otherwise it will return the current string
   String removeSurrounding(String delimiter) {
     final prefix = delimiter;
@@ -53,8 +57,4 @@ extension StringExtention on String {
     if (isNullOrEmpty) return;
     print(this.toString());
   }
-}
-
-main() {
-
 }

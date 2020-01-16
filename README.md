@@ -18,6 +18,7 @@ To this:
 
 ## Extensions for Iterables
 - emptyOrNull
+- chunks
 - zip
 - half
 - take
@@ -54,6 +55,7 @@ To this:
 - ifEmpty
 - lastIndex
 - printThis
+- equalsIgnoreCase
 
 
 ## Extensions for Date Time
