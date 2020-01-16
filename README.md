@@ -17,6 +17,8 @@ To this:
 ```
 
 ## Extensions for Iterables
+- emptyOrNull
+- zip
 - half
 - take
 - drop
@@ -70,6 +72,7 @@ To this:
 - yesterday
 - min
 - max
+- isLeapYear
 
 
 TBD - add tests

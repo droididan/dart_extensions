@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.16.1
+  quiver: ^2.0.0
 
 dev_dependencies:
   flutter_test:

@@ -12,6 +12,7 @@
  */
 import 'dart:collection';
 import 'dart:math';
+import 'package:quiver/iterables.dart';
 
 import 'data_stractures/stack.dart';
 
@@ -90,8 +91,8 @@ extension CollectionsExt<T> on Iterable<T> {
 
   /// get the first element or provider default
   /// example:
-  /// var name = [danny, ronny, idan].firstOrDefault["nuni"]; // danny
-  /// var name = [].firstOrDefault["nuni"]; // nuni
+  /// var name = [danny, ronny, james].firstOrDefault["jack"]; // danny
+  /// var name = [].firstOrDefault["jack"]; // jack
   T firstOrDefault(T defaultValue) => firstOrNull ?? defaultValue;
 
   /// forEach with an index on collections, will provide [index] and [element] for every iteration,
@@ -211,7 +212,6 @@ extension CollectionsExt<T> on Iterable<T> {
   /// result:
   /// 1,2,3
   subtract(Iterable<T> other) {
-    List<String>();
     final set = this.toSet();
     set.removeAll(other);
     return set;
@@ -228,4 +228,27 @@ extension CollectionsExt<T> on Iterable<T> {
     stack.addAll(this);
     return stack;
   }
+
+  bool get emptyOrNull => this == null || this.isEmpty;
+
+  /// Returns an Iterable of Lists where the nth element in the returned
+  /// iterable contains the nth element from every Iterable in iterables.
+  /// The returned Iterable is as long as the shortest Iterable in the argument.
+  /// If iterables is empty, it returns an empty list.
+  zip<T>(Iterable<T> iterable) sync* {
+    if (iterable.emptyOrNull) return;
+    final iterables = List<Iterable>()..add(this)..add(iterable);
+
+    final iterators = iterables.map((e) => e.iterator).toList(growable: false);
+    while (iterators.every((e) => e.moveNext())) {
+      yield iterators.map((e) => e.current).toList(growable: false);
+    }
+  }
+
+  /// Partitions the input iterable into chunks of the specified [size].
+  /// example:
+  /// 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].chunks(3))
+  /// result:
+  /// ([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
+  Iterable<List<T>> chunks(int size) => partition(this, size);
 }
