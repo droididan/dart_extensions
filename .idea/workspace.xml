@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dart_extentions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README - Copy.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +68,53 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/strings.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="dart_extensions" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="dart_extensions" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
@@ -139,11 +188,36 @@
       <option name="project" value="LOCAL" />
       <updated>1579297753239</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="readme update">
+      <created>1579297850729</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579297850729</updated>
+    </task>
+    <task id="LOCAL-00008" summary="readme update">
+      <created>1579297979430</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579297979430</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of github.com:droididan/dart_extentions&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit." />
@@ -152,18 +226,19 @@
     <MESSAGE value="pubspecupdate" />
     <MESSAGE value="readmechange" />
     <MESSAGE value="added feature list file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added feature list file" />
+    <MESSAGE value="readme update" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="883" y="242" key="#xdebugger.evaluate" timestamp="1579247341293">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="883" y="242" key="#xdebugger.evaluate/91.0.1829.1080@91.0.1829.1080" timestamp="1579247341293" />
-    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1579297850307">
+    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1579298272930">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="320" y="0" key="CommitChangelistDialog2/74.0.1462.864@74.0.1462.864" timestamp="1579178757948" />
-    <state x="399" y="0" key="CommitChangelistDialog2/91.0.1829.1080@91.0.1829.1080" timestamp="1579297850307" />
+    <state x="399" y="0" key="CommitChangelistDialog2/91.0.1829.1080@91.0.1829.1080" timestamp="1579298272930" />
     <state width="440" height="466" key="DebuggerActiveHint" timestamp="1579245740905">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
@@ -192,11 +267,11 @@
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="506" y="182" key="SettingsEditor/91.0.1829.1080@91.0.1829.1080" timestamp="1579183981467" />
-    <state x="498" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579297851998">
+    <state x="498" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579297980499">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="399" y="152" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1579178760180" />
-    <state x="498" y="190" key="Vcs.Push.Dialog.v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579297851998" />
+    <state x="498" y="190" key="Vcs.Push.Dialog.v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579297980499" />
     <state x="814" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579245981702">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
