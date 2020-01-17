@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="" />
+    <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,7 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579302379076</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test update">
+      <created>1579304231357</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579304231357</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update version, removed image">
+      <created>1579304383028</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579304383028</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -263,18 +279,20 @@
     <MESSAGE value="added feature list file" />
     <MESSAGE value="readme update" />
     <MESSAGE value="tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests" />
+    <MESSAGE value="test update" />
+    <MESSAGE value="update version, removed image" />
+    <option name="LAST_COMMIT_MESSAGE" value="update version, removed image" />
   </component>
   <component name="WindowStateProjectService">
     <state x="883" y="242" key="#xdebugger.evaluate" timestamp="1579247341293">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="883" y="242" key="#xdebugger.evaluate/91.0.1829.1080@91.0.1829.1080" timestamp="1579247341293" />
-    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1579302378580">
+    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1579304382598">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="320" y="0" key="CommitChangelistDialog2/74.0.1462.864@74.0.1462.864" timestamp="1579178757948" />
-    <state x="399" y="0" key="CommitChangelistDialog2/91.0.1829.1080@91.0.1829.1080" timestamp="1579302378580" />
+    <state x="399" y="0" key="CommitChangelistDialog2/91.0.1829.1080@91.0.1829.1080" timestamp="1579304382598" />
     <state width="473" height="466" key="DebuggerActiveHint" timestamp="1579302241773">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
@@ -307,11 +325,11 @@
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="506" y="182" key="SettingsEditor/91.0.1829.1080@91.0.1829.1080" timestamp="1579299937603" />
-    <state x="498" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579302380139">
+    <state x="498" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579304384389">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="399" y="152" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1579178760180" />
-    <state x="498" y="190" key="Vcs.Push.Dialog.v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579302380139" />
+    <state x="498" y="190" key="Vcs.Push.Dialog.v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579304384389" />
     <state x="183" y="92" width="1645" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579300057287">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>

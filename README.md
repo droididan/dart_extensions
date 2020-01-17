@@ -1,5 +1,5 @@
   
-[![](https://img.shields.io/badge/dart%20extensions-v0.0.01-green)](https://github.com/droididan/dart_extentions)  
+[![](https://img.shields.io/badge/dart%20extensions-v0.0.01-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/code%20coverage-94%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
 ### Resources:  
 - [Extetsions Full List](https://pub.dev/documentation/dartx/latest/dartx/dartx-library.html)  
