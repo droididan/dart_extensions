@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/dart%20extensions-v0.0.01-green)](https://github.com/droididan/dart_extentions)  
   
 ### Resources:  
-- [Extetsions Full List](https://pub.dev/documentation/dartx/latest/dartx/dartx-library.html)  
+- [Extensions Full List](https://github.com/droididan/dart_extentions/blob/master/FEATURELIST.md)  
 - [GitHub Repository](https://github.com/leisim/dartx)  
   
 Why I need this? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
