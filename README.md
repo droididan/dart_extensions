@@ -1,5 +1,3 @@
-
-<img src="https://raw.githubusercontent.com/leisim/dartx/master/.github/logo.svg?sanitize=true" width="500px">  
   
 [![](https://img.shields.io/badge/dart%20extensions-v0.0.01-green)](https://github.com/droididan/dart_extentions)  
   
