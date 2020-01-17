@@ -1,7 +1,7 @@
 
 <img src="https://raw.githubusercontent.com/leisim/dartx/master/.github/logo.svg?sanitize=true" width="500px">  
   
-[![](https://img.shields.io/badge/dart__extensions-v0.0.1-green)](https://github.com/droididan/dart_extentions)  [![](https://img.shields.io/badge/bitrise-pass-green)](https://github.com/droididan/dart_extentions)  
+[![](https://img.shields.io/badge/dart__extensions-v0.0.1-green)](https://github.com/droididan/dart_extentions)  [![](https://img.shields.io/badge/bitrise-pass-green)](https://github.com/droididan/dart_extentions) [![](https://img.shields.io/badge/code%20coverage-80%25-orange)](https://github.com/droididan/dart_extentions)  
   
 ### Resources:  
 - [Extensions Full List](https://github.com/droididan/dart_extentions/blob/master/FEATURELIST.md)  
