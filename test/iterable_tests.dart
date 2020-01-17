@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 import 'package:test/test.dart';
-import 'package:flutter_extentions/iterable.dart';
+import 'package:dart_extensions/iterable.dart';
 
 main() {
   final users = <User>[]..add(User(22, "Ronit"))..add(User(22, "Oded"))..add(

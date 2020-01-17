@@ -13,7 +13,7 @@
 
 
 import 'package:test/test.dart';
-import 'package:flutter_extentions/strings.dart';
+import 'package:dart_extensions/strings.dart';
 
 main() {
   group('strings', () {
