@@ -21,7 +21,7 @@ extension CollectionsExt<T> on Iterable<T> {
   int get halfLength => (this.length / 2).floor();
 
   /// Returns a list containing all elements except first [n] elements.
-  List<T> take(int n) {
+  List<T> takeOnly(int n) {
     if (n == 0) return [];
 
     var list = List<T>();
@@ -56,9 +56,9 @@ extension CollectionsExt<T> on Iterable<T> {
     return list;
   }
 
-  List<T> firstHalf() => take(halfLength);
+  List<T> firstHalf() => take(halfLength).toList();
 
-  List<T> secondHalf() => drop(halfLength);
+  List<T> secondHalf() => drop(halfLength).toList();
 
   /// returns a list with two swapped items
   /// [i] first item

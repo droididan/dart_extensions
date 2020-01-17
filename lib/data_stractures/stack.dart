@@ -30,8 +30,8 @@ class Stack<T> {
 
   top() => _list.last;
 
-  addAll(Iterable elements) {
+  List<T> addAll(Iterable elements) {
     _list.addAll(elements);
-    return _list;
+    return _list.toList();
   }
 }
