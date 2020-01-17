@@ -1,34 +1,37 @@
 <img src="https://raw.githubusercontent.com/leisim/dartx/master/.github/logo.svg?sanitize=true" width="500px">
 
-[![Dart CI](https://github.com/leisim/dartx/workflows/Dart%20CI/badge.svg)](https://github.com/leisim/dartx/actions) [![Codecov](https://img.shields.io/codecov/c/github/leisim/dartx.svg)](https://codecov.io/gh/leisim/dartx) [![dartx](https://img.shields.io/pub/v/dartx?label=dartx)](https://pub.dev/packages/dartx) [![flutterx](https://img.shields.io/pub/v/flutterx?label=flutterx)](https://pub.dev/packages/flutterx)
+[![](https://img.shields.io/badge/dart%20extensions-v0.0.01-green)](https://github.com/droididan/dart_extentions)
 
-*If you miss an extension, please open an issue or pull request*
+*let me know if you miss a something specific and ill add it*
 
 ### Resources:
 - [Documentation](https://pub.dev/documentation/dartx/latest/dartx/dartx-library.html)
 - [Pub Package](https://pub.dev/packages/dartx)
 - [GitHub Repository](https://github.com/leisim/dartx)
 
-On this page you can find some of the extensions. Take a look at the docs to see all of them.
+why I need this? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.
 
-## Getting started 🎉
+## Let get started 💪🏻
 
-Add the following to you `pubspec.yaml` and replace `[version]` with the latest version:
+1. go to `pubspec.yaml` 
+2. add a dart_extentions and replace `[version]` with the latest version:
 
 ```dart
 dependencies:
-  dartx: ^[version]
+  dart_extentions: ^[version]
 ```
 
-After you import the library, you can use the extensions.
-
-```dart
-import 'package:dartx/dartx.dart';
-
-var slice = [1, 2, 3, 4, 5].slice(1, -2); // [2, 3, 4]
-```
+3. click the packages get button or *flutter pub get*
 
 ## Iterable
+
+```dart
+ ["red","green","blue"].forEachIndexed((item, index) {
+    print("$item, $index");
+  }); // 0: red
+      // 1: green
+      // 2: blue
+```
 
 ### .slice()
 Returns elements at indices between `start` (inclusive) and `end` (inclusive).

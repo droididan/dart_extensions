@@ -95,10 +95,14 @@ extension CollectionsExt<T> on Iterable<T> {
   /// var name = [].firstOrDefault["jack"]; // jack
   T firstOrDefault(T defaultValue) => firstOrNull ?? defaultValue;
 
-  /// forEach with an index on collections, will provide [index] and [element] for every iteration,
+  ///
+  /// Performs the given action on each element on iterable, providing sequential index with the element.
+  /// [item] the element on the current iteration
+  /// [index] the index of the current iteration
+  ///
   /// example:
-  /// ["a","b","c"].forEachIndexed((item, index) {
-  ///    print("$item, $index");
+  /// ["a","b","c"].forEachIndexed((element, index) {
+  ///    print("$element, $index");
   ///  });
   /// result:
   /// a, 0
@@ -172,12 +176,12 @@ extension CollectionsExt<T> on Iterable<T> {
   List<T> distinctBy(predicate(T selector)) {
     final set = HashSet();
     final list = List<T>();
-    for (var item in this) {
-      final key = predicate(item);
+    this.toList().forEach((e) {
+      final key = predicate(e);
       if (set.add(key)) {
-        list.add(item);
+        list.add(e);
       }
-    }
+    });
 
     return list;
   }
@@ -231,10 +235,8 @@ extension CollectionsExt<T> on Iterable<T> {
 
   bool get emptyOrNull => this == null || this.isEmpty;
 
-  /// Returns an Iterable of Lists where the nth element in the returned
-  /// iterable contains the nth element from every Iterable in iterables.
-  /// The returned Iterable is as long as the shortest Iterable in the argument.
-  /// If iterables is empty, it returns an empty list.
+  /// Zip is used to combine multiple iterables into a single list that contains
+  /// the combination of them two.
   zip<T>(Iterable<T> iterable) sync* {
     if (iterable.emptyOrNull) return;
     final iterables = List<Iterable>()..add(this)..add(iterable);
@@ -251,4 +253,43 @@ extension CollectionsExt<T> on Iterable<T> {
   /// result:
   /// ([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
   Iterable<List<T>> chunks(int size) => partition(this, size);
+
+  Iterable<T> distinctB<R>(R selector(T element)) sync* {
+    var existing = HashSet<R>();
+    for (var current in this) {
+      if (existing.add(selector(current))) {
+        yield current;
+      }
+    }
+  }
+
+}
+
+class Motorcycle {
+  final int year;
+  final String brand;
+
+  Motorcycle(this.year, this.brand);
+
+  @override
+  String toString() {
+
+    return "brand: $brand year: $year";
+  }
+}
+main() {
+
+  final soldThisMonth = <Motorcycle>[]
+    ..add(Motorcycle(2020, 'BMW R1200GS'))
+    ..add(Motorcycle(1967, 'Honda GoldWing'));
+
+  final soldLastMonth = <Motorcycle>[]
+    ..add(Motorcycle(2014, 'Honda Transalp'))
+    ..add(Motorcycle(2019, 'Ducati Multistrada'));
+
+  final sales = soldThisMonth.zip(soldLastMonth).toList();
+
+  print(sales);
+
+
 }

@@ -44,7 +44,7 @@ extension StringExtention on String {
   /// Returns the string if it is not `null`, or the empty string otherwise
   String get orEmpty => this ?? "";
 
-
+  // if the string is empty perform an action
   String ifEmpty(Function action) => (this.isEmpty) ? action() : this;
 
   String get lastIndex {
@@ -57,4 +57,14 @@ extension StringExtention on String {
     if (isNullOrEmpty) return;
     print(this.toString());
   }
+
+  // Parses the string as an double or returns `null` if it is not a number.
+  double toDoubleOrNull() => double.tryParse(this);
+
+  // Parses the string as an int or returns `null` if it is not a number.
+  int toIntOrNull() => int.tryParse(this);
+}
+
+main() {
+  print("20.2".toDoubleOrNull());
 }
