@@ -1,10 +1,11 @@
 
 <img src="https://raw.githubusercontent.com/leisim/dartx/master/.github/logo.svg?sanitize=true" width="500px">  
   
-[![](https://img.shields.io/badge/dart__extensions-v0.0.1-green)](https://github.com/droididan/dart_extentions)  [![](https://img.shields.io/badge/bitrise-pass-green)](https://github.com/droididan/dart_extentions) [![](https://img.shields.io/badge/code%20coverage-80%25-orange)](https://github.com/droididan/dart_extentions)  
+[![](https://img.shields.io/badge/dart%20extensions-v0.0.01-green)](https://github.com/droididan/dart_extentions)  
   
 ### Resources:  
-- [Extensions Full List](https://github.com/droididan/dart_extentions/blob/master/FEATURELIST.md)  
+- [Extetsions Full List](https://pub.dev/documentation/dartx/latest/dartx/dartx-library.html)  
+- [GitHub Repository](https://github.com/leisim/dartx)  
   
 Why I need this? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
   
@@ -23,6 +24,8 @@ dependencies:
 
   
 ## Iterable Extensions
+`import 'package:flutter_extentions/iterable.dart';`
+
 ### .forEachIndexed()
   Performs the given action on each element on iterable, providing sequential `index` with the `element`.
 ```dart
@@ -89,6 +92,7 @@ print(sales); // [[brand: BMW R1200GS year: 2020, brand: Honda Transalp year: 20
   See [iterable.dart](https://github.com/droididan/dart_extentions/blob/master/lib/iterable.dart) for more  examples.  
   
 ## String  Extensions
+`import 'package:flutter_extentions/strings.dart';
   
 ### .replaceAfter
 Replace part of string after the first occurrence of given delimiter.

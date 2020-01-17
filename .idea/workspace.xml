@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dart_extentions.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +15,13 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,15 +65,29 @@
       <recent name="C:\Users\luci\Desktop\Projects\dart_extentions" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.strings.dart">
-    <configuration name="iterable.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/iterable.dart" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
+  <component name="RunManager" selected="Flutter Test.toStack">
+    <configuration name="iterables" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="iterables" />
+      <option name="testFile" value="$PROJECT_DIR$/test/iterable_tests.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="strings.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/strings.dart" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
+    <configuration name="sortedDescending" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="sortedDescending" />
+      <option name="testFile" value="$PROJECT_DIR$/test/iterable_tests.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="subtract" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="subtract" />
+      <option name="testFile" value="$PROJECT_DIR$/test/iterable_tests.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests in iterable_tests.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/iterable_tests.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="toStack" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="toStack" />
+      <option name="testFile" value="$PROJECT_DIR$/test/iterable_tests.dart" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
@@ -117,8 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Dart Command Line App.strings.dart" />
-        <item itemvalue="Dart Command Line App.iterable.dart" />
+        <item itemvalue="Flutter Test.toStack" />
+        <item itemvalue="Flutter Test.subtract" />
+        <item itemvalue="Flutter Test.tests in iterable_tests.dart" />
+        <item itemvalue="Flutter Test.iterables" />
+        <item itemvalue="Flutter Test.sortedDescending" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579298273510</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="tests">
+      <created>1579302379076</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579302379076</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -233,59 +265,68 @@
     <MESSAGE value="readmechange" />
     <MESSAGE value="added feature list file" />
     <MESSAGE value="readme update" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme update" />
+    <MESSAGE value="tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="883" y="242" key="#xdebugger.evaluate" timestamp="1579247341293">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="883" y="242" key="#xdebugger.evaluate/91.0.1829.1080@91.0.1829.1080" timestamp="1579247341293" />
-    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1579298272930">
+    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1579302378580">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="320" y="0" key="CommitChangelistDialog2/74.0.1462.864@74.0.1462.864" timestamp="1579178757948" />
-    <state x="399" y="0" key="CommitChangelistDialog2/91.0.1829.1080@91.0.1829.1080" timestamp="1579298272930" />
-    <state width="440" height="466" key="DebuggerActiveHint" timestamp="1579245740905">
+    <state x="399" y="0" key="CommitChangelistDialog2/91.0.1829.1080@91.0.1829.1080" timestamp="1579302378580" />
+    <state width="473" height="466" key="DebuggerActiveHint" timestamp="1579302241773">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
-    <state width="440" height="466" key="DebuggerActiveHint/91.0.1829.1080@91.0.1829.1080" timestamp="1579245740905" />
-    <state width="1786" height="295" key="GridCell.Tab.0.bottom" timestamp="1579297722621">
+    <state width="473" height="466" key="DebuggerActiveHint/91.0.1829.1080@91.0.1829.1080" timestamp="1579302241773" />
+    <state x="785" y="294" key="FileChooserDialogImpl" timestamp="1579300329298">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
-    <state width="1786" height="295" key="GridCell.Tab.0.bottom/91.0.1829.1080@91.0.1829.1080" timestamp="1579297722621" />
-    <state width="1786" height="295" key="GridCell.Tab.0.center" timestamp="1579297722621">
+    <state x="785" y="294" key="FileChooserDialogImpl/91.0.1829.1080@91.0.1829.1080" timestamp="1579300329298" />
+    <state width="1786" height="379" key="GridCell.Tab.0.bottom" timestamp="1579302356654">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
-    <state width="1786" height="295" key="GridCell.Tab.0.center/91.0.1829.1080@91.0.1829.1080" timestamp="1579297722621" />
-    <state width="1786" height="295" key="GridCell.Tab.0.left" timestamp="1579297722621">
+    <state width="1786" height="379" key="GridCell.Tab.0.bottom/91.0.1829.1080@91.0.1829.1080" timestamp="1579302356654" />
+    <state width="1786" height="379" key="GridCell.Tab.0.center" timestamp="1579302356654">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
-    <state width="1786" height="295" key="GridCell.Tab.0.left/91.0.1829.1080@91.0.1829.1080" timestamp="1579297722621" />
-    <state width="1786" height="295" key="GridCell.Tab.0.right" timestamp="1579297722621">
+    <state width="1786" height="379" key="GridCell.Tab.0.center/91.0.1829.1080@91.0.1829.1080" timestamp="1579302356654" />
+    <state width="1786" height="379" key="GridCell.Tab.0.left" timestamp="1579302356654">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
-    <state width="1786" height="295" key="GridCell.Tab.0.right/91.0.1829.1080@91.0.1829.1080" timestamp="1579297722621" />
+    <state width="1786" height="379" key="GridCell.Tab.0.left/91.0.1829.1080@91.0.1829.1080" timestamp="1579302356654" />
+    <state width="1786" height="379" key="GridCell.Tab.0.right" timestamp="1579302356654">
+      <screen x="91" y="0" width="1829" height="1080" />
+    </state>
+    <state width="1786" height="379" key="GridCell.Tab.0.right/91.0.1829.1080@91.0.1829.1080" timestamp="1579302356654" />
     <state x="759" y="250" key="RollbackChangesDialog" timestamp="1579297732868">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="759" y="250" key="RollbackChangesDialog/91.0.1829.1080@91.0.1829.1080" timestamp="1579297732868" />
-    <state x="506" y="182" key="SettingsEditor" timestamp="1579183981467">
+    <state x="506" y="182" key="SettingsEditor" timestamp="1579299937603">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
-    <state x="506" y="182" key="SettingsEditor/91.0.1829.1080@91.0.1829.1080" timestamp="1579183981467" />
-    <state x="498" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579297980499">
+    <state x="506" y="182" key="SettingsEditor/91.0.1829.1080@91.0.1829.1080" timestamp="1579299937603" />
+    <state x="498" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579302380139">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="399" y="152" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1579178760180" />
-    <state x="498" y="190" key="Vcs.Push.Dialog.v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579297980499" />
+    <state x="498" y="190" key="Vcs.Push.Dialog.v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579302380139" />
+    <state x="183" y="92" width="1645" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579300057287">
+      <screen x="91" y="0" width="1829" height="1080" />
+    </state>
+    <state x="183" y="92" width="1645" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/91.0.1829.1080@91.0.1829.1080" timestamp="1579300057287" />
     <state x="814" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579245981702">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="814" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579245981702" />
-    <state x="662" y="250" key="run.anything.popup" timestamp="1579283113837">
+    <state x="662" y="250" key="run.anything.popup" timestamp="1579300840949">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
-    <state x="662" y="250" key="run.anything.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579283113837" />
+    <state x="662" y="250" key="run.anything.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579300840949" />
     <state x="668" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1579183891559">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
@@ -295,9 +336,29 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/iterable.dart</url>
-          <line>181</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/test/iterable_tests.dart</url>
+          <line>78</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$USER_HOME$/Documents/flutter/bin/cache/pkg/sky_engine/lib/collection/queue.dart</url>
+          <line>719</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/data_stractures/stack.dart</url>
+          <line>22</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/data_stractures/stack.dart</url>
+          <line>33</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/data_stractures/stack.dart</url>
+          <line>34</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
