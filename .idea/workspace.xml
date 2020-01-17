@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,10 +342,10 @@
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="662" y="250" key="run.anything.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579300840949" />
-    <state x="668" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1579183891559">
+    <state x="668" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1579304653597">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
-    <state x="668" y="235" width="672" height="678" key="search.everywhere.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579183891559" />
+    <state x="668" y="235" width="672" height="678" key="search.everywhere.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579304653597" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,8 +2,8 @@
 [![](https://img.shields.io/badge/dart%20extensions-v0.0.01-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/code%20coverage-94%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
 ### Resources:  
-- [Extetsions Full List](https://pub.dev/documentation/dartx/latest/dartx/dartx-library.html)  
-- [GitHub Repository](https://github.com/leisim/dartx)  
+- [Extetsions Full List](https://github.com/droididan/dart_extensions/blob/master/FEATURELIST.md)  
+
   
 Why I need this? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
   
