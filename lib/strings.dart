@@ -64,7 +64,3 @@ extension StringExtention on String {
   // Parses the string as an int or returns `null` if it is not a number.
   int toIntOrNull() => int.tryParse(this);
 }
-
-main() {
-  print("20.2".toDoubleOrNull());
-}

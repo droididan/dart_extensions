@@ -262,34 +262,4 @@ extension CollectionsExt<T> on Iterable<T> {
       }
     }
   }
-
-}
-
-class Motorcycle {
-  final int year;
-  final String brand;
-
-  Motorcycle(this.year, this.brand);
-
-  @override
-  String toString() {
-
-    return "brand: $brand year: $year";
-  }
-}
-main() {
-
-  final soldThisMonth = <Motorcycle>[]
-    ..add(Motorcycle(2020, 'BMW R1200GS'))
-    ..add(Motorcycle(1967, 'Honda GoldWing'));
-
-  final soldLastMonth = <Motorcycle>[]
-    ..add(Motorcycle(2014, 'Honda Transalp'))
-    ..add(Motorcycle(2019, 'Ducati Multistrada'));
-
-  final sales = soldThisMonth.zip(soldLastMonth).toList();
-
-  print(sales);
-
-
 }

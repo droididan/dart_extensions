@@ -8,14 +8,10 @@ environment:
   sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
   intl: ^0.16.1
   quiver: ^2.0.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   test: ^1.9.2
 
 flutter:

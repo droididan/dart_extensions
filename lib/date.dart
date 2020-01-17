@@ -122,7 +122,3 @@ extension DateExt on DateTime {
   bool get isLeapYear =>
       (year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0));
 }
-
-main() {
-  print(DateTime.now().isLeapYear);
-}
