@@ -1,7 +1,7 @@
 # Flutter Extensions Full Feature List
 
 ## Extensions for Iterables
-- emptyOrNull
+- isEmptyOrNull
 - chunks
 - zip
 - half
@@ -22,6 +22,8 @@
 - count
 - distinctBy
 - subtract
+- concatWithSingleList
+- concatWithMultipleList
 
 ## Extensions for Integers
 - toMilliseconds

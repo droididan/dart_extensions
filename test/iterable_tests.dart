@@ -14,8 +14,10 @@ import 'package:test/test.dart';
 import 'package:dart_extensions/iterable.dart';
 
 main() {
-  final users = <User>[]..add(User(22, "Ronit"))..add(User(22, "Oded"))..add(
-      User(32, "Shimi"));
+  final users = <User>[]
+    ..add(User(22, "Ronit"))
+    ..add(User(22, "Oded"))
+    ..add(User(32, "Shimi"));
 
   group('iterables', () {
     test('take', () {
@@ -75,26 +77,41 @@ main() {
     });
 
     test('distinctBy', () {
-       final expected = users.distinctBy((u) => u.age);
+      final expected = users.distinctBy((u) => u.age);
       expect(users.distinctBy((u) => u.age), expected);
     });
 
     test('subtract', () {
-      expect([1, 2, 3, 4].subtract([3,4]), [1,2]);
-      expect([1, 2, 3, 4].subtract([1,2,3,4]), []);
-      expect([1, 2, 3, 4].subtract([1,2]), [3,4]);
+      expect([1, 2, 3, 4].subtract([3, 4]), [1, 2]);
+      expect([1, 2, 3, 4].subtract([1, 2, 3, 4]), []);
+      expect([1, 2, 3, 4].subtract([1, 2]), [3, 4]);
     });
 
     test('toStack', () {
-      var stack = [1,2,3,4].toStack();
+      var stack = [1, 2, 3, 4].toStack();
       expect(stack.pop(), 4);
       expect(stack.top(), 3);
       expect(stack.pop(), 3);
       expect(stack.top(), 2);
     });
 
+    test('concatWithSingleList', () {
+      expect([1, 2, 3, 4].concatWithSingleList([33333, 44444]),
+          [1, 2, 3, 4, 33333, 44444]);
+      expect([1, 2, 3, 4].concatWithSingleList([]), []);
+      expect([].concatWithSingleList([33333, 44444]), []);
+    });
 
-
+    test('concatWithSingleList', () {
+      final listOfLists = [
+        [111, 222],
+        [333, 444]
+      ];
+      expect([1, 2, 3, 4].concatWithMultipleList(listOfLists),
+          [1, 2, 3, 4, 111, 222, 333, 444]);
+      expect([1, 2, 3, 4].concatWithMultipleList([[],[]]), [1,2,3,4]);
+      expect([].concatWithMultipleList(listOfLists), []);
+    });
   });
 }
 

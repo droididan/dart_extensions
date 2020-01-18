@@ -233,12 +233,12 @@ extension CollectionsExt<T> on Iterable<T> {
     return stack;
   }
 
-  bool get emptyOrNull => this == null || this.isEmpty;
+  bool get isEmptyOrNull => this == null || this.isEmpty;
 
   /// Zip is used to combine multiple iterables into a single list that contains
   /// the combination of them two.
   zip<T>(Iterable<T> iterable) sync* {
-    if (iterable.emptyOrNull) return;
+    if (iterable.isEmptyOrNull) return;
     final iterables = List<Iterable>()..add(this)..add(iterable);
 
     final iterators = iterables.map((e) => e.iterator).toList(growable: false);
@@ -254,12 +254,17 @@ extension CollectionsExt<T> on Iterable<T> {
   /// ([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
   Iterable<List<T>> chunks(int size) => partition(this, size);
 
-  Iterable<T> distinctB<R>(R selector(T element)) sync* {
-    var existing = HashSet<R>();
-    for (var current in this) {
-      if (existing.add(selector(current))) {
-        yield current;
-      }
-    }
+  List<T> concatWithSingleList(Iterable<T> iterable) {
+    if (this.isEmptyOrNull || iterable.isEmptyOrNull) return [];
+
+    return <T>[]..addAll(this)..addAll(iterable);
+  }
+
+  List<T> concatWithMultipleList(List<Iterable<T>> iterable) {
+    if (this.isEmptyOrNull || iterable.isEmptyOrNull) return [];
+    final list = iterable.toList(growable: false).expand((i) => i);
+    return <T>[]
+      ..addAll(this)
+      ..addAll(list);
   }
 }
