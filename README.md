@@ -11,7 +11,7 @@ Why I need this? When you’re using someone else’s API or when you implement 
 ## Let get started 💪🏻  
   
 1. Go to `pubspec.yaml` 
-2. add a dart_extentions and replace `[version]` with the latest version:  
+2. add a dart_extensions and replace `[version]` with the latest version:  
   
 ```dart  
 dependencies:  
