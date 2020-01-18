@@ -15,7 +15,7 @@ Why I need this? When you’re using someone else’s API or when you implement 
   
 ```dart  
 dependencies:  
- dart_extentions: ^[version]
+ dart_extensions: ^[version]
  ```
   
 3. click the packages get button or *flutter pub get*  
