@@ -18,8 +18,6 @@ import 'strings.dart';
 const _defaultHeaders = {"Content-type": "application/json"};
 
 extension HttpExtensions on String {
-
-
   /// Sends an HTTP GET request with the given headers to the given URL, which can
   /// be a [Uri] or a [String].
   Future<dynamic> httpGet() async {
@@ -80,13 +78,5 @@ extension HttpExtensions on String {
     } on Exception catch (e) {
       return Future.error(e);
     }
-  }
-
-  main() async {
-    String json = '{"title": "Hello", "body": "body text", "userId": 1}';
-
-    "https://jsonplaceholder.typicode.com/posts".httpPost(json).then((result) {
-      print(result);
-    }).catchError((e) => print(e));
   }
 }

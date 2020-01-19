@@ -14,7 +14,7 @@ extension IntExtensions on int {
   /// Returns the absolute value
   get absolute => this.abs();
 
-  /** Returns number of digits in this number */
+  /// Returns number of digits in this number
   int get numberOfDigits => toString().length;
 
   /// Returns if the number is even

@@ -89,8 +89,7 @@ extension StringExtention on String {
 
   /// Returns a String without white space at all
   /// "hello world" // helloworld
-  String removeAllWhiteSpace() =>
-      this.replaceAll(new RegExp(r"\s+\b|\b\s"), "");
+  String removeAllWhiteSpace() => this.replaceAll(RegExp(r"\s+\b|\b\s"), "");
 
   /// Returns true if s is neither null, empty nor is solely made of whitespace characters.
   bool get isNotBlank => this != null && this.trim().isNotEmpty;

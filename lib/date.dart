@@ -12,7 +12,6 @@
  */
 
 extension DateString on String {
-
   /// Parse string to [DateTime]
   DateTime toDateTime() {
     try {
@@ -36,7 +35,6 @@ extension DateInt on int {
 }
 
 extension DateExt on DateTime {
-
   /// return true if the date is today
   bool isToday() {
     final now = DateTime.now();
@@ -88,29 +86,26 @@ extension DateExt on DateTime {
   DateTime startOfYear() => DateTime(year);
 
   /// DateTime `+` operator
-  DateTime operator +(DateTime time) =>
-      this.add(Duration(
-          days: time.day,
-          hours: time.hour,
-          minutes: time.minute,
-          seconds: time.second,
-          milliseconds: time.millisecond));
+  DateTime operator +(DateTime time) => this.add(Duration(
+      days: time.day,
+      hours: time.hour,
+      minutes: time.minute,
+      seconds: time.second,
+      milliseconds: time.millisecond));
 
   /// DateTime `-` operator
-  DateTime operator -(DateTime time) =>
-      this.subtract(Duration(
-          days: time.day,
-          hours: time.hour,
-          minutes: time.minute,
-          seconds: time.second,
-          milliseconds: time.millisecond));
+  DateTime operator -(DateTime time) => this.subtract(Duration(
+      days: time.day,
+      hours: time.hour,
+      minutes: time.minute,
+      seconds: time.second,
+      milliseconds: time.millisecond));
 
   /// next day
   DateTime tomorrow() => DateTime(year, month, day + 1);
 
   /// last day
   DateTime yesterday() => DateTime(year, month, day - 1);
-
 
   /// return the smaller date between
   DateTime min(DateTime that) =>
