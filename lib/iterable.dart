@@ -254,15 +254,21 @@ extension CollectionsExt<T> on Iterable<T> {
   /// ([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
   Iterable<List<T>> chunks(int size) => partition(this, size);
 
+  /// Return a list concatenates the output of the current list and another [iterable]
   List<T> concatWithSingleList(Iterable<T> iterable) {
     if (this.isEmptyOrNull || iterable.isEmptyOrNull) return [];
 
     return <T>[...this, ...iterable];
   }
 
-  List<T> concatWithMultipleList(List<Iterable<T>> iterable) {
-    if (this.isEmptyOrNull || iterable.isEmptyOrNull) return [];
-    final list = iterable.toList(growable: false).expand((i) => i);
+  /// Return a list concatenates the output of the current list and multiple [iterables]
+  List<T> concatWithMultipleList(List<Iterable<T>> iterables) {
+    if (this.isEmptyOrNull || iterables.isEmptyOrNull) return [];
+    final list = iterables.toList(growable: false).expand((i) => i);
     return <T>[...this, ...list];
   }
+
+  /// Creates a Map instance in which the keys and values are computed from the iterable.
+  Map<dynamic, dynamic> associate(key(element), value(element)) =>
+      Map.fromIterable(this, key: key, value: value);
 }

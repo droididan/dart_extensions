@@ -49,14 +49,32 @@ final aboveAgeTwenty = users.count((user) => user.age > 20);
 print(aboveAgeTwenty); // 2
 ```
 
+### .associate()  
+Creates a Map instance in which the keys and values are computed from the iterable.
+```dart  
+final users = [User(33, "Miki"), User(45, "Anna"), User(19, "Amit")];  
 
+users.associate((k) => k.name, (e) => e.age) // 'Miki': 33, 'Anna': 45, 'Amit': 19}
+```
+
+### .concatWithMultipleList()  
+/// Return a list concatenates the output of the current list and multiple iterables.
+```dart  
+  final listOfLists = [
+        [5, 6, 7],
+        [8, 9, 10]
+      ];
+  [1, 2, 3, 4].concatWithMultipleList(listOfLists); 
+  
+  // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
   
 ### .distinctBy()  
 Returns a list containing only the elements from given collection having distinct keys.
 ```dart  
 // example 1
-final users = ["Idan", "Ian", "Ronit"];  
-users.distinctBy((u) => u.toLowerCase().startsWith("I")); // Idan 
+final users = ["Zack", "Ian", "Ronit"];  
+users.distinctBy((u) => u.toLowerCase().startsWith("z")); // Zack 
 
 // example 2
 final users = [User(11, 'idan'), User(12, 'ronit'), User(11, 'asaf')];

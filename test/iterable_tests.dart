@@ -93,27 +93,37 @@ main() {
     });
 
     test('concatWithSingleList', () {
-      expect([1, 2, 3, 4].concatWithSingleList([33333, 44444]),
-          [1, 2, 3, 4, 33333, 44444]);
+      expect([1, 2, 3, 4].concatWithSingleList([5, 6, 7, 8, 9, 10, 11]),
+          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
       expect([1, 2, 3, 4].concatWithSingleList([]), []);
-      expect([].concatWithSingleList([33333, 44444]), []);
+      expect([].concatWithSingleList([5, 6, 7, 8, 9, 10, 11]), []);
     });
 
-    test('concatWithSingleList', () {
+    test('concatWithMultipleList', () {
       final listOfLists = [
-        [111, 222],
-        [333, 444]
+        [5, 6, 7],
+        [8, 9, 10]
       ];
       expect([1, 2, 3, 4].concatWithMultipleList(listOfLists),
-          [1, 2, 3, 4, 111, 222, 333, 444]);
-      expect([1, 2, 3, 4].concatWithMultipleList([[],[]]), [1,2,3,4]);
+          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+      expect([1, 2, 3, 4].concatWithMultipleList([[], []]), [1, 2, 3, 4]);
       expect([].concatWithMultipleList(listOfLists), []);
     });
 
     test('zip', () {
-      final expectedResult = [[1,2],[3,4],[5,6]];
-      expect([1,3,5].zip([2,4,6]),expectedResult);
-      expect([1,3,5].zip([2,4,6,7,8]), expectedResult);
+      final expectedResult = [
+        [1, 2],
+        [3, 4],
+        [5, 6]
+      ];
+      expect([1, 3, 5].zip([2, 4, 6]), expectedResult);
+      expect([1, 3, 5].zip([2, 4, 6, 7, 8]), expectedResult);
+    });
+
+    test('associate', () {
+      final users = [User(33, "Miki"), User(45, "Anna"), User(19, "Amit")];
+      expect(users.associate((k) => k.name, (e) => e.age),
+          {'Miki': 33, 'Anna': 45, 'Amit': 19});
     });
   });
 }

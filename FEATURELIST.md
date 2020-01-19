@@ -24,6 +24,7 @@
 - subtract
 - concatWithSingleList
 - concatWithMultipleList
+- associate
 
 ## Extensions for Integers
 - toMilliseconds
