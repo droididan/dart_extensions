@@ -1,4 +1,7 @@
-## [0.0.1] - TODO: Add release date.
-- dates tools
-- iterable tools
-- strings tools
+## [0.1.3] - TODO: Add release date.
+- anyChar in Strings extensions + tests
+- replaceBefore Strings extensions + tests
+- toDoubleOrNull Strings extensions test
+- removeAllWhiteSpace Strings extensions + tests
+- toCharArray Strings extension + tests
+

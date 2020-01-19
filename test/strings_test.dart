@@ -11,7 +11,6 @@
  * limitations under the License.
  */
 
-
 import 'package:test/test.dart';
 import 'package:dart_extensions/strings.dart';
 
@@ -36,8 +35,41 @@ main() {
       expect(nullStr.isNullOrEmpty, true);
       expect('not empty'.isNullOrEmpty, false);
     });
+
     test('replaceAfter', () {
       expect('name@'.replaceAfter('@', "domain.com"), "name@domain.com");
+    });
+
+    test('replaceBefore', () {
+      expect('@domain.com'.replaceBefore('@', "name"), "name@domain.com");
+    });
+
+    test('anyChar', () {
+      expect('test'.anyChar((s) => s == 't'), true);
+      expect('test'.anyChar((s) => s == 'd'), false);
+    });
+
+    test('toDoubleOrNull', () {
+      expect('20.0'.toDoubleOrNull(), 20.0);
+      expect('a20.0'.toDoubleOrNull(), null);
+    });
+
+    test('removeAllWhiteSpace', () {
+      expect('hello world'.removeAllWhiteSpace(), 'helloworld');
+      expect(' helloworld '.removeAllWhiteSpace(), 'helloworld');
+    });
+
+    test('isNotBlank', () {
+      expect('hello world'.isNotBlank, true);
+      expect('hello world      '.isNotBlank, true);
+      expect(''.isNotBlank, false);
+      final String test = null;
+      expect(test.isNotBlank, false);
+    });
+
+    test('toCharArray', () {
+      expect("test".toCharArray(),  ['t','e', 's', 't']);
+      expect("".toCharArray(),  []);
     });
   });
 }

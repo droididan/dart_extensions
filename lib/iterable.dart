@@ -257,14 +257,12 @@ extension CollectionsExt<T> on Iterable<T> {
   List<T> concatWithSingleList(Iterable<T> iterable) {
     if (this.isEmptyOrNull || iterable.isEmptyOrNull) return [];
 
-    return <T>[]..addAll(this)..addAll(iterable);
+    return <T>[...this, ...iterable];
   }
 
   List<T> concatWithMultipleList(List<Iterable<T>> iterable) {
     if (this.isEmptyOrNull || iterable.isEmptyOrNull) return [];
     final list = iterable.toList(growable: false).expand((i) => i);
-    return <T>[]
-      ..addAll(this)
-      ..addAll(list);
+    return <T>[...this, ...list];
   }
 }

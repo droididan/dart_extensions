@@ -14,10 +14,7 @@ import 'package:test/test.dart';
 import 'package:dart_extensions/iterable.dart';
 
 main() {
-  final users = <User>[]
-    ..add(User(22, "Ronit"))
-    ..add(User(22, "Oded"))
-    ..add(User(32, "Shimi"));
+  final users = [User(22, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
 
   group('iterables', () {
     test('take', () {
@@ -111,6 +108,12 @@ main() {
           [1, 2, 3, 4, 111, 222, 333, 444]);
       expect([1, 2, 3, 4].concatWithMultipleList([[],[]]), [1,2,3,4]);
       expect([].concatWithMultipleList(listOfLists), []);
+    });
+
+    test('zip', () {
+      final expectedResult = [[1,2],[3,4],[5,6]];
+      expect([1,3,5].zip([2,4,6]),expectedResult);
+      expect([1,3,5].zip([2,4,6,7,8]), expectedResult);
     });
   });
 }

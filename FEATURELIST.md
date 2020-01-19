@@ -37,6 +37,7 @@
 - removeSurrounding
 - isNullOrEmpty
 - replaceAfter
+- replaceBefore
 - orEmpty
 - ifEmpty
 - lastIndex
@@ -44,6 +45,10 @@
 - equalsIgnoreCase
 - toDoubleOrNull
 - toIntOrNull
+- anyChar
+- removeAllWhiteSpace
+- isNotBlank
+- toCharArray
 
 
 ## Extensions for Date Time

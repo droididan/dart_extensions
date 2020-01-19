@@ -1,4 +1,4 @@
-  /*
+/*
  * Copyright 2020 Idan Ayalon. All rights reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -12,18 +12,24 @@
  */
 
 extension StringExtention on String {
-  bool validateEmail() => RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(this);
+  bool validateEmail() => RegExp(
+          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+      .hasMatch(this);
 
   bool equalsIgnoreCase(String other) =>
       (this == null && other == null) ||
-          (this != null && other != null && this.toLowerCase() == other.toLowerCase());
+      (this != null &&
+          other != null &&
+          this.toLowerCase() == other.toLowerCase());
 
   /// Return the string only if the delimiter exists in both ends, otherwise it will return the current string
   String removeSurrounding(String delimiter) {
     final prefix = delimiter;
     final suffix = delimiter;
 
-    if ((length >= prefix.length + suffix.length) && startsWith(prefix) && endsWith(suffix)) {
+    if ((length >= prefix.length + suffix.length) &&
+        startsWith(prefix) &&
+        endsWith(suffix)) {
       return substring(prefix.length, length - suffix.length);
     }
     return this;
@@ -33,13 +39,30 @@ extension StringExtention on String {
   bool get isNullOrEmpty => this == null || this.isEmpty;
 
   ///  Replace part of string after the first occurrence of given delimiter with the [replacement] string.
-  ///  If the string does not contain the delimiter, returns [missingDelimiterValue] which defaults to the original string.
-  String replaceAfter(String delimiter, String replacement, [String missingDelimiterVal]) {
+  ///  If the string does not contain the delimiter, returns [defaultValue] which defaults to the original string.
+  String replaceAfter(String delimiter, String replacement,
+      [String defaultValue]) {
     final index = this.indexOf(delimiter);
     return (index == -1)
-        ? missingDelimiterVal.isNullOrEmpty ? this : missingDelimiterVal
+        ? defaultValue.isNullOrEmpty ? this : defaultValue
         : this.replaceRange(index + 1, this.length, replacement);
   }
+
+  ///
+  /// Replace part of string before the first occurrence of given delimiter with the [replacement] string.
+  ///  If the string does not contain the delimiter, returns [missingDelimiterValue] which defaults to the original string.
+  String replaceBefore(String delimiter, String replacement,
+      [String defaultValue]) {
+    final index = indexOf(delimiter);
+    return (index == -1)
+        ? defaultValue.isNullOrEmpty ? this : defaultValue
+        : replaceRange(0, index, replacement);
+  }
+
+  ///Returns `true` if at least one element matches the given [predicate].
+  /// the [predicate] should have only one character
+  bool anyChar(bool predicate(String element)) =>
+      this.split('').any((s) => predicate(s));
 
   /// Returns the string if it is not `null`, or the empty string otherwise
   String get orEmpty => this ?? "";
@@ -58,9 +81,20 @@ extension StringExtention on String {
     print(this.toString());
   }
 
-  // Parses the string as an double or returns `null` if it is not a number.
+  /// Parses the string as an double or returns `null` if it is not a number.
   double toDoubleOrNull() => double.tryParse(this);
 
-  // Parses the string as an int or returns `null` if it is not a number.
+  /// Parses the string as an int or returns `null` if it is not a number.
   int toIntOrNull() => int.tryParse(this);
+
+  /// Returns a String without white space at all
+  /// "hello world" // helloworld
+  String removeAllWhiteSpace() =>
+      this.replaceAll(new RegExp(r"\s+\b|\b\s"), "");
+
+  /// Returns true if s is neither null, empty nor is solely made of whitespace characters.
+  bool get isNotBlank => this != null && this.trim().isNotEmpty;
+
+  /// Returns a list of chars from a String
+  List<String> toCharArray() => isNotBlank ? split('') : [];
 }
