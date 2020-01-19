@@ -6,12 +6,9 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="0.1.2">
-      <change afterPath="$PROJECT_DIR$/lib/files.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/http.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/int.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/int_test.dart" afterDir="false" />
+    <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FEATURELIST.md" beforeDir="false" afterPath="$PROJECT_DIR$/FEATURELIST.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -285,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579441157812</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added http and int">
+      <created>1579469629848</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1579469629848</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -324,7 +328,8 @@
     <MESSAGE value="0.1.3" />
     <MESSAGE value="updated shield" />
     <MESSAGE value="associate" />
-    <option name="LAST_COMMIT_MESSAGE" value="associate" />
+    <MESSAGE value="added http and int" />
+    <option name="LAST_COMMIT_MESSAGE" value="added http and int" />
   </component>
   <component name="WindowStateProjectService">
     <state x="459" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579432835035">

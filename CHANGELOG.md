@@ -1,5 +1,19 @@
-## [0.1.4] - todo.
+## [0.1.4] - 19/011/202.
 - associate in Iterables extensions + tests
+- added Http Extensions: - httpGet httpPost httpPut httpDelete
+- added int Extensions: - absolute
+                        - isEven
+                        - isOdd
+                        - isPositive
+                        - isNegative
+                        - tenth
+                        - fourth
+                        - third
+                        - half
+                        - doubled
+                        - tripled
+                        - quadrupled
+                        - squared
 
 
 ## [0.1.3] - 19/01/2020.

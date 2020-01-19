@@ -1,5 +1,5 @@
   
-[![](https://img.shields.io/badge/Dart%20Extensions-0.1.3-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
+[![](https://img.shields.io/badge/Dart%20Extensions-0.1.4-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
 ### Resources:  
 - [Extensions Full List](https://github.com/droididan/dart_extensions/blob/master/FEATURELIST.md)  

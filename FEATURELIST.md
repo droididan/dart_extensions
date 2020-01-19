@@ -31,13 +31,6 @@
 - concatWithMultipleList
 - associate
 
-## Integers Extensions
-- toMilliseconds
-- toSeconds
-- toMinutes
-- toHours
-- toDays
-
 ## Strings Extensions
 - validateEmail
 - removeSurrounding
@@ -58,6 +51,11 @@
 
 
 ## DateTime Extensions
+- toMilliseconds
+- toSeconds
+- toMinutes
+- toHours
+- toDays
 - isToday
 - addOrRemoveYears
 - addOrRemoveMonth
