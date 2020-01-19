@@ -20,7 +20,7 @@ extension StringExtention on String {
       (this == null && other == null) ||
       (this != null &&
           other != null &&
-          this.toLowerCase() == other.toLowerCase());
+          toLowerCase() == other.toLowerCase());
 
   /// Return the string only if the delimiter exists in both ends, otherwise it will return the current string
   String removeSurrounding(String delimiter) {
@@ -36,16 +36,16 @@ extension StringExtention on String {
   }
 
   /// Return a bool if the string is null or empty
-  bool get isNullOrEmpty => this == null || this.isEmpty;
+  bool get isNullOrEmpty => this == null || isEmpty;
 
   ///  Replace part of string after the first occurrence of given delimiter with the [replacement] string.
   ///  If the string does not contain the delimiter, returns [defaultValue] which defaults to the original string.
   String replaceAfter(String delimiter, String replacement,
       [String defaultValue]) {
-    final index = this.indexOf(delimiter);
+    final index = indexOf(delimiter);
     return (index == -1)
         ? defaultValue.isNullOrEmpty ? this : defaultValue
-        : this.replaceRange(index + 1, this.length, replacement);
+        : replaceRange(index + 1, length, replacement);
   }
 
   ///
@@ -62,13 +62,13 @@ extension StringExtention on String {
   ///Returns `true` if at least one element matches the given [predicate].
   /// the [predicate] should have only one character
   bool anyChar(bool predicate(String element)) =>
-      this.split('').any((s) => predicate(s));
+      split('').any((s) => predicate(s));
 
   /// Returns the string if it is not `null`, or the empty string otherwise
   String get orEmpty => this ?? "";
 
   // if the string is empty perform an action
-  String ifEmpty(Function action) => (this.isEmpty) ? action() : this;
+  String ifEmpty(Function action) => (isEmpty) ? action() : this;
 
   String get lastIndex {
     if (isNullOrEmpty) return "";
@@ -78,7 +78,7 @@ extension StringExtention on String {
   /// prints to console this text if it's not empty or null
   void printThis() {
     if (isNullOrEmpty) return;
-    print(this.toString());
+    print(toString());
   }
 
   /// Parses the string as an double or returns `null` if it is not a number.
@@ -89,10 +89,10 @@ extension StringExtention on String {
 
   /// Returns a String without white space at all
   /// "hello world" // helloworld
-  String removeAllWhiteSpace() => this.replaceAll(RegExp(r"\s+\b|\b\s"), "");
+  String removeAllWhiteSpace() => replaceAll(RegExp(r"\s+\b|\b\s"), "");
 
   /// Returns true if s is neither null, empty nor is solely made of whitespace characters.
-  bool get isNotBlank => this != null && this.trim().isNotEmpty;
+  bool get isNotBlank => this != null && trim().isNotEmpty;
 
   /// Returns a list of chars from a String
   List<String> toCharArray() => isNotBlank ? split('') : [];

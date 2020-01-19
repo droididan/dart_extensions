@@ -176,7 +176,7 @@ extension CollectionsExt<T> on Iterable<T> {
   List<T> distinctBy(predicate(T selector)) {
     final set = HashSet();
     final list = List<T>();
-    this.toList().forEach((e) {
+    toList().forEach((e) {
       final key = predicate(e);
       if (set.add(key)) {
         list.add(e);
@@ -216,7 +216,7 @@ extension CollectionsExt<T> on Iterable<T> {
   /// result:
   /// 1,2,3
   subtract(Iterable<T> other) {
-    final set = this.toSet();
+    final set = toSet();
     set.removeAll(other);
     return set;
   }
@@ -233,7 +233,7 @@ extension CollectionsExt<T> on Iterable<T> {
     return stack;
   }
 
-  bool get isEmptyOrNull => this == null || this.isEmpty;
+  bool get isEmptyOrNull => this == null || isEmpty;
 
   /// Zip is used to combine multiple iterables into a single list that contains
   /// the combination of them two.
@@ -257,14 +257,14 @@ extension CollectionsExt<T> on Iterable<T> {
 
   /// Return a list concatenates the output of the current list and another [iterable]
   List<T> concatWithSingleList(Iterable<T> iterable) {
-    if (this.isEmptyOrNull || iterable.isEmptyOrNull) return [];
+    if (isEmptyOrNull || iterable.isEmptyOrNull) return [];
 
     return <T>[...this, ...iterable];
   }
 
   /// Return a list concatenates the output of the current list and multiple [iterables]
   List<T> concatWithMultipleList(List<Iterable<T>> iterables) {
-    if (this.isEmptyOrNull || iterables.isEmptyOrNull) return [];
+    if (isEmptyOrNull || iterables.isEmptyOrNull) return [];
     final list = iterables.toList(growable: false).expand((i) => i);
     return <T>[...this, ...list];
   }

@@ -12,7 +12,7 @@
  */
 extension IntExtensions on int {
   /// Returns the absolute value
-  get absolute => this.abs();
+  get absolute => abs();
 
   /// Returns number of digits in this number
   int get numberOfDigits => toString().length;
