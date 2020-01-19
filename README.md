@@ -28,11 +28,30 @@ Sends an HTTP GET request with the given headers to the given URL
 ```dart
 final json = await "https://jsonplaceholder.typicode.com/posts".httpGet();
 ```
+*result:*
+```json
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere",
+    "body": "quia et suscipit"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "dolor beatae ea dolores neque"
+  },
+  /// ...
+]
+```
+
 *usage with then:*
 ```dart
-https://jsonplaceholder.typicode.com/posts".httpGet().then((result) {
-        // print(result);
-    // }).catchError((e) => print(e));
+""https://jsonplaceholder.typicode.com/posts".httpGet().then((result) {
+          print(result);
+       }).catchError((e) => print(e));
 ```
 
 ### .httpPost()
@@ -45,6 +64,16 @@ final json = await "https://jsonplaceholder.typicode.com/posts".httpPost(json);
 for more examples (put, delete) See [http.dart](https://github.com/droididan/dart_extentions/blob/master/lib/http.dart) 
 
 ## Iterable Extensions
+
+### .chunks()
+Splits the Iterable into chunks of the specified `size`
+```dart
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].chunks(3)) 
+```
+*result
+```dart
+([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
+```
 
 ### .forEachIndexed()
 Performs the given action on each element on iterable, providing sequential `index` with the `element`.

@@ -247,9 +247,10 @@ extension CollectionsExt<T> on Iterable<T> {
     }
   }
 
-  /// Partitions the input iterable into chunks of the specified [size].
+  /// Splits the Iterable into chunks of the specified size
+  ///
   /// example:
-  /// 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].chunks(3))
+  /// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].chunks(3))
   /// result:
   /// ([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
   Iterable<List<T>> chunks(int size) => partition(this, size);
