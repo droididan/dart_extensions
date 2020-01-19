@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/iterable.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iterable.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579469991497</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="doco fix">
+      <created>1579471437241</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1579471437241</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -336,7 +341,8 @@
     <MESSAGE value="associate" />
     <MESSAGE value="added http and int" />
     <MESSAGE value="doco update" />
-    <option name="LAST_COMMIT_MESSAGE" value="doco update" />
+    <MESSAGE value="doco fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="doco fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="459" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579432835035">

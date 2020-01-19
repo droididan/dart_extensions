@@ -48,7 +48,7 @@ final json = await "https://jsonplaceholder.typicode.com/posts".httpGet();
 
 *usage with then:*
 ```dart
-""https://jsonplaceholder.typicode.com/posts".httpGet().then((result) {
+"https://jsonplaceholder.typicode.com/posts".httpGet().then((result) {
           print(result);
        }).catchError((e) => print(e));
 ```
@@ -69,7 +69,7 @@ Splits the Iterable into chunks of the specified `size`
 ```dart
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].chunks(3)) 
 ```
-*result
+*result*
 ```dart
 ([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
 ```
