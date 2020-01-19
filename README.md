@@ -43,7 +43,7 @@ final json = await "https://jsonplaceholder.typicode.com/posts".httpGet();
     "title": "qui est esse",
     "body": "dolor beatae ea dolores neque"
   },
-  /// ...
+  ...
 ]
 ```
 
