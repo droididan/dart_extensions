@@ -1,6 +1,11 @@
 # Flutter Extensions Full Feature List
+## Http Extensions
+- httpGet
+- httpPost
+- httpPut
+- httpDelete
 
-## Extensions for Iterables
+## Iterables Extensions
 - isEmptyOrNull
 - chunks
 - zip
@@ -26,14 +31,14 @@
 - concatWithMultipleList
 - associate
 
-## Extensions for Integers
+## Integers Extensions
 - toMilliseconds
 - toSeconds
 - toMinutes
 - toHours
 - toDays
 
-## Extensions for Strings
+## Strings Extensions
 - validateEmail
 - removeSurrounding
 - isNullOrEmpty
@@ -52,7 +57,7 @@
 - toCharArray
 
 
-## Extensions for Date Time
+## DateTime Extensions
 - isToday
 - addOrRemoveYears
 - addOrRemoveMonth
@@ -70,16 +75,23 @@
 - max
 - isLeapYear
 
+## Integers Extensions
+- absolute
+- isEven
+- isOdd
+- isPositive
+- isNegative
+- tenth
+- fourth
+- third
+- half
+- doubled
+- tripled
+- quadrupled
+- squared
 
 TBD - add tests
 
 ## will release soon...
-- Extentions for Ranges
-- Extentions for Files
-
-
-
-
-
-
-
+- Extensions for Ranges
+- Extensions for Files

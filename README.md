@@ -21,11 +21,33 @@ dependencies:
   
 3. click the packages get button or *flutter pub get*  
 
-  
+## Http Extensions
+
+### .httpGet()
+Sends an HTTP GET request with the given headers to the given URL
+```dart
+final json = await "https://jsonplaceholder.typicode.com/posts".httpGet();
+```
+*usage with then:*
+```dart
+https://jsonplaceholder.typicode.com/posts".httpGet().then((result) {
+        // print(result);
+    // }).catchError((e) => print(e));
+```
+
+### .httpPost()
+Sends an HTTP POST request with the given headers and body to the given URL which can be a [Uri] or a [String].
+```dart
+String json = '{"title": "Hello", "body": "body text", "userId": 1}';
+final json = await "https://jsonplaceholder.typicode.com/posts".httpPost(json);
+```
+
+for more examples (put, delete) See [http.dart](https://github.com/droididan/dart_extentions/blob/master/lib/http.dart) 
+
 ## Iterable Extensions
 
 ### .forEachIndexed()
-  Performs the given action on each element on iterable, providing sequential `index` with the `element`.
+Performs the given action on each element on iterable, providing sequential `index` with the `element`.
 ```dart
 ["red","green","blue"].forEachIndexed((item, index) { 
 	print("$item, $index"); 
@@ -41,7 +63,7 @@ print(descendingList); // [5, 4, 3, 2, 1]
 ```  
   
 ### .count()  
- Return a number of the existing elements by a specific predicate
+Return a number of the existing elements by a specific predicate
 ```dart  
 final users = [User(33, "Miki"), User(45, "Anna"), User(19, "Amit")];  
   
@@ -58,7 +80,7 @@ users.associate((k) => k.name, (e) => e.age) // 'Miki': 33, 'Anna': 45, 'Amit': 
 ```
 
 ### .concatWithMultipleList()  
-/// Return a list concatenates the output of the current list and multiple iterables.
+Return a list concatenates the output of the current list and multiple iterables.
 ```dart  
   final listOfLists = [
         [5, 6, 7],
@@ -97,7 +119,7 @@ print(sales); // [
   [brand: Honda GoldWing year: 1967, brand: Ducati Multistrada year: 2019] // second pair from last month 
 ]
 ```  
-  See [iterable.dart](https://github.com/droididan/dart_extentions/blob/master/lib/iterable.dart) for more  examples.  
+See [iterable.dart](https://github.com/droididan/dart_extentions/blob/master/lib/iterable.dart) for more  examples.  
   
 ## String  Extensions
   
@@ -120,7 +142,7 @@ Returns `true` if at least one element matches the given predicate
 ```
 
 ### .ifEmpty
-if the string is empty perform an action.
+If the string is empty perform an action.
 ```dart  
 "".ifEmpty(() => print("do any action here")); // do any action here
 ```  
