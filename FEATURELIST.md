@@ -52,6 +52,7 @@
 - `removeAllWhiteSpace`
 - `isNotBlank`
 - `toCharArray`
+- `insert`
 
 
 ## DateTime Extensions
