@@ -272,4 +272,17 @@ extension CollectionsExt<T> on Iterable<T> {
   /// Creates a Map instance in which the keys and values are computed from the iterable.
   Map<dynamic, dynamic> associate(key(element), value(element)) =>
       Map.fromIterable(this, key: key, value: value);
+
+  /// Returns the first element matching the given [predicate], or `null`
+  /// if element was not found.
+  T find(predicate(T selector)) {
+    for (final element in this) {
+      if (predicate(element)) {
+        return element;
+      }
+      ;
+    }
+
+    return null;
+  }
 }

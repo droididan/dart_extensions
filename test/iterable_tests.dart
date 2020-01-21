@@ -14,7 +14,7 @@ import 'package:test/test.dart';
 import 'package:dart_extensions/iterable.dart';
 
 main() {
-  final users = [User(22, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
+  final users = [User(22, "Ronit"), User(23, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
 
   group('iterables', () {
     test('take', () {
@@ -124,6 +124,15 @@ main() {
       final users = [User(33, "Miki"), User(45, "Anna"), User(19, "Amit")];
       expect(users.associate((k) => k.name, (e) => e.age),
           {'Miki': 33, 'Anna': 45, 'Amit': 19});
+    });
+
+    test('find', () {
+      final users = [User(22, "Ronit"), User(23, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
+      expect(users.find((u) => u.name == "Ronit"), users.first);
+      expect(users.find((u) => u.name == "Oded"), users[2]);
+      expect(users.find((u) => u.name == "Not Exists Name"), null);
+      expect(users.find((u) => u.age == 32), users.last);
+      expect(users.find((u) => u.age == 31), null);
     });
   });
 }

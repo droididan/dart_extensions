@@ -1,3 +1,7 @@
+## [0.1.7] - 19/011/202.
+- find - Iterable extensions + tests
+
+
 ## [0.1.4] - 19/011/202.
 - associate in Iterables extensions + tests
 - added Http Extensions: - httpGet httpPost httpPut httpDelete

@@ -7,14 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/example/dart_extensions.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/example.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/date.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/date.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/http.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/int.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/int.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/strings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/strings.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FEATURELIST.md" beforeDir="false" afterPath="$PROJECT_DIR$/FEATURELIST.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/dart_extensions.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iterable.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iterable.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/iterable_tests.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/iterable_tests.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,16 +75,16 @@
       <recent name="C:\Users\luci\Desktop\Projects\dart_extentions" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.files.dart">
+  <component name="RunManager" selected="Dart Test.find in iterable_tests.dart">
     <configuration name="files.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/files.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="doubled in int_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/int_test.dart" />
+    <configuration name="find in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
       <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="doubled" />
+      <option name="testName" value="find" />
       <method v="2" />
     </configuration>
     <configuration name="integers in int_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
@@ -94,25 +93,23 @@
       <option name="testName" value="integers" />
       <method v="2" />
     </configuration>
-    <configuration name="quadrupled in int_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/int_test.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="quadrupled" />
+    <configuration name="tests in dart_extentions" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$" />
+      <option name="scope" value="FOLDER" />
       <method v="2" />
     </configuration>
-    <configuration name="third in int_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/int_test.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="third" />
+    <configuration name="tests in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
+      <option name="testName" value="iterable_tests.dart" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Dart Test.find in iterable_tests.dart" />
+        <item itemvalue="Dart Test.tests in iterable_tests.dart" />
+        <item itemvalue="Dart Test.tests in dart_extentions" />
         <item itemvalue="Dart Command Line App.files.dart" />
         <item itemvalue="Dart Test.integers in int_test.dart" />
-        <item itemvalue="Dart Test.quadrupled in int_test.dart" />
-        <item itemvalue="Dart Test.doubled in int_test.dart" />
-        <item itemvalue="Dart Test.third in int_test.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +304,28 @@
       <option name="project" value="LOCAL" />
       <updated>1579471437241</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="doco fix&#10;added http">
+      <created>1579472225937</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1579472225937</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix analysis">
+      <created>1579472770735</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1579472770735</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added highlight">
+      <created>1579550555196</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1579550555196</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -349,7 +367,10 @@
     <MESSAGE value="added http and int" />
     <MESSAGE value="doco update" />
     <MESSAGE value="doco fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="doco fix" />
+    <MESSAGE value="doco fix&#10;added http" />
+    <MESSAGE value="fix analysis" />
+    <MESSAGE value="added highlight" />
+    <option name="LAST_COMMIT_MESSAGE" value="added highlight" />
   </component>
   <component name="WindowStateProjectService">
     <state x="459" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579432835035">
@@ -360,35 +381,45 @@
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="883" y="242" key="#xdebugger.evaluate/91.0.1829.1080@91.0.1829.1080" timestamp="1579433049871" />
-    <state x="399" y="0" width="1315" height="816" key="CommitChangelistDialog2" timestamp="1579471436793">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state x="406" y="0" width="1315" height="816" key="CommitChangelistDialog2" timestamp="1579550554756">
+      <screen x="99" y="0" width="1821" height="1080" />
     </state>
     <state x="320" y="0" key="CommitChangelistDialog2/74.0.1462.864@74.0.1462.864" timestamp="1579178757948" />
-    <state x="399" y="0" width="1315" height="816" key="CommitChangelistDialog2/91.0.1829.1080@91.0.1829.1080" timestamp="1579471436793" />
-    <state width="473" height="466" key="DebuggerActiveHint" timestamp="1579302241773">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state x="399" y="0" width="1315" height="816" key="CommitChangelistDialog2/91.0.1829.1080@91.0.1829.1080" timestamp="1579472770286" />
+    <state x="406" y="0" key="CommitChangelistDialog2/99.0.1821.1080@99.0.1821.1080" timestamp="1579550554756" />
+    <state width="471" height="466" key="DebuggerActiveHint" timestamp="1579596287672">
+      <screen x="99" y="0" width="1821" height="1080" />
     </state>
     <state width="473" height="466" key="DebuggerActiveHint/91.0.1829.1080@91.0.1829.1080" timestamp="1579302241773" />
+    <state width="471" height="466" key="DebuggerActiveHint/99.0.1821.1080@99.0.1821.1080" timestamp="1579596287672" />
     <state x="785" y="294" key="FileChooserDialogImpl" timestamp="1579300329298">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="785" y="294" key="FileChooserDialogImpl/91.0.1829.1080@91.0.1829.1080" timestamp="1579300329298" />
-    <state width="1786" height="286" key="GridCell.Tab.0.bottom" timestamp="1579469518502">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state width="1796" height="259" key="GridCell.Tab.0.bottom" timestamp="1579597318138">
+      <screen x="81" y="0" width="1839" height="1080" />
     </state>
-    <state width="1786" height="286" key="GridCell.Tab.0.bottom/91.0.1829.1080@91.0.1829.1080" timestamp="1579469518502" />
-    <state width="1786" height="286" key="GridCell.Tab.0.center" timestamp="1579469518502">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state width="1796" height="259" key="GridCell.Tab.0.bottom/81.0.1839.1080@81.0.1839.1080" timestamp="1579597318138" />
+    <state width="1786" height="479" key="GridCell.Tab.0.bottom/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662847" />
+    <state width="1573" height="259" key="GridCell.Tab.0.bottom/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
+    <state width="1796" height="259" key="GridCell.Tab.0.center" timestamp="1579597318138">
+      <screen x="81" y="0" width="1839" height="1080" />
     </state>
-    <state width="1786" height="286" key="GridCell.Tab.0.center/91.0.1829.1080@91.0.1829.1080" timestamp="1579469518502" />
-    <state width="1786" height="286" key="GridCell.Tab.0.left" timestamp="1579469518502">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state width="1796" height="259" key="GridCell.Tab.0.center/81.0.1839.1080@81.0.1839.1080" timestamp="1579597318138" />
+    <state width="1786" height="479" key="GridCell.Tab.0.center/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662846" />
+    <state width="1573" height="259" key="GridCell.Tab.0.center/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
+    <state width="1796" height="259" key="GridCell.Tab.0.left" timestamp="1579597318138">
+      <screen x="81" y="0" width="1839" height="1080" />
     </state>
-    <state width="1786" height="286" key="GridCell.Tab.0.left/91.0.1829.1080@91.0.1829.1080" timestamp="1579469518502" />
-    <state width="1786" height="286" key="GridCell.Tab.0.right" timestamp="1579469518502">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state width="1796" height="259" key="GridCell.Tab.0.left/81.0.1839.1080@81.0.1839.1080" timestamp="1579597318138" />
+    <state width="1786" height="479" key="GridCell.Tab.0.left/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662846" />
+    <state width="1573" height="259" key="GridCell.Tab.0.left/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
+    <state width="1796" height="259" key="GridCell.Tab.0.right" timestamp="1579597318138">
+      <screen x="81" y="0" width="1839" height="1080" />
     </state>
-    <state width="1786" height="286" key="GridCell.Tab.0.right/91.0.1829.1080@91.0.1829.1080" timestamp="1579469518502" />
+    <state width="1796" height="259" key="GridCell.Tab.0.right/81.0.1839.1080@81.0.1839.1080" timestamp="1579597318138" />
+    <state width="1786" height="479" key="GridCell.Tab.0.right/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662846" />
+    <state width="1573" height="259" key="GridCell.Tab.0.right/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
     <state x="759" y="250" key="RollbackChangesDialog" timestamp="1579297732868">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
@@ -397,11 +428,12 @@
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="506" y="182" key="SettingsEditor/91.0.1829.1080@91.0.1829.1080" timestamp="1579305259788" />
-    <state x="498" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579469992953">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state x="504" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579550556415">
+      <screen x="99" y="0" width="1821" height="1080" />
     </state>
     <state x="399" y="152" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1579178760180" />
-    <state x="498" y="190" key="Vcs.Push.Dialog.v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579469992953" />
+    <state x="498" y="190" key="Vcs.Push.Dialog.v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579472772046" />
+    <state x="504" y="190" key="Vcs.Push.Dialog.v2/99.0.1821.1080@99.0.1821.1080" timestamp="1579550556415" />
     <state x="183" y="92" width="1645" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579468968119">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
@@ -410,10 +442,11 @@
       <screen x="91" y="0" width="1829" height="1080" />
     </state>
     <state x="568" y="137" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/91.0.1829.1080@91.0.1829.1080" timestamp="1579440423868" />
-    <state x="814" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579245981702">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state x="819" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579595886226">
+      <screen x="99" y="0" width="1821" height="1080" />
     </state>
     <state x="814" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579245981702" />
+    <state x="819" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/99.0.1821.1080@99.0.1821.1080" timestamp="1579595886226" />
     <state x="702" y="145" width="607" height="789" key="find.popup" timestamp="1579441061615">
       <screen x="91" y="0" width="1829" height="1080" />
     </state>

@@ -6,6 +6,7 @@
 - `httpDelete`
 
 ## Iterables Extensions
+- `find`
 - `isEmptyOrNull`
 - `chunks`
 - `zip`

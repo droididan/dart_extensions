@@ -64,6 +64,14 @@ for more examples (put, delete) See [http.dart](https://github.com/droididan/dar
 
 ## Iterable Extensions
 
+### .find()
+Returns the first element matching the given predicate, or `null` if element wasn't found.
+```dart
+final users = [User(22, "Kasey"), User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")]; 
+
+users.find((u) => u.name == "Rene") // User(22, "Rene")
+```
+
 ### .chunks()
 Splits the Iterable into chunks of the specified `size`
 ```dart
