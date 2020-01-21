@@ -92,8 +92,5 @@
 - `quadrupled`
 - `squared`
 
-TBD - add tests
-
 ## will release soon...
-- Extensions for Ranges
 - Extensions for Files
