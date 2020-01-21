@@ -79,5 +79,16 @@ main() {
       // how about multiline?
       expect('flutter\ncooler'.insert(7, '\nis'), 'flutter\nis\ncooler');
     });
+
+    test('isNullOrWhiteSpace', () {
+      expect('test'.isNullOrWhiteSpace, false);
+      expect('   '.isNullOrWhiteSpace, true);
+      expect(null.isNullOrWhiteSpace, true);
+      expect(''.isNullOrWhiteSpace, true);
+      expect('  test'.isNullOrWhiteSpace, false);
+      expect('test  '.isNullOrWhiteSpace, false);
+      expect('te  st'.isNullOrWhiteSpace, false);
+      expect('  te  st  '.isNullOrWhiteSpace, false);
+    });
   });
 }

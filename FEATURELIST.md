@@ -53,7 +53,7 @@
 - `isNotBlank`
 - `toCharArray`
 - `insert`
-
+- `isNullOrWhiteSpace`
 
 ## DateTime Extensions
 - `toMilliseconds`
