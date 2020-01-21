@@ -1,4 +1,7 @@
 # Flutter Extensions Full Feature List
+## Range Extensions
+- `until`
+
 ## Http Extensions
 - `httpGet`
 - `httpPost`

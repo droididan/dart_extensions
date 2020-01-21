@@ -11,31 +11,28 @@
  * limitations under the License.
  */
 
-import 'dart:html';
+import 'package:dart_extensions/exceptions/range_exception.dart';
 
-import 'package:test/test.dart';
-import 'package:dart_extensions/date.dart';
+extension RangeExtension on int {
+  /// Returns a sequence of integer, starting from [this],
+  /// increments by [step] and ends at [end]
+  Iterable<int> until(int end, {int step = 1}) sync* {
+    if (step == 0) {
+      throw RException.steps();
+    }
 
-main() {
-  group('date time', () {
-    test('toMilliseconds', () {
-      expect(1.toMilliseconds(), Duration(milliseconds: 1));
-    });
+    int currentNumber = this;
 
-    test('toSeconds', () {
-      expect(1.toSeconds(), Duration(seconds: 1));
-    });
-
-    test('toMinutes', () {
-      expect(1.toMinutes(), Duration(minutes: 1));
-    });
-
-    test('toHours', () {
-      expect(1.toHours(), Duration(hours: 1));
-    });
-
-    test('toDays', () {
-      expect(1.toDays(), Duration(days: 1));
-    });
-  });
+    if (step > 0) {
+      while (currentNumber < end) {
+        yield currentNumber;
+        currentNumber += step;
+      }
+    } else {
+      while (currentNumber > end) {
+        yield currentNumber;
+        currentNumber += step;
+      }
+    }
+  }
 }

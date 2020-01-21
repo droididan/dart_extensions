@@ -1,6 +1,6 @@
 ## [0.1.7] - 19/011/202.
 - find - Iterable extensions + tests
-
+- added Ranges extension for int + tests
 
 ## [0.1.4] - 19/011/202.
 - associate in Iterables extensions + tests

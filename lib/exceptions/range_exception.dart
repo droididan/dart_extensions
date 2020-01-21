@@ -11,31 +11,19 @@
  * limitations under the License.
  */
 
-import 'dart:html';
+/// Represents a range exception.
+class RException {
+  RException(this.message);
 
-import 'package:test/test.dart';
-import 'package:dart_extensions/date.dart';
+  RException.steps() : message = 'The range must be more then 0';
 
-main() {
-  group('date time', () {
-    test('toMilliseconds', () {
-      expect(1.toMilliseconds(), Duration(milliseconds: 1));
-    });
+  final String message;
 
-    test('toSeconds', () {
-      expect(1.toSeconds(), Duration(seconds: 1));
-    });
-
-    test('toMinutes', () {
-      expect(1.toMinutes(), Duration(minutes: 1));
-    });
-
-    test('toHours', () {
-      expect(1.toHours(), Duration(hours: 1));
-    });
-
-    test('toDays', () {
-      expect(1.toDays(), Duration(days: 1));
-    });
-  });
+  @override
+  String toString() {
+    if (message != null) {
+      return 'RException: $message';
+    }
+    return 'RException';
+  }
 }

@@ -156,8 +156,31 @@ print(sales); // [
 ]
 ```  
 See [iterable.dart](https://github.com/droididan/dart_extentions/blob/master/lib/iterable.dart) for more  examples.  
-  
-## String  Extensions
+
+## Range Extensions
+### .until
+Returns a sequence of integer, starting from the current number until the [end] number. [step] is optional, it will step number if given
+```dart
+for(final num in 1.until(10)) {
+  numbers.add(num); 
+}
+```
+*result*
+```dart
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+with step:
+```dart
+for(final num in 1.until(10, step: 2)) {
+  numbers.add(num); 
+}
+```
+*result*
+```dart
+[1, 3, 5, 7, 9]
+```
+
+## String Extensions
   
 ### .replaceAfter
 Replace part of string after the first occurrence of given delimiter.
