@@ -270,7 +270,7 @@ var notANumber = '123-45'.toDoubleOrNull(); // null
 - `removeAllWhiteSpace`
 - `isNotBlank`
 - `toCharArray`
-
+- `insert`
 
 ## DateTime Extensions
 - `toMilliseconds`
