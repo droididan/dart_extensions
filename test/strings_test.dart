@@ -71,5 +71,24 @@ main() {
       expect("test".toCharArray(),  ['t','e', 's', 't']);
       expect("".toCharArray(),  []);
     });
+
+    test('insert', () {
+      expect('test'.insert(1, 't'), 'ttest');
+      expect('123456890'.insert(6, '7'), '1234567890');
+      expect('dart cool'.insert(4, ' is'), 'dart is cool');
+      // how about multiline?
+      expect('flutter\ncooler'.insert(7, '\nis'), 'flutter\nis\ncooler');
+    });
+
+    test('isNullOrWhiteSpace', () {
+      expect('test'.isNullOrWhiteSpace, false);
+      expect('   '.isNullOrWhiteSpace, true);
+      expect(null.isNullOrWhiteSpace, true);
+      expect(''.isNullOrWhiteSpace, true);
+      expect('  test'.isNullOrWhiteSpace, false);
+      expect('test  '.isNullOrWhiteSpace, false);
+      expect('te  st'.isNullOrWhiteSpace, false);
+      expect('  te  st  '.isNullOrWhiteSpace, false);
+    });
   });
 }

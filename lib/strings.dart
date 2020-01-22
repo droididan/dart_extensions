@@ -96,4 +96,13 @@ extension StringExtention on String {
 
   /// Returns a list of chars from a String
   List<String> toCharArray() => isNotBlank ? split('') : [];
+
+  /// Returns a new string in which a specified string is inserted at a specified index position in this instance.
+  String insert(int index, String str) => (List<String>.from(this.toCharArray())..insert(index, str)).join();
+
+  /// Indicates whether a specified string is `null`, `empty`, or consists only of `white-space` characters.
+  bool get isNullOrWhiteSpace {
+    var length = (this?.split('') ?? []).where((x) => x == ' ').length;
+    return length == (this?.length ?? 0) || this.isNullOrEmpty;
+  }
 }
