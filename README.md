@@ -82,6 +82,42 @@ Splits the Iterable into chunks of the specified `size`
 ([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
 ```
 
+### .filter() 
+ Returns a list containing only elements matching the given predicate, the return type will be `List`,
+ unlike the `where` operator that return `Iterator`,  also it filters null.
+```dart
+final users = [User(22, "Kasey"), User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")]; 
+final filtered = users.filter((u) => u.name == "Kasey"); // [User(22, "Kasey")] <- Type List<User>
+
+final listWithNull = [null, User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")];
+final filtered = listWithNull.filter((u) => u.name == "Jadn"); // [User(23, "Jadn")]
+```
+
+### .filterNot() 
+ Returns a list containing only not the elements matching the given predicate, the return type will be `List`,
+ unlike the `where` operator that return `Iterator`,  also it filters null.
+```dart
+final users = [User(22, "Kasey"), User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")]; 
+final filtered = users.filterNot((u) => u.name == "Kasey"); // [User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")] <- Type List<User>
+
+final listWithNull = [null, User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")];
+final filtered = listWithNull.filterNot((u) => u.name == "Jadn"); // [User(22, "Rene"), User(32, "Aden")]
+```
+
+### .takeOnly() 
+Returns a list containing first [n] elements.
+```dart
+[1, 2, 3, 4].takeOnly(1) // [1]
+```
+
+### .drop() 
+Returns a list containing all elements except first [n] elements.
+```dart
+[1, 2, 3, 4].drop(1) // [2, 3, 4]
+```
+
+
+
 ### .forEachIndexed()
 Performs the given action on each element on iterable, providing sequential `index` with the `element`.
 ```dart
@@ -158,7 +194,7 @@ print(sales); // [
 See [iterable.dart](https://github.com/droididan/dart_extentions/blob/master/lib/iterable.dart) for more  examples.  
 
 ## Range Extensions
-### .until
+### .until()
 Returns a sequence of integer, starting from the current number until the [end] number. [step] is optional, it will step number if given
 ```dart
 for(final num in 1.until(10)) {
@@ -182,25 +218,25 @@ for(final num in 1.until(10, step: 2)) {
 
 ## String Extensions
   
-### .replaceAfter
+### .replaceAfter()
 Replace part of string after the first occurrence of given delimiter.
 ```dart  
 print("myemail@".replaceAfter("@", "gmail.com")); // myemail@gmail.com 
 ```  
-### .replaceBefore
+### .replaceBefore()
 Replace part of string before the first occurrence of given delimiter.
 ```dart  
 print('@domain.com'.replaceBefore('@', "name")); // "name@domain.com"
 ```
 
-### .anyChar
+### .anyChar()
 Returns `true` if at least one element matches the given predicate
 ```dart  
 'test'.anyChar((c) => c == 't'); // true;
 'test'.anyChar((c) => c == 'd'); // false;
 ```
 
-### .ifEmpty
+### .ifEmpty()
 If the string is empty perform an action.
 ```dart  
 "".ifEmpty(() => print("do any action here")); // do any action here
@@ -224,11 +260,13 @@ var notANumber = '123-45'.toDoubleOrNull(); // null
 
 ## Iterables Extensions
 - `find`
+- `filter`
+- `filterNot`
 - `isEmptyOrNull`
 - `chunks`
 - `zip`
 - `half`
-- `take`
+- `takeOnly`
 - `drop`
 - `firstHalf`
 - `secondHalf`

@@ -11,16 +11,14 @@
  * limitations under the License.
  */
 
-import 'package:dart_extensions/iterable.dart';
-import 'package:dart_extensions/model/user.dart';
+class User {
+  final int age;
+  final String name;
 
-main() {
-  final users = [
-    User(22, "Ronit"),
-    User(23, "Ronit"),
-    User(22, "Oded"),
-    User(32, "Shimi")
-  ];
+  User(this.age, this.name);
 
-  users.groupBy(values, key)
+  @override
+  String toString() {
+    return "$age, $name";
+  }
 }

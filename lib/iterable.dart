@@ -17,10 +17,33 @@ import 'package:quiver/iterables.dart';
 import 'data_stractures/stack.dart';
 
 extension CollectionsExt<T> on Iterable<T> {
+
+  /// Returns a list containing only elements matching the given [predicate].
+  List<T> filter(bool test(T element)) {
+    final result = <T>[];
+    forEach((e) {
+      if (e != null && test(e)) {
+        result.add(e);
+      }
+    });
+    return result;
+  }
+
+  /// Returns a list containing all elements not matching the given [predicate] and will filter nulls as well.
+  List<T> filterNot(bool test(T element)) {
+    final result = <T>[];
+    forEach((e) {
+      if (e != null && !test(e)) {
+        result.add(e);
+      }
+    });
+    return result;
+  }
+
   // return the half size of a list
   int get halfLength => (this.length / 2).floor();
 
-  /// Returns a list containing all elements except first [n] elements.
+  /// Returns a list containing first [n] elements.
   List<T> takeOnly(int n) {
     if (n == 0) return [];
 

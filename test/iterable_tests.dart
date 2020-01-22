@@ -10,14 +10,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import 'package:dart_extensions/model/user.dart';
 import 'package:test/test.dart';
 import 'package:dart_extensions/iterable.dart';
 
 main() {
-  final users = [User(22, "Ronit"), User(23, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
+  final users = [
+    User(22, "Ronit"),
+    User(23, "Ronit"),
+    User(22, "Oded"),
+    User(32, "Shimi")
+  ];
 
   group('iterables', () {
-    test('take', () {
+    test('filter', () {
+      [null, 1, 2].where((n) => n == 2);
+      final listWithNull = [null, User(1, "r"), User(2, "t")];
+      final numberList = [1, 2, 3, 4, 5, 6];
+
+      expect(users.filter((u) => u.name == "Ronit"), [users[0], users[1]]);
+      expect(numberList.filter((n) => n > 4), [5, 6]);
+      expect(listWithNull.filter((u) => u.name == "r"), [listWithNull[1]]);
+    });
+
+    test('filterNot', () {
+      final listWithNull = [null, User(1, "r"), User(2, "t")];
+      final numberList = [1, 2, 3, 4, 5, 6];
+
+      expect(listWithNull.filterNot((u) => u.name == "t"), [listWithNull[1]]);
+      expect(numberList.filterNot((n) => n > 4), [1, 2, 3, 4]);
+    });
+
+    test('takeOnly', () {
       expect([1, 2, 3, 4].takeOnly(1), [1]);
       expect([1, 2, 3, 4].takeOnly(2), [1, 2]);
       expect([1, 2, 3, 4].takeOnly(10), []);
@@ -69,7 +93,7 @@ main() {
 
     test('containsAll', () {
       expect(users.count((u) => u.age == 22), 2);
-      expect(users.count((u) => u.name == "Ronit"), 1);
+      expect(users.count((u) => u.name == "Ronit"), 2);
       expect(users.count((u) => u.name == "Bin"), 0);
     });
 
@@ -127,7 +151,12 @@ main() {
     });
 
     test('find', () {
-      final users = [User(22, "Ronit"), User(23, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
+      final users = [
+        User(22, "Ronit"),
+        User(23, "Ronit"),
+        User(22, "Oded"),
+        User(32, "Shimi")
+      ];
       expect(users.find((u) => u.name == "Ronit"), users.first);
       expect(users.find((u) => u.name == "Oded"), users[2]);
       expect(users.find((u) => u.name == "Not Exists Name"), null);
@@ -135,16 +164,4 @@ main() {
       expect(users.find((u) => u.age == 31), null);
     });
   });
-}
-
-class User {
-  final int age;
-  final String name;
-
-  User(this.age, this.name);
-
-  @override
-  String toString() {
-    return "$age, $name";
-  }
 }
