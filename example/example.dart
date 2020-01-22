@@ -11,16 +11,5 @@
  * limitations under the License.
  */
 
-import 'package:dart_extensions/iterable.dart';
-import 'package:dart_extensions/model/user.dart';
-
 main() {
-  final users = [
-    User(22, "Ronit"),
-    User(23, "Ronit"),
-    User(22, "Oded"),
-    User(32, "Shimi")
-  ];
-
-  users.groupBy(values, key)
 }

@@ -2,7 +2,6 @@
 [![](https://img.shields.io/badge/build-0.1.7-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
 ### Resources:  
-- [Extensions Full List](https://github.com/droididan/dart_extensions/blob/master/FEATURELIST.md)  
 - [Change Log](https://github.com/droididan/dart_extensions/blob/master/CHANGELOG.md)  
 
   
@@ -217,7 +216,23 @@ for(final num in 1.until(10, step: 2)) {
 ```
 
 ## String Extensions
-  
+### .insert()
+Returns a new string in which a specified string is inserted at a specified index position in this instance.
+```dart
+'test'.insert(1, 't') // 'ttest'
+'123456890'.insert(6, '7') // '1234567890'
+'dart cool'.insert(4, ' is') // 'dart is cool'
+```
+
+### .isNullOrWhiteSpace()
+Indicates whether a specified string is `null`, `empty`, or consists only of `white-space` characters.
+```dart
+'test'.isNullOrWhiteSpace // false
+'   '.isNullOrWhiteSpace, // true
+null.isNullOrWhiteSpace, // true
+'  te  st  '.isNullOrWhiteSpace // false
+```
+
 ### .replaceAfter()
 Replace part of string after the first occurrence of given delimiter.
 ```dart  
