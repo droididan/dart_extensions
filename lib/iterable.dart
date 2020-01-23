@@ -17,6 +17,20 @@ import 'package:quiver/iterables.dart';
 import 'data_stractures/stack.dart';
 
 extension CollectionsExt<T> on Iterable<T> {
+  /// Groups the elements in values by the value returned by key.
+  ///
+  /// Returns a map from keys computed by key to a list of all values for which
+  /// key returns that key. The values appear in the list in the same
+  /// relative order as in values.
+  Map<K, List<T>> groupBy<T, K>(K key(T e)) {
+    var map = <K, List<T>>{};
+
+    for (final element in this) {
+      var list = map.putIfAbsent(key(element as T), () => []);
+      list.add(element as T);
+    }
+    return map;
+  }
 
   /// Returns a list containing only elements matching the given [predicate].
   List<T> filter(bool test(T element)) {

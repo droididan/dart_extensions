@@ -1,4 +1,7 @@
-## [0.1.8] - 22/01/202.
+## [0.1.9] - 23/01/20.
+- .groupBy() added Iterable + tests
+
+## [0.1.8] - 22/01/20.
 - .filter() added Iterable + tests
 - .notFilter() added Iterable + tests
 - .isNullOrWhiteSpace added String + tests

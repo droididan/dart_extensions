@@ -63,6 +63,24 @@ for more examples (put, delete) See [http.dart](https://github.com/droididan/dar
 
 ## Iterable Extensions
 
+### .groupBy()
+Groups the elements in values by the value returned by key.
+final users = [User(22, "Kasey"), User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")]; 
+
+```dart
+final users = [User(22, "Kasey"), User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")]; 
+
+users.groupBy((u) => u.age); 
+```
+Sort the users by age:
+```dart
+{  
+  22: [User:22, Kasey, User:22, Rene], 
+  23: [User:23, Jadn], 
+  32: [User:32, Aden]
+}
+```
+
 ### .find()
 Returns the first element matching the given predicate, or `null` if element wasn't found.
 ```dart
@@ -274,6 +292,7 @@ var notANumber = '123-45'.toDoubleOrNull(); // null
 - `httpDelete`
 
 ## Iterables Extensions
+- `groupBy`
 - `find`
 - `filter`
 - `filterNot`

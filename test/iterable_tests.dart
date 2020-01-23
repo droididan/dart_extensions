@@ -163,5 +163,26 @@ main() {
       expect(users.find((u) => u.age == 32), users.last);
       expect(users.find((u) => u.age == 31), null);
     });
+
+    test('gruopBy by age', () {
+      final expected = {
+        22: [users[0], users[2]],
+        23: [users[1]],
+        32: [users[3]]
+      };
+
+      expect(users.groupBy((u) => u.age), expected);
+    });
+
+    test('gourpBy by name', () {
+      final expected = {
+        'Ronit': [users[0], users[1]],
+        'Oded': [users[2]],
+        'Shimi': [users[3]]
+      };
+      expect(users.groupBy((u) => u.name), expected);
+    });
+
+
   });
 }
