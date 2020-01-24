@@ -1,10 +1,10 @@
   
-[![](https://img.shields.io/badge/build-0.1.9-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
+[![](https://img.shields.io/badge/build-0.2.0-brightgreen)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
 ### Resources:  
 - [Change Log](https://github.com/droididan/dart_extensions/blob/master/CHANGELOG.md)  
 
-## What New (0.1.9)
+## What New (0.2.0)
 * `groupBy - Iterables`
 * `intersect - Iterables`
 * `toMutableSet - Iterables`
@@ -69,8 +69,6 @@ for more examples (put, delete) See [http.dart](https://github.com/droididan/dar
 
 ### .groupBy()
 Groups the elements in values by the value returned by key.
-final users = [User(22, "Kasey"), User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")]; 
-
 ```dart
 final users = [User(22, "Kasey"), User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")]; 
 

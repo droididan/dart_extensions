@@ -1,4 +1,4 @@
-## [0.1.9] - 23/01/20.
+## [0.2.0] - 23/01/20.
 - .groupBy() added Iterable + tests
 - .intersect() + test
 - .toMutableSet() + test
