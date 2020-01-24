@@ -21,7 +21,7 @@ extension HttpExtensions on String {
   /// Sends an HTTP GET request with the given headers to the given URL, which can
   /// be a [Uri] or a [String].
   Future<dynamic> httpGet() async {
-    if (this.isNullOrEmpty) return;
+    if (this.isEmptyOrNull) return;
 
     try {
       final response = await http.get(this);
@@ -37,7 +37,7 @@ extension HttpExtensions on String {
   /// which can be a [Uri] or a [String].
   Future<dynamic> httpPost(String json,
       [Map<String, String> headers = _defaultHeaders]) async {
-    if (this.isNullOrEmpty) return;
+    if (this.isEmptyOrNull) return;
 
     try {
       final response = await http.post(this, headers: headers, body: json);
@@ -53,7 +53,7 @@ extension HttpExtensions on String {
   /// which can be a [Uri] or a [String].
   Future<dynamic> httpPut(String json,
       [Map<String, String> headers = _defaultHeaders]) async {
-    if (this.isNullOrEmpty) return;
+    if (this.isEmptyOrNull) return;
 
     try {
       final response = await http.put(this, headers: headers, body: json);
@@ -68,7 +68,7 @@ extension HttpExtensions on String {
   /// Sends an HTTP DELETE request with the given headers to the given URL, which
   /// can be a [Uri] or a [String].
   Future<dynamic> httpDelete({Map<String, String> headers}) async {
-    if (this.isNullOrEmpty) return;
+    if (this.isEmptyOrNull) return;
 
     try {
       final response = await http.delete(this, headers: headers);

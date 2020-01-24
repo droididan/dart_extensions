@@ -16,6 +16,9 @@ import 'package:dart_extensions/strings.dart';
 
 main() {
   group('strings', () {
+
+
+
     test('validateEmail', () {
       expect('name@domain.com'.validateEmail(), true);
       expect('name@domain'.validateEmail(), false);
@@ -29,11 +32,11 @@ main() {
       expect('-text-'.removeSurrounding('t'), '-text-');
     });
     test('isNullOrEmpty', () {
-      expect(''.isNullOrEmpty, true);
+      expect(''.isEmptyOrNull, true);
 
       String nullStr;
-      expect(nullStr.isNullOrEmpty, true);
-      expect('not empty'.isNullOrEmpty, false);
+      expect(nullStr.isEmptyOrNull, true);
+      expect('not empty'.isEmptyOrNull, false);
     });
 
     test('replaceAfter', () {

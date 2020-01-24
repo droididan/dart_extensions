@@ -17,6 +17,18 @@ import 'package:quiver/iterables.dart';
 import 'data_stractures/stack.dart';
 
 extension CollectionsExt<T> on Iterable<T> {
+
+  /// Convert iterable to set
+  Set<T> toMutableSet() => Set.from(this);
+
+  /// Returns a set containing all elements that are contained
+  /// by both this set and the specified collection.
+  Set<T> intersect(Iterable other) {
+    final set = this.toMutableSet();
+    set.addAll(other);
+    return set;
+  }
+
   /// Groups the elements in values by the value returned by key.
   ///
   /// Returns a map from keys computed by key to a list of all values for which

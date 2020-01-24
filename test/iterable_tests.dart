@@ -183,6 +183,16 @@ main() {
       expect(users.groupBy((u) => u.name), expected);
     });
 
+    test('toMutableSet', () {
+      expect([1, 1, 1, 1, 2, 3, 4].toMutableSet(), [1, 2, 3, 4]);
+      expect(["a", "b", "a"].toMutableSet(), ["a", "b"]);
+    });
 
+    test('intersect', () {
+      expect(Set.from([1, 2, 3, 4]).intersect(Set.from([3, 4, 5, 6])),
+          [1, 2, 3, 4, 5, 6]);
+      expect(Set.from([-1, -2, -3, 4]).intersect(Set.from([3, 4, 5, 6])),
+          [-1, -2, -3, 4, 3, 5, 6]);
+    });
   });
 }

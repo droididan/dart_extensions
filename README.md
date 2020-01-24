@@ -1,10 +1,14 @@
   
-[![](https://img.shields.io/badge/build-0.1.8-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
+[![](https://img.shields.io/badge/build-0.1.9-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
 ### Resources:  
 - [Change Log](https://github.com/droididan/dart_extensions/blob/master/CHANGELOG.md)  
 
-  
+## What New (0.1.9)
+* `groupBy - Iterables`
+* `intersect - Iterables`
+* `toMutableSet - Iterables`
+
 Why Method Extensions? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
   
   *let me know if you want something specific or you found a bug at bar.idan@gmail.com*  
@@ -108,6 +112,12 @@ final filtered = users.filter((u) => u.name == "Kasey"); // [User(22, "Kasey")] 
 
 final listWithNull = [null, User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")];
 final filtered = listWithNull.filter((u) => u.name == "Jadn"); // [User(23, "Jadn")]
+```
+
+### .intersect()
+Returns a set containing all elements that are contained by both this set and the specified collection.
+```dart
+Set.from([1, 2, 3, 4]).intersect(Set.from([3, 4, 5, 6]) // 1,2,3,4,5,6
 ```
 
 ### .filterNot() 
@@ -292,6 +302,8 @@ var notANumber = '123-45'.toDoubleOrNull(); // null
 - `httpDelete`
 
 ## Iterables Extensions
+- `toMutableSet`
+- `intersect`
 - `groupBy`
 - `find`
 - `filter`
