@@ -11,8 +11,6 @@
  * limitations under the License.
  */
 
-import 'dart:html';
-
 import 'package:test/test.dart';
 import 'package:dart_extensions/date.dart';
 
