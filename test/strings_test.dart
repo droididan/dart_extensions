@@ -13,12 +13,8 @@
 
 import 'package:test/test.dart';
 import 'package:dart_extensions/strings.dart';
-
 main() {
   group('strings', () {
-
-
-
     test('validateEmail', () {
       expect('name@domain.com'.validateEmail(), true);
       expect('name@domain'.validateEmail(), false);
