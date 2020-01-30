@@ -13,6 +13,7 @@
 import 'package:dart_extensions/model/user.dart';
 import 'package:test/test.dart';
 import 'package:dart_extensions/iterable.dart';
+import 'package:dart_extensions/strings.dart';
 
 main() {
   final users = [
@@ -23,6 +24,12 @@ main() {
   ];
 
   group('iterables', () {
+    test('any', () {
+      expect(users.any((u) => u.name == 'Oded'), true);
+      expect(users.any((u) => u.name == 'Not Exists'), false);
+      expect([].any((u) => u.name == 'Oded'), false);
+    });
+
     test('filter', () {
       [null, 1, 2].where((n) => n == 2);
       final listWithNull = [null, User(1, "r"), User(2, "t")];

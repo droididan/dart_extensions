@@ -4,7 +4,9 @@
 ### Resources:  
 - [Change Log](https://github.com/droididan/dart_extensions/blob/master/CHANGELOG.md)  
 
-## What New (0.2.0)
+## What New 
+* `inRangeOf - int`
+* `any - Iterables`
 * `groupBy - Iterables`
 * `intersect - Iterables`
 * `toMutableSet - Iterables`
@@ -66,6 +68,13 @@ final json = await "https://jsonplaceholder.typicode.com/posts".httpPost(json);
 for more examples (put, delete) See [http.dart](https://github.com/droididan/dart_extentions/blob/master/lib/http.dart) 
 
 ## Iterable Extensions
+
+### .any()
+Returns `true` if at least one element matches the given predicate.
+```dart
+final users = [User(22, "Kasey"), User(23, "Jadn")]; 
+users.any((u) => u.name == 'Kasey') // true
+```
 
 ### .groupBy()
 Groups the elements in values by the value returned by key.
@@ -290,6 +299,17 @@ var number = '12345'.toDoubleOrNull(); // 12345
 var notANumber = '123-45'.toDoubleOrNull(); // null  
 ```  
 
+## int Extensions
+
+### .inRangeOf()  
+Return the min if this number is smaller then minimum
+Return the max if this number is bigger the the maximum
+Return this number if it's between the range
+```dart
+1.inRangeOf(0, 3) // 1 number in range so will return the number
+2.inRangeOf(3, 4) // 3 number is smaller then the range so will return min
+5.inRangeOf(3, 4) // 4 number is bigger then the range so will return max
+```
 
 # Flutter Extensions Full List
 
@@ -379,6 +399,7 @@ var notANumber = '123-45'.toDoubleOrNull(); // null
 - `isLeapYear`
 
 ## Integers Extensions
+- `inRangeOf`
 - `absolute`
 - `isEven`
 - `isOdd`

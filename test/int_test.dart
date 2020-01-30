@@ -16,6 +16,13 @@ import 'package:dart_extensions/int.dart';
 main() {
   group('integers', () {
 
+    test('inRangeOf', () {
+      expect(1.inRangeOf(0, 3), 1);
+      expect(2.inRangeOf(3, 4), 3);
+      expect(5.inRangeOf(3, 4), 4);
+    });
+
+
     test('isEven', () {
       expect(2.isEven, true);
       expect(3.isEven, false);

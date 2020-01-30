@@ -13,6 +13,7 @@
 
 import 'package:test/test.dart';
 import 'package:dart_extensions/strings.dart';
+
 main() {
   group('strings', () {
     test('validateEmail', () {
@@ -67,8 +68,8 @@ main() {
     });
 
     test('toCharArray', () {
-      expect("test".toCharArray(),  ['t','e', 's', 't']);
-      expect("".toCharArray(),  []);
+      expect("test".toCharArray(), ['t', 'e', 's', 't']);
+      expect("".toCharArray(), []);
     });
 
     test('insert', () {

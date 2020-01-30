@@ -12,11 +12,18 @@
  */
 import 'dart:collection';
 import 'dart:math';
+
 import 'package:quiver/iterables.dart';
 
 import 'data_stractures/stack.dart';
 
 extension CollectionsExt<T> on Iterable<T> {
+  /// Returns `true` if at least one element matches the given [predicate].
+  bool any(bool predicate(T element)) {
+    if (this.isEmptyOrNull) return false;
+    for (final element in this) if (predicate(element)) return true;
+    return false;
+  }
 
   /// Convert iterable to set
   Set<T> toMutableSet() => Set.from(this);
