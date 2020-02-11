@@ -414,6 +414,30 @@ Return this number if it's between the range
 - `quadrupled`
 - `squared`
 
+## Contributing
+
+If you have read up till here, then 🎉🎉🎉. There are couple of ways in which you can contribute to
+the growing community of `dart_extensions.dart`.
+
+
+- Propose any feature, enhancement
+- Report a bug
+- Fix a bug
+- Participate in a discussion and help in decision making
+- Write and improve some **documentation**. Documentation is super critical and its importance
+  cannot be overstated!
+- Send in a Pull Request :-)
+
+
+## Contributors ✨
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/xamantra"><img src="https://avatars0.githubusercontent.com/u/37391380?s=400&v=4" width="64px;" alt=""/><br /><sub><b>Pavan Podila</b></sub></a><br /><a href="https://github.com/mobxjs/mobx.dart/commits?author=pavanpodila" title="Code">💻</a> <a href="https://github.com/mobxjs/mobx.dart/commits?author=pavanpodila" title="Documentation">📖</a> <a href="https://github.com/mobxjs/mobx.dart/pulls?q=is%3Apr+reviewed-by%3Apavanpodila" title="Reviewed Pull Requests">👀</a></td>
+  </a></td>
+  </tr>
+</table>
+
+
 
 ## License  
 ```  
