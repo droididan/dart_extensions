@@ -1,6 +1,6 @@
 name: dart_extensions
 description: Set of method-extensions for dart that makes using framework in a much easier and clean way also adds additional functionality.
-version: 0.2.0
+version: 0.3.0
 documentation: https://github.com/droididan/dart_extentions
 homepage: https://github.com/droididan/dart_extentions
 
@@ -11,6 +11,8 @@ dependencies:
   intl: ^0.16.1
   quiver: ^2.0.0
   http: ^0.12.0+4
+  flutter:
+    sdk: flutter
 
 dev_dependencies:
   test: ^1.9.2

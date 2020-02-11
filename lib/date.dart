@@ -34,7 +34,7 @@ extension DateInt on int {
   Duration toDays() => Duration(days: this);
 }
 
-extension DateExt on DateTime {
+extension DateExtensions on DateTime {
   /// return true if the date is today
   bool isToday() {
     final now = DateTime.now();

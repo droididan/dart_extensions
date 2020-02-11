@@ -24,7 +24,7 @@ class Message {
         assert(other.isEmptyOrNull);
 }
 
-extension StringExtention on String {
+extension StringExtensions on String {
   String generateMessageByGender({Gender gender, Message message}) =>
       Intl.gender(gender.toString(),
           male: '$this ${message.male}',
