@@ -10,26 +10,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import 'package:dart_extensions/flutter/widgets/click_translate.dart';
 import 'package:flutter/material.dart';
-import 'package:dart_extensions/flutter/align.dart';
-import 'package:dart_extensions/flutter/padding.dart';
 
-class StackExample extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Container(
-          child: Text('right corner'),
-        ).alignAtTopLeft()
-          
-         .paddingAll(10)
-      ],
-    );
-  }
+extension TransformExtensions on Widget {
+
+  Widget get pushEffectOnClick => TranslateOnClick(child: this);
 }
 
-main() {
-
-
-}

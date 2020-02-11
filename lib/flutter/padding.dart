@@ -14,7 +14,7 @@
 import 'package:flutter/material.dart';
 
 extension PaddingExtensions on Widget {
-  Padding paddingAll({@required double value, Key key}) {
+  Padding paddingAll(double value, {Key key}) {
     return Padding(
       key: key,
       padding: EdgeInsets.all(value),

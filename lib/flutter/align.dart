@@ -12,7 +12,7 @@
  */
 import 'package:flutter/material.dart';
 
-extension AlignExtensions on Align {
+extension AlignExtensions on Widget {
   Align alignAtBottomCenter({
     Key key,
     double heightFactor,
