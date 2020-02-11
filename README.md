@@ -432,7 +432,11 @@ the growing community of `dart_extensions.dart`.
 ## Contributors ✨
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/xamantra"><img src="https://avatars0.githubusercontent.com/u/37391380?s=400&v=4" width="64px;" alt=""/><br /><sub><b>Pavan Podila</b></sub></a><br /><a href="https://github.com/mobxjs/mobx.dart/commits?author=pavanpodila" title="Code">💻</a> <a href="https://github.com/mobxjs/mobx.dart/commits?author=pavanpodila" title="Documentation">📖</a> <a href="https://github.com/mobxjs/mobx.dart/pulls?q=is%3Apr+reviewed-by%3Apavanpodila" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center"><a href="https://github.com/droididan"><img src="https://avatars2.githubusercontent.com/u/10584019?s=460&v=4" width="64px;" alt=""/><br /><sub><b>Idan Ayalon</b></sub></a><br /><a href="" title="Code">💻</a> <a href="" title="Documentation">📖</a> <a href="" title="Reviewed Pull Requests">👀</a></td>
+    </a></td>
+    </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/xamantra"><img src="https://avatars0.githubusercontent.com/u/37391380?s=400&v=4" width="64px;" alt=""/><br /><sub><b>Xamantra</b></sub></a><br /><a href="" title="Code">💻</a> <a href="" title="Documentation">📖</a> <a href="" title="Reviewed Pull Requests">👀</a></td>
   </a></td>
   </tr>
 </table>
