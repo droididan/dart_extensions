@@ -11,14 +11,3 @@
  * limitations under the License.
  */
 
-import 'package:flutter/material.dart';
-
-extension CenterExtension on Widget {
-
-  Center wrapWithCenter() {
-    return Center(
-      child: this,
-    );
-  }
-
-}

@@ -5,6 +5,9 @@
 - [Change Log](https://github.com/droididan/dart_extensions/blob/master/CHANGELOG.md)  
 
 ## What New 
+* `Flutter extenesions` 🎉 🐦
+* `search algorithms` 🕵️‍
+* `sort algorithms`
 * `inRangeOf - int`
 * `any - Iterables`
 * `groupBy - Iterables`

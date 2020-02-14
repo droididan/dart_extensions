@@ -13,12 +13,17 @@
 
 import 'package:flutter/material.dart';
 
-extension CenterExtension on Widget {
+extension NavigationExtensions on State {
+  /// Navigate to another widget
+  Future<T> navigateTo<T>({@required Route<T> route}) => Navigator.push(this.context, route);
 
-  Center wrapWithCenter() {
-    return Center(
-      child: this,
-    );
-  }
+  /// Navigate back to the last widget
+  bool navigateBack<T>({T result}) => Navigator.pop(context, result);
+
+
+  /// Navigate to widget by the route name
+  Future<T> navigateByRouteName<T>(String routeName, {Object args}) =>
+      Navigator.pushNamed(context, routeName, arguments: args);
 
 }
+ 

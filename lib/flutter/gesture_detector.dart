@@ -13,12 +13,19 @@
 
 import 'package:flutter/material.dart';
 
-extension CenterExtension on Widget {
+extension GestureDetectorExtensions on Widget {
+  Widget onDoubleTap(Function function) => GestureDetector(
+        onDoubleTap: function,
+        child: this,
+      );
 
-  Center wrapWithCenter() {
-    return Center(
-      child: this,
-    );
-  }
+  Widget onTap(Function function) => GestureDetector(
+        onTap: function,
+        child: this,
+      );
 
+  Widget onLongPress(Function function) => GestureDetector(
+        onLongPress: function,
+        child: this,
+      );
 }
