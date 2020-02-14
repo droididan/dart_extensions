@@ -10,7 +10,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import 'package:dart_extensions/ranges.dart';
+import 'package:dart_extensions/src/ranges.dart';
 import 'package:test/test.dart';
 
 main() {

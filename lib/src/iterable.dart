@@ -73,7 +73,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
     return result;
   }
 
-  // return the half size of a list
+// return the half size of a list
   int get halfLength => (this.length / 2).floor();
 
   /// Returns a list containing first [n] elements.
@@ -242,13 +242,13 @@ extension CollectionsExtensions<T> on Iterable<T> {
     return list;
   }
 
-  // get an element at specific index or return null
+// get an element at specific index or return null
   T _elementAtOrNull(int index) {
     return _elementOrNull(index, (_) => null);
   }
 
   _elementOrNull(int index, T defaultElement(int index)) {
-    // if our index is smaller then 0 return the default
+// if our index is smaller then 0 return the default
     if (index < 0) return defaultElement(index);
 
     var counter = 0;
@@ -283,8 +283,8 @@ extension CollectionsExtensions<T> on Iterable<T> {
   ///  stack.pop()
   ///  stack.push(5)
   ///
-  Stack<T> toStack() {
-    final stack = Stack<T>();
+  StackX<T> toStack() {
+    final stack = StackX<T>();
     stack.addAll(this);
     return stack;
   }
@@ -326,8 +326,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   }
 
   /// Creates a Map instance in which the keys and values are computed from the iterable.
-  Map<dynamic, dynamic> associate(key(element), value(element)) =>
-      Map.fromIterable(this, key: key, value: value);
+  Map<dynamic, dynamic> associate(key(element), value(element)) => Map.fromIterable(this, key: key, value: value);
 
   /// Returns the first element matching the given [predicate], or `null`
   /// if element was not found.
@@ -336,7 +335,6 @@ extension CollectionsExtensions<T> on Iterable<T> {
       if (predicate(element)) {
         return element;
       }
-      ;
     }
 
     return null;

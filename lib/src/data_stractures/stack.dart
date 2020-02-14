@@ -13,7 +13,7 @@
 
 import 'dart:collection';
 
-class Stack<T> {
+class StackX<T> {
   final _list = ListQueue<T>();
 
   bool get isEmpty => _list.isEmpty;

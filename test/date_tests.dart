@@ -12,7 +12,7 @@
  */
 
 import 'package:test/test.dart';
-import 'package:dart_extensions/date.dart';
+import 'package:dart_extensions/src/date.dart';
 
 main() {
   group('date time', () {

@@ -2,10 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="updated README.md">
+      <change afterPath="$PROJECT_DIR$/lib/dart_extensions.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data_stractures/stack.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/data_stractures/stack.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/date.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/date.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/exceptions/range_exception.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/exceptions/range_exception.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/files.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/files.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutter/align.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter/align.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutter/center.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter/center.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutter/gesture_detector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter/gesture_detector.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutter/navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter/navigation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutter/padding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter/padding.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutter/transforms.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter/transforms.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutter/transforms/click_translate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter/transforms/click_translate.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/http.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/http.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/int.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/int.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iterable.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/iterable.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/model/user.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ranges.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ranges.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/search_algorithms.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/search_algorithms.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/sort_algorithms.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/sort_algorithms.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/strings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/strings.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/date_tests.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/date_tests.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/int_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/int_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/iterable_tests.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/iterable_tests.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ranges_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/ranges_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/strings_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/strings_test.dart" afterDir="false" />
     </list>
     <list id="5184f34c-81bf-45d3-bda8-acf5b9f79ed3" name="revert" comment="" />
+    <ignored path="$PROJECT_DIR$/.dart_tool/" />
+    <ignored path="$PROJECT_DIR$/.pub/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +43,111 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/src/ranges.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#1187#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/src/sort_algorithms.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/iterable_tests.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#6359#0" expanded="true" />
+                <element signature="e#604#657#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/ranges_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#1658#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/strings_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#3156#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#1028#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/src/iterable.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="285" column="8" selection-start-line="285" selection-start-column="8" selection-end-line="285" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#9753#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/dart_extensions.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#0#615#0" expanded="true" />
+                <element signature="e#605#669#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,8 +157,30 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lib/flutter/gesture_detector.dart" />
+        <option value="$PROJECT_DIR$/lib/flutter/transforms.dart" />
+        <option value="$PROJECT_DIR$/lib/flutter/navigation.dart" />
+        <option value="$PROJECT_DIR$/lib/flutter/center.dart" />
+        <option value="$PROJECT_DIR$/lib/search_algorithms.dart" />
+        <option value="$PROJECT_DIR$/lib/sort_algorithms.dart" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/example/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/src/flutter/transforms.dart" />
+        <option value="$PROJECT_DIR$/lib/src/ranges.dart" />
+        <option value="$PROJECT_DIR$/test/iterable_tests.dart" />
+        <option value="$PROJECT_DIR$/lib/dart_extensions.dart" />
+        <option value="$PROJECT_DIR$/lib/src/data_stractures/stack.dart" />
+        <option value="$PROJECT_DIR$/example/example.dart" />
+        <option value="$PROJECT_DIR$/lib/src/iterable.dart" />
+        <option value="$PROJECT_DIR$/example/lib/main.dart" />
+      </list>
+    </option>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="CqnSSyen" />
@@ -43,7 +200,62 @@
       </list>
     </option>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
   <component name="ProjectId" id="1WTnDMN9xdNWN023ICrObgVEKkF" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dart_extentions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dart_extentions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dart_extentions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dart_extentions" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dart_extentions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dart_extentions" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dart_extentions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dart_extentions" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dart_extentions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dart_extentions" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dart_extentions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dart_extentions" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data_stractures" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -55,25 +267,33 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\luci\Desktop\Projects\dart_extentions\lib\src" />
+      <recent name="C:\Users\luci\Desktop\Projects\dart_extentions" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\luci\Desktop\Projects\dart_extentions" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\luci\Desktop\Projects\dart_extentions" />
-    </key>
   </component>
-  <component name="RunManager" selected="Dart Test.iterables in iterable_tests.dart">
-    <configuration name="gourpBy by name in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="gourpBy by name" />
-      <method v="2" />
-    </configuration>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="gruopBy by age in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
       <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
@@ -98,13 +318,17 @@
       <option name="testName" value="toMutableSet" />
       <method v="2" />
     </configuration>
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.main.dart" />
         <item itemvalue="Dart Test.iterables in iterable_tests.dart" />
         <item itemvalue="Dart Test.intersect in iterable_tests.dart" />
         <item itemvalue="Dart Test.toMutableSet in iterable_tests.dart" />
         <item itemvalue="Dart Test.gruopBy by age in iterable_tests.dart" />
-        <item itemvalue="Dart Test.gourpBy by name in iterable_tests.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -405,8 +629,50 @@
       <option name="project" value="LOCAL" />
       <updated>1579855884201</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="updated README.md">
+      <created>1581461228568</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1581461228568</updated>
+    </task>
+    <task id="LOCAL-00041" summary="added gestures, new files">
+      <created>1581718036895</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1581718036895</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32995737" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Dart Analysis" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Run" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32936078" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Flutter Inspector" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Flutter Outline" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
   </component>
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
@@ -417,15 +683,34 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="version, image remove" />
     <MESSAGE value="cleanup" />
     <MESSAGE value="version" />
     <MESSAGE value="concatSingle, ConcatMultiple" />
@@ -445,12 +730,13 @@
     <MESSAGE value="updated readme" />
     <MESSAGE value="updated shield" />
     <MESSAGE value=".filter .filterNot" />
-    <MESSAGE value="updated README.md" />
     <MESSAGE value="updated version" />
     <MESSAGE value="added groupBy()" />
     <MESSAGE value="toMutableSet&#10;groupBy&#10;intersect" />
     <MESSAGE value="typo fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="typo fix" />
+    <MESSAGE value="updated README.md" />
+    <MESSAGE value="added gestures, new files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added gestures, new files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="459" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579432835035">
@@ -566,64 +852,36 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+        <line-breakpoint enabled="true" type="Dart">
           <url>file://$USER_HOME$/Documents/flutter/bin/cache/pkg/sky_engine/lib/collection/queue.dart</url>
           <line>719</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/data_stractures/stack.dart</url>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart</url>
           <line>22</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/data_stractures/stack.dart</url>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart</url>
           <line>33</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/data_stractures/stack.dart</url>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart</url>
           <line>34</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/ranges.dart</url>
-          <line>25</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/ranges.dart</url>
-          <line>26</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/ranges.dart</url>
-          <line>27</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/ranges.dart</url>
-          <line>28</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/ranges.dart</url>
-          <line>31</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/ranges.dart</url>
-          <line>32</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+        <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/test/iterable_tests.dart</url>
-          <line>176</line>
+          <line>163</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
-        <breakpoint suspend="THREAD" type="dart-exception" />
+        <breakpoint type="dart-exception">
+          <properties />
+        </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -640,5 +898,227 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dart_extentions$files_dart.json" NAME="files.dart Coverage Results" MODIFIED="1579466363500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="DartCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="$PROJECT_DIR$/lib/files.dart" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Documents/flutter/packages/flutter/lib/src/widgets/navigator.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="911" column="19" selection-start-line="911" selection-start-column="19" selection-end-line="911" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/vector_math-2.0.8/lib/src/vector_math_64/matrix4.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="617" column="2" selection-start-line="617" selection-start-column="2" selection-end-line="617" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/int.dart">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/date.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/flutter/transforms/click_translate.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/flutter/packages/flutter/lib/src/widgets/gesture_detector.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4500">
+          <caret line="295" column="26" selection-start-line="295" selection-start-column="26" selection-end-line="295" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/flutter/packages/flutter/lib/src/gestures/tap.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1476">
+          <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/flutter/center.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#765#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/flutter/padding.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/http.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-594">
+          <folding>
+            <element signature="e#0#2976#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/search_algorithms.dart">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/flutter/align.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/flutter/gesture_detector.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/flutter/navigation.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/flutter/transforms.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#605#682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/ranges.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#1187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/sort_algorithms.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/iterable_tests.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#6359#0" expanded="true" />
+            <element signature="e#604#657#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ranges_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dart_extensions.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#615#0" expanded="true" />
+            <element signature="e#605#669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/iterable.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="285" column="8" selection-start-line="285" selection-start-column="8" selection-end-line="285" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#9753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/example.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="e#604#658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/strings_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#3156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

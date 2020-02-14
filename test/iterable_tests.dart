@@ -10,18 +10,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import 'package:dart_extensions/model/user.dart';
+import 'package:dart_extensions/src/iterable.dart';
+import 'package:dart_extensions/src/model/user.dart';
 import 'package:test/test.dart';
-import 'package:dart_extensions/iterable.dart';
-import 'package:dart_extensions/strings.dart';
 
 main() {
-  final users = [
-    User(22, "Ronit"),
-    User(23, "Ronit"),
-    User(22, "Oded"),
-    User(32, "Shimi")
-  ];
+  final users = [User(22, "Ronit"), User(23, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
 
   group('iterables', () {
     test('any', () {
@@ -124,8 +118,7 @@ main() {
     });
 
     test('concatWithSingleList', () {
-      expect([1, 2, 3, 4].concatWithSingleList([5, 6, 7, 8, 9, 10, 11]),
-          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+      expect([1, 2, 3, 4].concatWithSingleList([5, 6, 7, 8, 9, 10, 11]), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
       expect([1, 2, 3, 4].concatWithSingleList([]), []);
       expect([].concatWithSingleList([5, 6, 7, 8, 9, 10, 11]), []);
     });
@@ -135,8 +128,7 @@ main() {
         [5, 6, 7],
         [8, 9, 10]
       ];
-      expect([1, 2, 3, 4].concatWithMultipleList(listOfLists),
-          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+      expect([1, 2, 3, 4].concatWithMultipleList(listOfLists), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
       expect([1, 2, 3, 4].concatWithMultipleList([[], []]), [1, 2, 3, 4]);
       expect([].concatWithMultipleList(listOfLists), []);
     });
@@ -153,17 +145,11 @@ main() {
 
     test('associate', () {
       final users = [User(33, "Miki"), User(45, "Anna"), User(19, "Amit")];
-      expect(users.associate((k) => k.name, (e) => e.age),
-          {'Miki': 33, 'Anna': 45, 'Amit': 19});
+      expect(users.associate((k) => k.name, (e) => e.age), {'Miki': 33, 'Anna': 45, 'Amit': 19});
     });
 
     test('find', () {
-      final users = [
-        User(22, "Ronit"),
-        User(23, "Ronit"),
-        User(22, "Oded"),
-        User(32, "Shimi")
-      ];
+      final users = [User(22, "Ronit"), User(23, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
       expect(users.find((u) => u.name == "Ronit"), users.first);
       expect(users.find((u) => u.name == "Oded"), users[2]);
       expect(users.find((u) => u.name == "Not Exists Name"), null);
@@ -196,10 +182,8 @@ main() {
     });
 
     test('intersect', () {
-      expect(Set.from([1, 2, 3, 4]).intersect(Set.from([3, 4, 5, 6])),
-          [1, 2, 3, 4, 5, 6]);
-      expect(Set.from([-1, -2, -3, 4]).intersect(Set.from([3, 4, 5, 6])),
-          [-1, -2, -3, 4, 3, 5, 6]);
+      expect(Set.from([1, 2, 3, 4]).intersect(Set.from([3, 4, 5, 6])), [1, 2, 3, 4, 5, 6]);
+      expect(Set.from([-1, -2, -3, 4]).intersect(Set.from([3, 4, 5, 6])), [-1, -2, -3, 4, 3, 5, 6]);
     });
   });
 }

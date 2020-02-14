@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 import 'package:test/test.dart';
-import 'package:dart_extensions/int.dart';
+import 'package:dart_extensions/src/int.dart';
 
 main() {
   group('integers', () {

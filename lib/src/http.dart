@@ -15,7 +15,7 @@ import 'dart:convert' as convert;
 
 import 'package:http/http.dart' as http;
 
-import 'strings.dart';
+import 'package:dart_extensions/src/strings.dart';
 
 const _defaultHeaders = {"Content-type": "application/json"};
 

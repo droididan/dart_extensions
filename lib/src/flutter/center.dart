@@ -11,9 +11,14 @@
  * limitations under the License.
  */
 
-import 'package:dart_extensions/flutter/transforms/click_translate.dart';
 import 'package:flutter/material.dart';
 
-extension TransformExtensions on Widget {
-  Widget get pushEffectOnClick => TranslateOnClick(child: this);
+extension CenterExtension on Widget {
+
+  Center toCenter() {
+    return Center(
+      child: this,
+    );
+  }
+
 }
