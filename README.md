@@ -1,5 +1,5 @@
   
-[![](https://img.shields.io/badge/build-0.2.0-brightgreen)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
+[![](https://img.shields.io/badge/build-0.3.1-brightgreen)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
 ### Resources:  
 - [Change Log](https://github.com/droididan/dart_extensions/blob/master/CHANGELOG.md)  
@@ -7,6 +7,7 @@
 ## What New 
 * `Flutter extenesions` 🎉 🐦
 * `search algorithms` 🕵️‍
+* `asBool` for String and int
 * `sort algorithms`
 * `inRangeOf - int`
 * `any - Iterables`
@@ -28,6 +29,54 @@ dependencies:
  ```
   
 3. click the packages get button or *flutter pub get*  
+
+
+## Flutter Extensions
+
+### Widget extensions
+In the example we can see how in a clean way we added round corners, added a nice shadow, align, and added gestures
+That's just the tip of the iceberg, expect to see very cool stuff soon.
+```dart
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        child: Stack(
+          children: <Widget>[
+            Container(
+              height: 100,
+              width: 100,
+            )   .withRoundCorners(backgroundColor: Colors.grey)
+                .withShadow()
+                .alignAtCenter()
+                .toCenter()
+                .paddingOnly(left: 10)
+                .paddingAll(20)
+                .onTap(() => print('tap'))
+                .onLongPress(() => print('long press'))
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+### Navigation
+We can navigate from every widget by calling these methods
+```dart
+    navigateTo(route: MaterialPageRoute(builder: (c) => Login()));
+    navigateByRouteName(Routes.home, );
+    final result = navigateBack();
+```
+
 
 ## Http Extensions
 
@@ -254,6 +303,22 @@ for(final num in 1.until(10, step: 2)) {
 ```
 
 ## String Extensions
+
+
+### .asBool()
+Returns true if this string is any of these values: "true", "yes", "1", or if the string is a number and greater than 0, false if less than 1. This is also case insensitive.
+```dart
+'true'.asBool  // true
+'True'.asBool  // true
+'false'.asBool //  false
+'False'.asBool //  false
+'yes'.asBool   // true
+'YES'.asBool   // true
+'no'.asBool    // false
+'NO'.asBool    // false
+```
+
+
 ### .insert()
 Returns a new string in which a specified string is inserted at a specified index position in this instance.
 ```dart
@@ -357,7 +422,6 @@ Return this number if it's between the range
 ## Range Extensions
 - `until`
 
-
 ## Strings Extensions
 - `validateEmail`
 - `removeSurrounding`
@@ -377,6 +441,7 @@ Return this number if it's between the range
 - `toCharArray`
 - `insert`
 - `isNullOrWhiteSpace`
+- `asBool`
 
 ## DateTime Extensions
 - `toMilliseconds`
@@ -416,6 +481,7 @@ Return this number if it's between the range
 - `tripled`
 - `quadrupled`
 - `squared`
+- `asBool`
 
 ## Contributing
 

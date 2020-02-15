@@ -26,6 +26,7 @@ export 'package:dart_extensions/src/flutter/center.dart';
 export 'package:dart_extensions/src/flutter/gesture_detector.dart';
 export 'package:dart_extensions/src/flutter/navigation.dart';
 export 'package:dart_extensions/src/flutter/padding.dart';
+export 'package:dart_extensions/src/flutter/container.dart';
 
 
 

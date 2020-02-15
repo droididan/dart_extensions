@@ -11,25 +11,15 @@
  * limitations under the License.
  */
 
-import 'package:dart_extensions/src/flutter/transforms/click_translate.dart';
-import 'package:flutter/material.dart';
+package com.rallycoder.tests
 
-extension GestureDetectorExtensions on Widget {
+import androidx.annotation.NonNull;
+import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.plugins.GeneratedPluginRegistrant
 
-  Widget get onTapAddJumpEffect => TranslateOnClick(child: this);
-
-  Widget onDoubleTap(Function function) => GestureDetector(
-        onDoubleTap: function,
-        child: this,
-      );
-
-  Widget onTap(Function function) => GestureDetector(
-        onTap: function,
-        child: this,
-      );
-
-  Widget onLongPress(Function function) => GestureDetector(
-        onLongPress: function,
-        child: this,
-      );
+class MainActivity: FlutterActivity() {
+    override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
+        GeneratedPluginRegistrant.registerWith(flutterEngine);
+    }
 }

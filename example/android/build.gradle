@@ -11,25 +11,34 @@
  * limitations under the License.
  */
 
-import 'package:dart_extensions/src/flutter/transforms/click_translate.dart';
-import 'package:flutter/material.dart';
+buildscript {
+    ext.kotlin_version = '1.3.50'
+    repositories {
+        google()
+        jcenter()
+    }
 
-extension GestureDetectorExtensions on Widget {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
 
-  Widget get onTapAddJumpEffect => TranslateOnClick(child: this);
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
 
-  Widget onDoubleTap(Function function) => GestureDetector(
-        onDoubleTap: function,
-        child: this,
-      );
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
 
-  Widget onTap(Function function) => GestureDetector(
-        onTap: function,
-        child: this,
-      );
-
-  Widget onLongPress(Function function) => GestureDetector(
-        onLongPress: function,
-        child: this,
-      );
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }

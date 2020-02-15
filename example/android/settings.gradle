@@ -11,25 +11,18 @@
  * limitations under the License.
  */
 
-import 'package:dart_extensions/src/flutter/transforms/click_translate.dart';
-import 'package:flutter/material.dart';
+include ':app'
 
-extension GestureDetectorExtensions on Widget {
+def flutterProjectRoot = rootProject.projectDir.parentFile.toPath()
 
-  Widget get onTapAddJumpEffect => TranslateOnClick(child: this);
+def plugins = new Properties()
+def pluginsFile = new File(flutterProjectRoot.toFile(), '.flutter-plugins')
+if (pluginsFile.exists()) {
+    pluginsFile.withReader('UTF-8') { reader -> plugins.load(reader) }
+}
 
-  Widget onDoubleTap(Function function) => GestureDetector(
-        onDoubleTap: function,
-        child: this,
-      );
-
-  Widget onTap(Function function) => GestureDetector(
-        onTap: function,
-        child: this,
-      );
-
-  Widget onLongPress(Function function) => GestureDetector(
-        onLongPress: function,
-        child: this,
-      );
+plugins.each { name, path ->
+    def pluginDirectory = flutterProjectRoot.resolve(path).resolve('android').toFile()
+    include ":$name"
+    project(":$name").projectDir = pluginDirectory
 }
