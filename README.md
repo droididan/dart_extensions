@@ -6,9 +6,9 @@
 
 ## What New 
 * `Flutter extenesions` 🎉 🐦
-* `search algorithms` 🕵️‍
+* `search algorithms` - SOON 🕵️‍
+* `sort algorithms` - SOON
 * `asBool` for String and int
-* `sort algorithms`
 * `inRangeOf - int`
 * `any - Iterables`
 * `groupBy - Iterables`
@@ -34,7 +34,7 @@ dependencies:
 ## Flutter Extensions
 
 ### Widget extensions
-In the example we can see how in a clean way we added round corners, added a nice shadow, align, and added gestures
+So now we can just add round corners, shadows, align, and added gestures to our `Widgets` without the crazy water-fall effect. awesome!
 That's just the tip of the iceberg, expect to see very cool stuff soon.
 ```dart
 class Home extends StatefulWidget {
