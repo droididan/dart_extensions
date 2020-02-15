@@ -90,5 +90,23 @@ main() {
       expect('te  st'.isNullOrWhiteSpace, false);
       expect('  te  st  '.isNullOrWhiteSpace, false);
     });
+
+    test('asBool', () {
+      // strings, it is case insensitive
+      expect('true'.asBool, true);
+      expect('True'.asBool, true);
+      expect('false'.asBool, false);
+      expect('False'.asBool, false);
+      expect('yes'.asBool, true);
+      expect('YES'.asBool, true);
+      expect('no'.asBool, false);
+      expect('NO'.asBool, false);
+
+      // string numbers
+      expect('232'.asBool, true);
+      expect('1'.asBool, true);
+      expect('0'.asBool, false);
+      expect('-1'.asBool, false);
+    });
   });
 }

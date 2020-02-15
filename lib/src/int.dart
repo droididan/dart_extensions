@@ -67,4 +67,9 @@ extension IntExtensions on int {
 
   /// Return squared number
   int get squared => this * this;
+
+  /// Convert this integer into boolean.
+  /// 
+  /// Returns `true` if this integer is greater than *0*.
+  bool get asBool => this > 0;
 }
