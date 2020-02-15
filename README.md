@@ -1,9 +1,7 @@
   
 [![](https://img.shields.io/badge/build-0.3.1-brightgreen)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
-### Resources:  
-- [Change Log](https://github.com/droididan/dart_extensions/blob/master/CHANGELOG.md)  
-
+ 
 ## What New 
 * `Flutter extenesions` 🎉 🐦
 * `search algorithms` - SOON 🕵️‍
