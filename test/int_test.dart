@@ -69,5 +69,12 @@ main() {
     test('squared', () {
       expect(2.squared, 4);
     });
+
+    test('asBool', () {
+      expect(1.asBool, true);
+      expect(0.asBool, false);
+      expect(9382.asBool, true);
+      expect((-2272).asBool, false);
+    });
   });
 }

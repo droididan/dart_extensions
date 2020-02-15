@@ -105,4 +105,18 @@ extension StringExtention on String {
     var length = (this?.split('') ?? []).where((x) => x == ' ').length;
     return length == (this?.length ?? 0) || this.isNullOrEmpty;
   }
+
+  /// Convert this string into boolean.
+  /// 
+  /// Returns `true` if this string is any of these values: `"true"`, `"yes"`, `"1"`, or if the string is a number and greater than 0, `false` if less than 1. This is also case insensitive.
+  bool get asBool {
+    var s = this.trim().toLowerCase();
+    num n;
+    try {
+      n = num.parse(s);
+    } catch (e) {
+      n = -1;
+    }
+    return s == 'true' || s == 'yes' || n > 0;
+  }
 }

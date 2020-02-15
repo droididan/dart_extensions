@@ -54,6 +54,7 @@
 - `toCharArray`
 - `insert`
 - `isNullOrWhiteSpace`
+- `asBool`
 
 ## DateTime Extensions
 - `toMilliseconds`
@@ -92,6 +93,7 @@
 - `tripled`
 - `quadrupled`
 - `squared`
+- `asBool`
 
 ## will release soon...
 - Extensions for Files
