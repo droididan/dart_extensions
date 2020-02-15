@@ -12,15 +12,71 @@
  */
 import 'dart:collection';
 import 'dart:math';
+
 import 'package:quiver/iterables.dart';
 
 import 'data_stractures/stack.dart';
 
-extension CollectionsExt<T> on Iterable<T> {
-  // return the half size of a list
+extension CollectionsExtensions<T> on Iterable<T> {
+  /// Returns `true` if at least one element matches the given [predicate].
+  bool any(bool predicate(T element)) {
+    if (this.isEmptyOrNull) return false;
+    for (final element in this) if (predicate(element)) return true;
+    return false;
+  }
+
+  /// Convert iterable to set
+  Set<T> toMutableSet() => Set.from(this);
+
+  /// Returns a set containing all elements that are contained
+  /// by both this set and the specified collection.
+  Set<T> intersect(Iterable other) {
+    final set = this.toMutableSet();
+    set.addAll(other);
+    return set;
+  }
+
+  /// Groups the elements in values by the value returned by key.
+  ///
+  /// Returns a map from keys computed by key to a list of all values for which
+  /// key returns that key. The values appear in the list in the same
+  /// relative order as in values.
+  Map<K, List<T>> groupBy<T, K>(K key(T e)) {
+    var map = <K, List<T>>{};
+
+    for (final element in this) {
+      var list = map.putIfAbsent(key(element as T), () => []);
+      list.add(element as T);
+    }
+    return map;
+  }
+
+  /// Returns a list containing only elements matching the given [predicate].
+  List<T> filter(bool test(T element)) {
+    final result = <T>[];
+    forEach((e) {
+      if (e != null && test(e)) {
+        result.add(e);
+      }
+    });
+    return result;
+  }
+
+  /// Returns a list containing all elements not matching the given [predicate] and will filter nulls as well.
+  List<T> filterNot(bool test(T element)) {
+    final result = <T>[];
+    forEach((e) {
+      if (e != null && !test(e)) {
+        result.add(e);
+      }
+    });
+    return result;
+  }
+
+// return the half size of a list
   int get halfLength => (this.length / 2).floor();
 
-  /// Returns a list containing all elements except first [n] elements.
+  /// Returns a list containing first [n] elements.
   List<T> takeOnly(int n) {
     if (n == 0) return [];
 
@@ -186,13 +242,13 @@ extension CollectionsExt<T> on Iterable<T> {
     return list;
   }
 
-  // get an element at specific index or return null
+// get an element at specific index or return null
   T _elementAtOrNull(int index) {
     return _elementOrNull(index, (_) => null);
   }
 
   _elementOrNull(int index, T defaultElement(int index)) {
-    // if our index is smaller then 0 return the default
+// if our index is smaller then 0 return the default
     if (index < 0) return defaultElement(index);
 
     var counter = 0;
@@ -227,8 +283,8 @@ extension CollectionsExt<T> on Iterable<T> {
   ///  stack.pop()
   ///  stack.push(5)
   ///
-  Stack<T> toStack() {
-    final stack = Stack<T>();
+  StackX<T> toStack() {
+    final stack = StackX<T>();
     stack.addAll(this);
     return stack;
   }
@@ -270,8 +326,7 @@ extension CollectionsExt<T> on Iterable<T> {
   }
 
   /// Creates a Map instance in which the keys and values are computed from the iterable.
-  Map<dynamic, dynamic> associate(key(element), value(element)) =>
-      Map.fromIterable(this, key: key, value: value);
+  Map<dynamic, dynamic> associate(key(element), value(element)) => Map.fromIterable(this, key: key, value: value);
 
   /// Returns the first element matching the given [predicate], or `null`
   /// if element was not found.
@@ -280,7 +335,6 @@ extension CollectionsExt<T> on Iterable<T> {
       if (predicate(element)) {
         return element;
       }
-      ;
     }
 
     return null;

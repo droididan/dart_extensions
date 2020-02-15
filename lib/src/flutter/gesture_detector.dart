@@ -11,29 +11,21 @@
  * limitations under the License.
  */
 
-import 'package:test/test.dart';
-import 'package:dart_extensions/src/date.dart';
+import 'package:flutter/material.dart';
 
-main() {
-  group('date time', () {
-    test('toMilliseconds', () {
-      expect(1.toMilliseconds(), Duration(milliseconds: 1));
-    });
+extension GestureDetectorExtensions on Widget {
+  Widget onDoubleTap(Function function) => GestureDetector(
+        onDoubleTap: function,
+        child: this,
+      );
 
-    test('toSeconds', () {
-      expect(1.toSeconds(), Duration(seconds: 1));
-    });
+  Widget onTap(Function function) => GestureDetector(
+        onTap: function,
+        child: this,
+      );
 
-    test('toMinutes', () {
-      expect(1.toMinutes(), Duration(minutes: 1));
-    });
-
-    test('toHours', () {
-      expect(1.toHours(), Duration(hours: 1));
-    });
-
-    test('toDays', () {
-      expect(1.toDays(), Duration(days: 1));
-    });
-  });
+  Widget onLongPress(Function function) => GestureDetector(
+        onLongPress: function,
+        child: this,
+      );
 }

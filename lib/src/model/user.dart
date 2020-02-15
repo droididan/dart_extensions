@@ -11,29 +11,14 @@
  * limitations under the License.
  */
 
-import 'package:test/test.dart';
-import 'package:dart_extensions/src/date.dart';
+class User {
+  final int age;
+  final String name;
 
-main() {
-  group('date time', () {
-    test('toMilliseconds', () {
-      expect(1.toMilliseconds(), Duration(milliseconds: 1));
-    });
+  User(this.age, this.name);
 
-    test('toSeconds', () {
-      expect(1.toSeconds(), Duration(seconds: 1));
-    });
-
-    test('toMinutes', () {
-      expect(1.toMinutes(), Duration(minutes: 1));
-    });
-
-    test('toHours', () {
-      expect(1.toHours(), Duration(hours: 1));
-    });
-
-    test('toDays', () {
-      expect(1.toDays(), Duration(days: 1));
-    });
-  });
+  @override
+  String toString() {
+    return "$age, $name";
+  }
 }

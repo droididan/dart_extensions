@@ -12,7 +12,7 @@
  */
 
 import 'package:test/test.dart';
-import 'package:dart_extensions/strings.dart';
+import 'package:dart_extensions/src/strings.dart';
 
 main() {
   group('strings', () {
@@ -29,11 +29,11 @@ main() {
       expect('-text-'.removeSurrounding('t'), '-text-');
     });
     test('isNullOrEmpty', () {
-      expect(''.isNullOrEmpty, true);
+      expect(''.isEmptyOrNull, true);
 
       String nullStr;
-      expect(nullStr.isNullOrEmpty, true);
-      expect('not empty'.isNullOrEmpty, false);
+      expect(nullStr.isEmptyOrNull, true);
+      expect('not empty'.isEmptyOrNull, false);
     });
 
     test('replaceAfter', () {
@@ -68,8 +68,8 @@ main() {
     });
 
     test('toCharArray', () {
-      expect("test".toCharArray(),  ['t','e', 's', 't']);
-      expect("".toCharArray(),  []);
+      expect("test".toCharArray(), ['t', 'e', 's', 't']);
+      expect("".toCharArray(), []);
     });
 
     test('insert', () {

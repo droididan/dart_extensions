@@ -1,11 +1,19 @@
   
-[![](https://img.shields.io/badge/build-0.1.7-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
+[![](https://img.shields.io/badge/build-0.2.0-brightgreen)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
 ### Resources:  
-- [Extensions Full List](https://github.com/droididan/dart_extensions/blob/master/FEATURELIST.md)  
 - [Change Log](https://github.com/droididan/dart_extensions/blob/master/CHANGELOG.md)  
 
-  
+## What New 
+* `Flutter extenesions` 🎉 🐦
+* `search algorithms` 🕵️‍
+* `sort algorithms`
+* `inRangeOf - int`
+* `any - Iterables`
+* `groupBy - Iterables`
+* `intersect - Iterables`
+* `toMutableSet - Iterables`
+
 Why Method Extensions? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
   
   *let me know if you want something specific or you found a bug at bar.idan@gmail.com*  
@@ -64,6 +72,29 @@ for more examples (put, delete) See [http.dart](https://github.com/droididan/dar
 
 ## Iterable Extensions
 
+### .any()
+Returns `true` if at least one element matches the given predicate.
+```dart
+final users = [User(22, "Kasey"), User(23, "Jadn")]; 
+users.any((u) => u.name == 'Kasey') // true
+```
+
+### .groupBy()
+Groups the elements in values by the value returned by key.
+```dart
+final users = [User(22, "Kasey"), User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")]; 
+
+users.groupBy((u) => u.age); 
+```
+Sort the users by age:
+```dart
+{  
+  22: [User:22, Kasey, User:22, Rene], 
+  23: [User:23, Jadn], 
+  32: [User:32, Aden]
+}
+```
+
 ### .find()
 Returns the first element matching the given predicate, or `null` if element wasn't found.
 ```dart
@@ -81,6 +112,48 @@ Splits the Iterable into chunks of the specified `size`
 ```dart
 ([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
 ```
+
+### .filter() 
+ Returns a list containing only elements matching the given predicate, the return type will be `List`,
+ unlike the `where` operator that return `Iterator`,  also it filters null.
+```dart
+final users = [User(22, "Kasey"), User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")]; 
+final filtered = users.filter((u) => u.name == "Kasey"); // [User(22, "Kasey")] <- Type List<User>
+
+final listWithNull = [null, User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")];
+final filtered = listWithNull.filter((u) => u.name == "Jadn"); // [User(23, "Jadn")]
+```
+
+### .intersect()
+Returns a set containing all elements that are contained by both this set and the specified collection.
+```dart
+Set.from([1, 2, 3, 4]).intersect(Set.from([3, 4, 5, 6]) // 1,2,3,4,5,6
+```
+
+### .filterNot() 
+ Returns a list containing only not the elements matching the given predicate, the return type will be `List`,
+ unlike the `where` operator that return `Iterator`,  also it filters null.
+```dart
+final users = [User(22, "Kasey"), User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")]; 
+final filtered = users.filterNot((u) => u.name == "Kasey"); // [User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")] <- Type List<User>
+
+final listWithNull = [null, User(23, "Jadn"), User(22, "Rene"), User(32, "Aden")];
+final filtered = listWithNull.filterNot((u) => u.name == "Jadn"); // [User(22, "Rene"), User(32, "Aden")]
+```
+
+### .takeOnly() 
+Returns a list containing first [n] elements.
+```dart
+[1, 2, 3, 4].takeOnly(1) // [1]
+```
+
+### .drop() 
+Returns a list containing all elements except first [n] elements.
+```dart
+[1, 2, 3, 4].drop(1) // [2, 3, 4]
+```
+
+
 
 ### .forEachIndexed()
 Performs the given action on each element on iterable, providing sequential `index` with the `element`.
@@ -158,7 +231,7 @@ print(sales); // [
 See [iterable.dart](https://github.com/droididan/dart_extentions/blob/master/lib/iterable.dart) for more  examples.  
 
 ## Range Extensions
-### .until
+### .until()
 Returns a sequence of integer, starting from the current number until the [end] number. [step] is optional, it will step number if given
 ```dart
 for(final num in 1.until(10)) {
@@ -181,26 +254,42 @@ for(final num in 1.until(10, step: 2)) {
 ```
 
 ## String Extensions
-  
-### .replaceAfter
+### .insert()
+Returns a new string in which a specified string is inserted at a specified index position in this instance.
+```dart
+'test'.insert(1, 't') // 'ttest'
+'123456890'.insert(6, '7') // '1234567890'
+'dart cool'.insert(4, ' is') // 'dart is cool'
+```
+
+### .isNullOrWhiteSpace()
+Indicates whether a specified string is `null`, `empty`, or consists only of `white-space` characters.
+```dart
+'test'.isNullOrWhiteSpace // false
+'   '.isNullOrWhiteSpace, // true
+null.isNullOrWhiteSpace, // true
+'  te  st  '.isNullOrWhiteSpace // false
+```
+
+### .replaceAfter()
 Replace part of string after the first occurrence of given delimiter.
 ```dart  
 print("myemail@".replaceAfter("@", "gmail.com")); // myemail@gmail.com 
 ```  
-### .replaceBefore
+### .replaceBefore()
 Replace part of string before the first occurrence of given delimiter.
 ```dart  
 print('@domain.com'.replaceBefore('@', "name")); // "name@domain.com"
 ```
 
-### .anyChar
+### .anyChar()
 Returns `true` if at least one element matches the given predicate
 ```dart  
 'test'.anyChar((c) => c == 't'); // true;
 'test'.anyChar((c) => c == 'd'); // false;
 ```
 
-### .ifEmpty
+### .ifEmpty()
 If the string is empty perform an action.
 ```dart  
 "".ifEmpty(() => print("do any action here")); // do any action here
@@ -213,6 +302,17 @@ var number = '12345'.toDoubleOrNull(); // 12345
 var notANumber = '123-45'.toDoubleOrNull(); // null  
 ```  
 
+## int Extensions
+
+### .inRangeOf()  
+Return the min if this number is smaller then minimum
+Return the max if this number is bigger the the maximum
+Return this number if it's between the range
+```dart
+1.inRangeOf(0, 3) // 1 number in range so will return the number
+2.inRangeOf(3, 4) // 3 number is smaller then the range so will return min
+5.inRangeOf(3, 4) // 4 number is bigger then the range so will return max
+```
 
 # Flutter Extensions Full List
 
@@ -223,12 +323,17 @@ var notANumber = '123-45'.toDoubleOrNull(); // null
 - `httpDelete`
 
 ## Iterables Extensions
+- `toMutableSet`
+- `intersect`
+- `groupBy`
 - `find`
+- `filter`
+- `filterNot`
 - `isEmptyOrNull`
 - `chunks`
 - `zip`
 - `half`
-- `take`
+- `takeOnly`
 - `drop`
 - `firstHalf`
 - `secondHalf`
@@ -297,6 +402,7 @@ var notANumber = '123-45'.toDoubleOrNull(); // null
 - `isLeapYear`
 
 ## Integers Extensions
+- `inRangeOf`
 - `absolute`
 - `isEven`
 - `isOdd`
@@ -310,6 +416,34 @@ var notANumber = '123-45'.toDoubleOrNull(); // null
 - `tripled`
 - `quadrupled`
 - `squared`
+
+## Contributing
+
+If you have read up till here, then 🎉🎉🎉. There are couple of ways in which you can contribute to
+the growing community of `dart_extensions.dart`.
+
+
+- Propose any feature, enhancement
+- Report a bug
+- Fix a bug
+- Participate in a discussion and help in decision making
+- Write and improve some **documentation**. Documentation is super critical and its importance
+  cannot be overstated!
+- Send in a Pull Request :-)
+
+
+## Contributors ✨
+<table>
+  <tr>
+      <td align="center"><a href="https://github.com/droididan"><img src="https://avatars2.githubusercontent.com/u/10584019?s=460&v=4" width="64px;" alt=""/><br /><sub><b>Idan Ayalon</b></sub></a><br /><a href="" title="Code">💻</a> <a href="" title="Documentation">📖</a> <a href="" title="Reviewed Pull Requests">👀</a></td>
+    </a></td>
+    </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/xamantra"><img src="https://avatars0.githubusercontent.com/u/37391380?s=400&v=4" width="64px;" alt=""/><br /><sub><b>Xamantra</b></sub></a><br /><a href="" title="Code">💻</a> <a href="" title="Documentation">📖</a> <a href="" title="Reviewed Pull Requests">👀</a></td>
+  </a></td>
+  </tr>
+</table>
+
 
 
 ## License  

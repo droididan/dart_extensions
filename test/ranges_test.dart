@@ -10,16 +10,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import 'package:dart_extensions/ranges.dart';
+import 'package:dart_extensions/src/ranges.dart';
 import 'package:test/test.dart';
+
 main() {
   group('ranges', () {
     test('test positive range', () {
-      expect(1.until(10), [1,2,3,4,5,6,7,8,9]);
+      expect(1.until(-10), []);
+    });
+
+    test('test from positive to nagative  range', () {
+      expect(1.until(-3, step: -1), [1, 0, -1, -2]);
     });
 
     test('test positive range with step 2', () {
-      expect(1.until(10, step: 2), [1,3,5,7,9]);
+      expect(1.until(10, step: 2), [1, 3, 5, 7, 9]);
     });
 
     test('test negative range', () {
@@ -27,12 +32,12 @@ main() {
     });
 
     test('test positive range with step 2', () {
-      expect((-10).until(0, step: 2),[-10, -8, -6, -4, -2]);
+      expect((-10).until(0, step: 2), [-10, -8, -6, -4, -2]);
     });
 
     test('for loop', () {
       final numbers = <int>[];
-      for(final num in 1.until(10)) {
+      for (final num in 1.until(10)) {
         numbers.add(num);
       }
       expect(numbers, [1, 2, 3, 4, 5, 6, 7, 8, 9]);
@@ -40,7 +45,7 @@ main() {
 
     test('for loop step 2', () {
       final numbers = <int>[];
-      for(final num in 1.until(10, step: 2)) {
+      for (final num in 1.until(10, step: 2)) {
         numbers.add(num);
       }
       expect(numbers, [1, 3, 5, 7, 9]);

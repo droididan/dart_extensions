@@ -11,27 +11,28 @@
  * limitations under the License.
  */
 
-import 'dart:collection';
+import 'exceptions/range_exception.dart';
 
-class Stack<T> {
-  final _list = ListQueue<T>();
+extension RangeExtensions on int {
+  /// Returns a sequence of integer, starting from [this],
+  /// increments by [step] and ends at [end]
+  Iterable<int> until(int end, {int step = 1}) sync* {
+    if (step == 0) {
+      throw RException.steps();
+    }
 
-  bool get isEmpty => _list.isEmpty;
+    int currentNumber = this;
 
-  bool get isNotEmpty => _list.isNotEmpty;
-
-  push(T element) => _list.addLast(element);
-
-  T pop() {
-    final T element = _list.last;
-    _list.removeLast();
-    return element;
-  }
-
-  top() => _list.last;
-
-  List<T> addAll(Iterable elements) {
-    _list.addAll(elements);
-    return _list.toList();
+    if (step > 0) {
+      while (currentNumber < end) {
+        yield currentNumber;
+        currentNumber += step;
+      }
+    } else {
+      while (currentNumber > end) {
+        yield currentNumber;
+        currentNumber += step;
+      }
+    }
   }
 }

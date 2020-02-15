@@ -11,16 +11,33 @@
  * limitations under the License.
  */
 
-extension StringExtention on String {
+import 'package:intl/intl.dart';
+
+enum Gender { male, female }
+
+class Message {
+  final String male, female, other;
+
+  Message({this.male, this.female, this.other})
+      : assert(male.isEmptyOrNull),
+        assert(female.isEmptyOrNull),
+        assert(other.isEmptyOrNull);
+}
+
+extension StringExtensions on String {
+  String generateMessageByGender({Gender gender, Message message}) =>
+      Intl.gender(gender.toString(),
+          male: '$this ${message.male}',
+          female: '$this ${message.female}',
+          other: '$this ${message.other}');
+
   bool validateEmail() => RegExp(
           r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
       .hasMatch(this);
 
   bool equalsIgnoreCase(String other) =>
       (this == null && other == null) ||
-      (this != null &&
-          other != null &&
-          toLowerCase() == other.toLowerCase());
+      (this != null && other != null && toLowerCase() == other.toLowerCase());
 
   /// Return the string only if the delimiter exists in both ends, otherwise it will return the current string
   String removeSurrounding(String delimiter) {
@@ -36,7 +53,7 @@ extension StringExtention on String {
   }
 
   /// Return a bool if the string is null or empty
-  bool get isNullOrEmpty => this == null || isEmpty;
+  bool get isEmptyOrNull => this == null || isEmpty;
 
   ///  Replace part of string after the first occurrence of given delimiter with the [replacement] string.
   ///  If the string does not contain the delimiter, returns [defaultValue] which defaults to the original string.
@@ -44,7 +61,7 @@ extension StringExtention on String {
       [String defaultValue]) {
     final index = indexOf(delimiter);
     return (index == -1)
-        ? defaultValue.isNullOrEmpty ? this : defaultValue
+        ? defaultValue.isEmptyOrNull ? this : defaultValue
         : replaceRange(index + 1, length, replacement);
   }
 
@@ -55,7 +72,7 @@ extension StringExtention on String {
       [String defaultValue]) {
     final index = indexOf(delimiter);
     return (index == -1)
-        ? defaultValue.isNullOrEmpty ? this : defaultValue
+        ? defaultValue.isEmptyOrNull ? this : defaultValue
         : replaceRange(0, index, replacement);
   }
 
@@ -68,16 +85,16 @@ extension StringExtention on String {
   String get orEmpty => this ?? "";
 
   // if the string is empty perform an action
-  String ifEmpty(Function action) => (isEmpty) ? action() : this;
+  String ifEmpty(Function action) => isEmpty ? action() : this;
 
   String get lastIndex {
-    if (isNullOrEmpty) return "";
+    if (isEmptyOrNull) return "";
     return this[length - 1];
   }
 
   /// prints to console this text if it's not empty or null
   void printThis() {
-    if (isNullOrEmpty) return;
+    if (isEmptyOrNull) return;
     print(toString());
   }
 
@@ -98,12 +115,13 @@ extension StringExtention on String {
   List<String> toCharArray() => isNotBlank ? split('') : [];
 
   /// Returns a new string in which a specified string is inserted at a specified index position in this instance.
-  String insert(int index, String str) => (List<String>.from(this.toCharArray())..insert(index, str)).join();
+  String insert(int index, String str) =>
+      (List<String>.from(this.toCharArray())..insert(index, str)).join();
 
   /// Indicates whether a specified string is `null`, `empty`, or consists only of `white-space` characters.
   bool get isNullOrWhiteSpace {
     var length = (this?.split('') ?? []).where((x) => x == ' ').length;
-    return length == (this?.length ?? 0) || this.isNullOrEmpty;
+    return length == (this?.length ?? 0) || this.isEmptyOrNull;
   }
 
   /// Convert this string into boolean.

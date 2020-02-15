@@ -1,8 +1,18 @@
-## [0.1.7] - 19/011/202.
+## [0.2.0] - 23/01/20.
+- .groupBy() added Iterable + tests
+- .intersect() + test
+- .toMutableSet() + test
+## [0.1.8] - 22/01/20.
+- .filter() added Iterable + tests
+- .notFilter() added Iterable + tests
+- .isNullOrWhiteSpace added String + tests
+- .insert() added Strings + test
+
+## [0.1.7] - 19/01/202.
 - find - Iterable extensions + tests
 - added Ranges extension for int + tests
 
-## [0.1.4] - 19/011/202.
+## [0.1.4] - 19/01/202.
 - associate in Iterables extensions + tests
 - added Http Extensions: - httpGet httpPost httpPut httpDelete
 - added int Extensions: - absolute

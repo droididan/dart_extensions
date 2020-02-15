@@ -34,7 +34,7 @@ extension DateInt on int {
   Duration toDays() => Duration(days: this);
 }
 
-extension DateExt on DateTime {
+extension DateExtensions on DateTime {
   /// return true if the date is today
   bool isToday() {
     final now = DateTime.now();
@@ -46,36 +46,31 @@ extension DateExt on DateTime {
   /// to add years to a [DateTime] add a positive number
   /// to remove years pass a negative number
   addOrRemoveYears(int years) {
-    return DateTime(
-        year + years, month, day, minute, second);
+    return DateTime(year + years, month, day, minute, second);
   }
 
   /// to add month to a [DateTime] add a positive number
   /// to remove years pass a negative number
   addOrRemoveMonth(int months) {
-    return DateTime(
-        year, month + months, day, minute, second);
+    return DateTime(year, month + months, day, minute, second);
   }
 
   /// to add days to a [DateTime] add a positive number
   /// to remove days pass a negative number
   addOrRemoveDay(int days) {
-    return DateTime(
-        year, month, day + days, minute, second);
+    return DateTime(year, month, day + days, minute, second);
   }
 
   /// to add min to a [DateTime] add a positive number
   /// to remove min pass a negative number
   addOrRemoveMinutes(int min) {
-    return DateTime(
-        year, month, day, minute + min, second);
+    return DateTime(year, month, day, minute + min, second);
   }
 
   /// to add sec to a [DateTime] add a positive number
   /// to remove sec pass a negative number
   addOrRemoveSeconds(int sec) {
-    return DateTime(
-        year, month, day, minute, second + sec);
+    return DateTime(year, month, day, minute, second + sec);
   }
 
   ///  Start time of Date times

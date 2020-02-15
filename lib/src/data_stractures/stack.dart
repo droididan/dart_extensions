@@ -11,29 +11,27 @@
  * limitations under the License.
  */
 
-import 'package:test/test.dart';
-import 'package:dart_extensions/src/date.dart';
+import 'dart:collection';
 
-main() {
-  group('date time', () {
-    test('toMilliseconds', () {
-      expect(1.toMilliseconds(), Duration(milliseconds: 1));
-    });
+class StackX<T> {
+  final _list = ListQueue<T>();
 
-    test('toSeconds', () {
-      expect(1.toSeconds(), Duration(seconds: 1));
-    });
+  bool get isEmpty => _list.isEmpty;
 
-    test('toMinutes', () {
-      expect(1.toMinutes(), Duration(minutes: 1));
-    });
+  bool get isNotEmpty => _list.isNotEmpty;
 
-    test('toHours', () {
-      expect(1.toHours(), Duration(hours: 1));
-    });
+  push(T element) => _list.addLast(element);
 
-    test('toDays', () {
-      expect(1.toDays(), Duration(days: 1));
-    });
-  });
+  T pop() {
+    final T element = _list.last;
+    _list.removeLast();
+    return element;
+  }
+
+  top() => _list.last;
+
+  List<T> addAll(Iterable elements) {
+    _list.addAll(elements);
+    return _list.toList();
+  }
 }

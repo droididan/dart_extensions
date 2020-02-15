@@ -10,14 +10,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import 'package:dart_extensions/src/iterable.dart';
+import 'package:dart_extensions/src/model/user.dart';
 import 'package:test/test.dart';
-import 'package:dart_extensions/iterable.dart';
 
 main() {
   final users = [User(22, "Ronit"), User(23, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
 
   group('iterables', () {
-    test('take', () {
+    test('any', () {
+      expect(users.any((u) => u.name == 'Oded'), true);
+      expect(users.any((u) => u.name == 'Not Exists'), false);
+      expect([].any((u) => u.name == 'Oded'), false);
+    });
+
+    test('filter', () {
+      [null, 1, 2].where((n) => n == 2);
+      final listWithNull = [null, User(1, "r"), User(2, "t")];
+      final numberList = [1, 2, 3, 4, 5, 6];
+
+      expect(users.filter((u) => u.name == "Ronit"), [users[0], users[1]]);
+      expect(numberList.filter((n) => n > 4), [5, 6]);
+      expect(listWithNull.filter((u) => u.name == "r"), [listWithNull[1]]);
+    });
+
+    test('filterNot', () {
+      final listWithNull = [null, User(1, "r"), User(2, "t")];
+      final numberList = [1, 2, 3, 4, 5, 6];
+
+      expect(listWithNull.filterNot((u) => u.name == "t"), [listWithNull[1]]);
+      expect(numberList.filterNot((n) => n > 4), [1, 2, 3, 4]);
+    });
+
+    test('takeOnly', () {
       expect([1, 2, 3, 4].takeOnly(1), [1]);
       expect([1, 2, 3, 4].takeOnly(2), [1, 2]);
       expect([1, 2, 3, 4].takeOnly(10), []);
@@ -69,7 +94,7 @@ main() {
 
     test('containsAll', () {
       expect(users.count((u) => u.age == 22), 2);
-      expect(users.count((u) => u.name == "Ronit"), 1);
+      expect(users.count((u) => u.name == "Ronit"), 2);
       expect(users.count((u) => u.name == "Bin"), 0);
     });
 
@@ -93,8 +118,7 @@ main() {
     });
 
     test('concatWithSingleList', () {
-      expect([1, 2, 3, 4].concatWithSingleList([5, 6, 7, 8, 9, 10, 11]),
-          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+      expect([1, 2, 3, 4].concatWithSingleList([5, 6, 7, 8, 9, 10, 11]), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
       expect([1, 2, 3, 4].concatWithSingleList([]), []);
       expect([].concatWithSingleList([5, 6, 7, 8, 9, 10, 11]), []);
     });
@@ -104,8 +128,7 @@ main() {
         [5, 6, 7],
         [8, 9, 10]
       ];
-      expect([1, 2, 3, 4].concatWithMultipleList(listOfLists),
-          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+      expect([1, 2, 3, 4].concatWithMultipleList(listOfLists), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
       expect([1, 2, 3, 4].concatWithMultipleList([[], []]), [1, 2, 3, 4]);
       expect([].concatWithMultipleList(listOfLists), []);
     });
@@ -122,8 +145,7 @@ main() {
 
     test('associate', () {
       final users = [User(33, "Miki"), User(45, "Anna"), User(19, "Amit")];
-      expect(users.associate((k) => k.name, (e) => e.age),
-          {'Miki': 33, 'Anna': 45, 'Amit': 19});
+      expect(users.associate((k) => k.name, (e) => e.age), {'Miki': 33, 'Anna': 45, 'Amit': 19});
     });
 
     test('find', () {
@@ -134,17 +156,34 @@ main() {
       expect(users.find((u) => u.age == 32), users.last);
       expect(users.find((u) => u.age == 31), null);
     });
+
+    test('gruopBy by age', () {
+      final expected = {
+        22: [users[0], users[2]],
+        23: [users[1]],
+        32: [users[3]]
+      };
+
+      expect(users.groupBy((u) => u.age), expected);
+    });
+
+    test('gourpBy by name', () {
+      final expected = {
+        'Ronit': [users[0], users[1]],
+        'Oded': [users[2]],
+        'Shimi': [users[3]]
+      };
+      expect(users.groupBy((u) => u.name), expected);
+    });
+
+    test('toMutableSet', () {
+      expect([1, 1, 1, 1, 2, 3, 4].toMutableSet(), [1, 2, 3, 4]);
+      expect(["a", "b", "a"].toMutableSet(), ["a", "b"]);
+    });
+
+    test('intersect', () {
+      expect(Set.from([1, 2, 3, 4]).intersect(Set.from([3, 4, 5, 6])), [1, 2, 3, 4, 5, 6]);
+      expect(Set.from([-1, -2, -3, 4]).intersect(Set.from([3, 4, 5, 6])), [-1, -2, -3, 4, 3, 5, 6]);
+    });
   });
-}
-
-class User {
-  final int age;
-  final String name;
-
-  User(this.age, this.name);
-
-  @override
-  String toString() {
-    return "$age, $name";
-  }
 }
