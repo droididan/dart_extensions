@@ -477,6 +477,8 @@ Return this number if it's between the range
 - `min`
 - `max`
 - `isLeapYear`
+- `limitFromEnd`
+- `limitFromStart`
 
 ## Integers Extensions
 - `inRangeOf`
