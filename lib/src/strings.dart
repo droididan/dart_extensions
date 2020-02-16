@@ -126,13 +126,13 @@ extension StringExtensions on String {
 
   /// Shrink a string to be no more than [maxSize] in length, extending from the end.
   /// For example, in a string with 10 charachters, a [maxSize] of 3 would return the last 3 charachters.
-  String limitFromEnd(int maxSize) => this?.length ?? 0 < maxSize
+  String limitFromEnd(int maxSize) => (this?.length ?? 0) < maxSize
       ? this
       : this.substring(this.length - maxSize);
 
     /// Shrink a string to be no more than [maxSize] in length, extending from the start.
   /// For example, in a string with 10 charachters, a [maxSize] of 3 would return the first 3 charachters.
-  String limitFromStart(int maxSize) => this?.length ?? 0 < maxSize ? this : this.substring(0, maxSize);
+  String limitFromStart(int maxSize) => (this?.length ?? 0) < maxSize ? this : this.substring(0, maxSize);
 
   /// Convert this string into boolean.
   ///
