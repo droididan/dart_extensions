@@ -82,19 +82,11 @@ extension DateExtensions on DateTime {
 
   /// DateTime `+` operator
   DateTime operator +(DateTime time) => add(Duration(
-      days: time.day,
-      hours: time.hour,
-      minutes: time.minute,
-      seconds: time.second,
-      milliseconds: time.millisecond));
+      days: time.day, hours: time.hour, minutes: time.minute, seconds: time.second, milliseconds: time.millisecond));
 
   /// DateTime `-` operator
   DateTime operator -(DateTime time) => subtract(Duration(
-      days: time.day,
-      hours: time.hour,
-      minutes: time.minute,
-      seconds: time.second,
-      milliseconds: time.millisecond));
+      days: time.day, hours: time.hour, minutes: time.minute, seconds: time.second, milliseconds: time.millisecond));
 
   /// next day
   DateTime tomorrow() => DateTime(year, month, day + 1);
@@ -103,12 +95,9 @@ extension DateExtensions on DateTime {
   DateTime yesterday() => DateTime(year, month, day - 1);
 
   /// return the smaller date between
-  DateTime min(DateTime that) =>
-      (millisecondsSinceEpoch < that.millisecondsSinceEpoch) ? this : that;
+  DateTime min(DateTime that) => (millisecondsSinceEpoch < that.millisecondsSinceEpoch) ? this : that;
 
-  DateTime max(DateTime that) =>
-      (millisecondsSinceEpoch > that.millisecondsSinceEpoch) ? this : that;
+  DateTime max(DateTime that) => (millisecondsSinceEpoch > that.millisecondsSinceEpoch) ? this : that;
 
-  bool get isLeapYear =>
-      (year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0));
+  bool get isLeapYear => (year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0));
 }

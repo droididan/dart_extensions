@@ -12,12 +12,13 @@
  */
 
 import 'package:test/test.dart';
-
+import 'package:dart_extensions/src/sort_algorithms.dart';
 main() {
   group('algo tests', () {
 
     test('binarySearch', () {
 
+      expect([9,3,5,1,2,7,8,6,10,4,3].quickSort(0, 10), [1,2,3,3,4,5,6,7,8,9,10]);
 
     });
 

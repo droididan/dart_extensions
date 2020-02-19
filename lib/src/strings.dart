@@ -25,28 +25,20 @@ class Message {
 }
 
 extension StringExtensions on String {
-  String generateMessageByGender({Gender gender, Message message}) =>
-      Intl.gender(gender.toString(),
-          male: '$this ${message.male}',
-          female: '$this ${message.female}',
-          other: '$this ${message.other}');
+  String generateMessageByGender({Gender gender, Message message}) => Intl.gender(gender.toString(),
+      male: '$this ${message.male}', female: '$this ${message.female}', other: '$this ${message.other}');
 
-  bool validateEmail() => RegExp(
-          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-      .hasMatch(this);
+  bool validateEmail() => RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(this);
 
   bool equalsIgnoreCase(String other) =>
-      (this == null && other == null) ||
-      (this != null && other != null && toLowerCase() == other.toLowerCase());
+      (this == null && other == null) || (this != null && other != null && toLowerCase() == other.toLowerCase());
 
   /// Return the string only if the delimiter exists in both ends, otherwise it will return the current string
   String removeSurrounding(String delimiter) {
     final prefix = delimiter;
     final suffix = delimiter;
 
-    if ((length >= prefix.length + suffix.length) &&
-        startsWith(prefix) &&
-        endsWith(suffix)) {
+    if ((length >= prefix.length + suffix.length) && startsWith(prefix) && endsWith(suffix)) {
       return substring(prefix.length, length - suffix.length);
     }
     return this;
@@ -57,8 +49,7 @@ extension StringExtensions on String {
 
   ///  Replace part of string after the first occurrence of given delimiter with the [replacement] string.
   ///  If the string does not contain the delimiter, returns [defaultValue] which defaults to the original string.
-  String replaceAfter(String delimiter, String replacement,
-      [String defaultValue]) {
+  String replaceAfter(String delimiter, String replacement, [String defaultValue]) {
     final index = indexOf(delimiter);
     return (index == -1)
         ? defaultValue.isEmptyOrNull ? this : defaultValue
@@ -68,23 +59,19 @@ extension StringExtensions on String {
   ///
   /// Replace part of string before the first occurrence of given delimiter with the [replacement] string.
   ///  If the string does not contain the delimiter, returns [missingDelimiterValue] which defaults to the original string.
-  String replaceBefore(String delimiter, String replacement,
-      [String defaultValue]) {
+  String replaceBefore(String delimiter, String replacement, [String defaultValue]) {
     final index = indexOf(delimiter);
-    return (index == -1)
-        ? defaultValue.isEmptyOrNull ? this : defaultValue
-        : replaceRange(0, index, replacement);
+    return (index == -1) ? defaultValue.isEmptyOrNull ? this : defaultValue : replaceRange(0, index, replacement);
   }
 
   ///Returns `true` if at least one element matches the given [predicate].
   /// the [predicate] should have only one character
-  bool anyChar(bool predicate(String element)) =>
-      split('').any((s) => predicate(s));
+  bool anyChar(bool predicate(String element)) => split('').any((s) => predicate(s));
 
   /// Returns the string if it is not `null`, or the empty string otherwise
   String get orEmpty => this ?? "";
 
-  // if the string is empty perform an action
+// if the string is empty perform an action
   String ifEmpty(Function action) => isEmpty ? action() : this;
 
   String get lastIndex {
@@ -115,8 +102,7 @@ extension StringExtensions on String {
   List<String> toCharArray() => isNotBlank ? split('') : [];
 
   /// Returns a new string in which a specified string is inserted at a specified index position in this instance.
-  String insert(int index, String str) =>
-      (List<String>.from(this.toCharArray())..insert(index, str)).join();
+  String insert(int index, String str) => (List<String>.from(this.toCharArray())..insert(index, str)).join();
 
   /// Indicates whether a specified string is `null`, `empty`, or consists only of `white-space` characters.
   bool get isNullOrWhiteSpace {
@@ -125,7 +111,7 @@ extension StringExtensions on String {
   }
 
   /// Convert this string into boolean.
-  /// 
+  ///
   /// Returns `true` if this string is any of these values: `"true"`, `"yes"`, `"1"`, or if the string is a number and greater than 0, `false` if less than 1. This is also case insensitive.
   bool get asBool {
     var s = this.trim().toLowerCase();

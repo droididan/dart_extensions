@@ -13,9 +13,8 @@
 
 import 'dart:convert' as convert;
 
-import 'package:http/http.dart' as http;
-
 import 'package:dart_extensions/src/strings.dart';
+import 'package:http/http.dart' as http;
 
 const _defaultHeaders = {"Content-type": "application/json"};
 
@@ -37,8 +36,7 @@ extension HttpExtensions on String {
 
   /// Sends an HTTP POST request with the given headers and body to the given URL,
   /// which can be a [Uri] or a [String].
-  Future<dynamic> httpPost(String json,
-      [Map<String, String> headers = _defaultHeaders]) async {
+  Future<dynamic> httpPost(String json, [Map<String, String> headers = _defaultHeaders]) async {
     if (this.isEmptyOrNull) return;
 
     try {
@@ -53,8 +51,7 @@ extension HttpExtensions on String {
 
   /// Sends an HTTP PUT request with the given headers and body to the given URL,
   /// which can be a [Uri] or a [String].
-  Future<dynamic> httpPut(String json,
-      [Map<String, String> headers = _defaultHeaders]) async {
+  Future<dynamic> httpPut(String json, [Map<String, String> headers = _defaultHeaders]) async {
     if (this.isEmptyOrNull) return;
 
     try {

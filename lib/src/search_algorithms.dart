@@ -11,8 +11,3 @@
  * limitations under the License.
  */
 
-extension SearchAlgorithmExtensions<T> on Iterable<T> {
-  // todo implement binarySearch()
-
-  // todo implement
-}

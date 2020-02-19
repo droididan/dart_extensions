@@ -11,12 +11,11 @@
  * limitations under the License.
  */
 extension IntExtensions on int {
-
   /// Return the min if this number is smaller then minimum
   /// Return the max if this number is bigger the the maximum
   /// Return this number if it's between the range
   int inRangeOf(int min, int max) {
-    if (min.isNull || max .isNull) throw Exception('min or max cannot be null');
+    if (min.isNull || max.isNull) throw Exception('min or max cannot be null');
     if (min > max) throw ArgumentError('min must be smaller the max');
 
     if (this < min) return min;
@@ -69,7 +68,7 @@ extension IntExtensions on int {
   int get squared => this * this;
 
   /// Convert this integer into boolean.
-  /// 
+  ///
   /// Returns `true` if this integer is greater than *0*.
   bool get asBool => this > 0;
 }

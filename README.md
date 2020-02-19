@@ -3,15 +3,13 @@
   
  
 ## What New 
-* `Flutter extenesions` 🎉 🐦
-* `search algorithms` - SOON 🕵️‍
-* `sort algorithms` - SOON
-* `asBool` for String and int
-* `inRangeOf - int`
-* `any - Iterables`
-* `groupBy - Iterables`
-* `intersect - Iterables`
-* `toMutableSet - Iterables`
+* `.withTooltip` Tooltips improve the accessibility of visual widgets by proving a textual representation of the widget
+* `.asBool` for String and int
+* `.inRangeOf - int`
+* `.any - Iterables`
+* `.groupBy - Iterables`
+* `.intersect - Iterables`
+* `.toMutableSet - Iterables`
 
 Why Method Extensions? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
   
@@ -55,6 +53,7 @@ class _HomeState extends State<Home> {
                 .withShadow()
                 .alignAtCenter()
                 .toCenter()
+                .withTooltip('just a tooltip')
                 .paddingOnly(left: 10)
                 .paddingAll(20)
                 .onTap(() => print('tap'))
@@ -378,6 +377,14 @@ Return this number if it's between the range
 ```
 
 # Flutter Extensions Full List
+
+## Flutter
+- `Tooltip`
+- `algin`
+- `center`
+- `container`
+- `padding`
+- `navigation`
 
 ## Http Extensions
 - `httpGet`

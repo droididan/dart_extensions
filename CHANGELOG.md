@@ -1,7 +1,12 @@
+## [0.3.3] 19/02/20
+- algorithm - quick search
+- Flutter - Tooltip extension
+
 ## [0.2.0] - 23/01/20.
 - .groupBy() added Iterable + tests
 - .intersect() + test
 - .toMutableSet() + test
+
 ## [0.1.8] - 22/01/20.
 - .filter() added Iterable + tests
 - .notFilter() added Iterable + tests
