@@ -364,6 +364,20 @@ var number = '12345'.toDoubleOrNull(); // 12345
 var notANumber = '123-45'.toDoubleOrNull(); // null  
 ```  
 
+### .limitFromEnd()
+Limit the string to a maximum length, taking from the end of the string.
+```dart
+var longString = "0123456789";
+var noMoreThanThree = longString.limitFromEnd(3); // "789"
+```
+
+### .limitFromStart()
+Limit the string to a maximum length, taking from the start of the string.
+```dart
+var longString = "0123456789";
+var noMoreThanThree = longString.limitFromStart(3); // "012"
+```
+
 ## int Extensions
 
 ### .inRangeOf()  
@@ -470,6 +484,8 @@ Return this number if it's between the range
 - `min`
 - `max`
 - `isLeapYear`
+- `limitFromEnd`
+- `limitFromStart`
 
 ## Integers Extensions
 - `inRangeOf`

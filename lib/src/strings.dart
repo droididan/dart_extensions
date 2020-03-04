@@ -110,6 +110,16 @@ extension StringExtensions on String {
     return length == (this?.length ?? 0) || this.isEmptyOrNull;
   }
 
+  /// Shrink a string to be no more than [maxSize] in length, extending from the end.
+  /// For example, in a string with 10 charachters, a [maxSize] of 3 would return the last 3 charachters.
+  String limitFromEnd(int maxSize) => (this?.length ?? 0) < maxSize
+      ? this
+      : this.substring(this.length - maxSize);
+
+    /// Shrink a string to be no more than [maxSize] in length, extending from the start.
+  /// For example, in a string with 10 charachters, a [maxSize] of 3 would return the first 3 charachters.
+  String limitFromStart(int maxSize) => (this?.length ?? 0) < maxSize ? this : this.substring(0, maxSize);
+
   /// Convert this string into boolean.
   ///
   /// Returns `true` if this string is any of these values: `"true"`, `"yes"`, `"1"`, or if the string is a number and greater than 0, `false` if less than 1. This is also case insensitive.
