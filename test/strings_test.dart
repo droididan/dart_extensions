@@ -108,5 +108,16 @@ main() {
       expect('0'.asBool, false);
       expect('-1'.asBool, false);
     });
+
+    test('limitFromEnd', () {
+      const source = "01234";
+      expect(source.limitFromEnd(10), source);
+      expect(source.limitFromEnd(2), "34");
+    });
+    test('limitFromStart', () {
+      const source = "01234";
+      expect(source.limitFromStart(10), source);
+      expect(source.limitFromStart(2), "01");
+    });
   });
 }
