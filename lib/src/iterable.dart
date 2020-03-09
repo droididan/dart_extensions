@@ -13,11 +13,24 @@
 import 'dart:collection';
 import 'dart:math';
 
+import 'package:dart_extensions/src/utils.dart';
 import 'package:quiver/iterables.dart';
 
 import 'data_stractures/stack.dart';
+import 'equality.dart';
 
 extension CollectionsExtensions<T> on Iterable<T> {
+  ///Sorts elements in the array in-place according to natural sort order of the value returned by specified [selector] function.
+  ///The sort is _stable_. It means that equal elements preserve their order relative to each other after sorting.
+  Iterable<T> sortBy<TKey>(
+    TKey Function(T) keySelector, {
+    EqualityComparer<TKey> keyComparer,
+  }) {
+    checkNullError(this);
+    ArgumentError.checkNotNull(keySelector, 'keySelector');
+    return InternalOrderedIterable(this, keySelector, keyComparer, false);
+  }
+
   /// Returns `true` if at least one element matches the given [predicate].
   bool any(bool predicate(T element)) {
     if (this.isEmptyOrNull) return false;
@@ -326,7 +339,8 @@ extension CollectionsExtensions<T> on Iterable<T> {
   }
 
   /// Creates a Map instance in which the keys and values are computed from the iterable.
-  Map<dynamic, dynamic> associate(key(element), value(element)) => Map.fromIterable(this, key: key, value: value);
+  Map<dynamic, dynamic> associate(key(element), value(element)) =>
+      Map.fromIterable(this, key: key, value: value);
 
   /// Returns the first element matching the given [predicate], or `null`
   /// if element was not found.
