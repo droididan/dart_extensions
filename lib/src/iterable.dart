@@ -20,6 +20,9 @@ import 'data_stractures/stack.dart';
 import 'equality.dart';
 
 extension CollectionsExtensions<T> on Iterable<T> {
+
+   List<E> mapList<E>(E f(T e)) => this.map(f).toList();
+
   ///Sorts elements in the array in-place according to natural sort order of the value returned by specified [selector] function.
   ///The sort is _stable_. It means that equal elements preserve their order relative to each other after sorting.
   Iterable<T> sortBy<TKey>(

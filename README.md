@@ -3,18 +3,14 @@
   
  
 ## What New 
+* `BuildContext` extensions 💪🏻
+* `.sortBy` [0.3.5] Sorts elements in the array in-place according to natural sort order of the value returned by specified selector function.
 * `.withTooltip` Tooltips improve the accessibility of visual widgets by proving a textual representation of the widget
-* `.asBool` for String and int
-* `.inRangeOf - int`
-* `.any - Iterables`
-* `.groupBy - Iterables`
-* `.intersect - Iterables`
-* `.toMutableSet - Iterables`
 
 Why Method Extensions? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
   
   *let me know if you want something specific or you found a bug at bar.idan@gmail.com*  
-## Let get started 💪🏻  
+## Let get started 💪🏻 
   
 1. Go to `pubspec.yaml` 
 2. add a dart_extensions and replace `[version]` with the latest version:  
@@ -26,95 +22,6 @@ dependencies:
   
 3. click the packages get button or *flutter pub get*  
 
-
-## Flutter Extensions
-
-### Widget extensions
-So now we can just add round corners, shadows, align, and added gestures to our `Widgets` without the crazy water-fall effect. awesome!
-That's just the tip of the iceberg, expect to see very cool stuff soon.
-```dart
-class Home extends StatefulWidget {
-  @override
-  _HomeState createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: Stack(
-          children: <Widget>[
-            Container(
-              height: 100,
-              width: 100,
-            )   .withRoundCorners(backgroundColor: Colors.grey)
-                .withShadow()
-                .alignAtCenter()
-                .toCenter()
-                .withTooltip('just a tooltip')
-                .paddingOnly(left: 10)
-                .paddingAll(20)
-                .onTap(() => print('tap'))
-                .onLongPress(() => print('long press'))
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
-
-### Navigation
-We can navigate from every widget by calling these methods
-```dart
-    navigateTo(route: MaterialPageRoute(builder: (c) => Login()));
-    navigateByRouteName(Routes.home, );
-    final result = navigateBack();
-```
-
-
-## Http Extensions
-
-### .httpGet()
-Sends an HTTP GET request with the given headers to the given URL
-```dart
-final json = await "https://jsonplaceholder.typicode.com/posts".httpGet();
-```
-*result:*
-```json
-[
-  {
-    "userId": 1,
-    "id": 1,
-    "title": "sunt aut facere",
-    "body": "quia et suscipit"
-  },
-  {
-    "userId": 1,
-    "id": 2,
-    "title": "qui est esse",
-    "body": "dolor beatae ea dolores neque"
-  },
-]
-```
-
-*usage with then:*
-```dart
-"https://jsonplaceholder.typicode.com/posts".httpGet().then((result) {
-          print(result);
-       }).catchError((e) => print(e));
-```
-
-### .httpPost()
-Sends an HTTP POST request with the given headers and body to the given URL which can be a [Uri] or a [String].
-```dart
-String json = '{"title": "Hello", "body": "body text", "userId": 1}';
-final json = await "https://jsonplaceholder.typicode.com/posts".httpPost(json);
-```
-
-for more examples (put, delete) See [http.dart](https://github.com/droididan/dart_extentions/blob/master/lib/http.dart) 
 
 ## Iterable Extensions
 
@@ -139,6 +46,13 @@ Sort the users by age:
   23: [User:23, Jadn], 
   32: [User:32, Aden]
 }
+```
+
+### .sortBy()
+Sorts elements in the array in-place according to natural sort order of the value returned by specified selector function.
+```dart
+final users = [User(22, "Kasey"), User(16, "Roni"), User(23, "Jadn")]; 
+users.sortBy((u) => u.age) ///  [User(16, "Roni"), [User(22, "Kasey"), User(23, "Jadn")]
 ```
 
 ### .find()
@@ -276,6 +190,117 @@ print(sales); // [
 ```  
 See [iterable.dart](https://github.com/droididan/dart_extentions/blob/master/lib/iterable.dart) for more  examples.  
 
+## Flutter Extensions
+
+### Context extensions
+Are you not tired from typing `MediaQuery.of(context).size...` to get height or width? here's a cool extension
+```dart
+  context.mq  // returns the MediaQuery
+```
+
+```dart
+  context isLandscape // returns if Orientation is landscape
+```
+
+```dart
+context.sizePx // returns same as MediaQuery.of(context).size
+```
+
+```dart
+context.widthPx // returns same as MediaQuery.of(context).size.width
+```
+
+```dart
+context.heightPx // returns same as MediaQuery.of(context).height
+```
+
+### Widget extensions
+So now we can just add round corners, shadows, align, and added gestures to our `Widgets` without the crazy water-fall effect. awesome!
+That's just the tip of the iceberg, expect to see very cool stuff soon.
+```dart
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        child: Stack(
+          children: <Widget>[
+            Container(
+              height: 100,
+              width: 100,
+            )   .withRoundCorners(backgroundColor: Colors.grey)
+                .withShadow()
+                .alignAtCenter()
+                .toCenter()
+                .withTooltip('just a tooltip')
+                .paddingOnly(left: 10)
+                .paddingAll(20)
+                .onTap(() => print('tap'))
+                .onLongPress(() => print('long press'))
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+### Navigation
+We can navigate from every widget by calling these methods
+```dart
+    navigateTo(route: MaterialPageRoute(builder: (c) => Login()));
+    navigateByRouteName(Routes.home, );
+    final result = navigateBack();
+```
+
+
+## Http Extensions
+
+### .httpGet()
+Sends an HTTP GET request with the given headers to the given URL
+```dart
+final json = await "https://jsonplaceholder.typicode.com/posts".httpGet();
+```
+*result:*
+```json
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere",
+    "body": "quia et suscipit"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "dolor beatae ea dolores neque"
+  },
+]
+```
+
+*usage with then:*
+```dart
+"https://jsonplaceholder.typicode.com/posts".httpGet().then((result) {
+          print(result);
+       }).catchError((e) => print(e));
+```
+
+### .httpPost()
+Sends an HTTP POST request with the given headers and body to the given URL which can be a [Uri] or a [String].
+```dart
+String json = '{"title": "Hello", "body": "body text", "userId": 1}';
+final json = await "https://jsonplaceholder.typicode.com/posts".httpPost(json);
+```
+
+for more examples (put, delete) See [http.dart](https://github.com/droididan/dart_extentions/blob/master/lib/http.dart) 
+
 ## Range Extensions
 ### .until()
 Returns a sequence of integer, starting from the current number until the [end] number. [step] is optional, it will step number if given
@@ -407,6 +432,7 @@ Return this number if it's between the range
 - `httpDelete`
 
 ## Iterables Extensions
+- `sortBy`
 - `toMutableSet`
 - `intersect`
 - `groupBy`

@@ -18,6 +18,10 @@ main() {
   final users = [User(22, "Ronit"), User(23, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
 
   group('iterables', () {
+    test('mapList', () {
+      expect([3,4,5,6,7].mapList((item) => item.toDouble()), [3.0, 4.0, 5.0, 6.0, 7.0]);
+    });
+
     test('any', () {
       expect(users.any((u) => u.name == 'Oded'), true);
       expect(users.any((u) => u.name == 'Not Exists'), false);

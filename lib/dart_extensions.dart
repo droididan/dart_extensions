@@ -16,6 +16,7 @@ export 'package:dart_extensions/src/date.dart';
 export 'package:dart_extensions/src/files.dart';
 export 'package:dart_extensions/src/flutter/align.dart';
 export 'package:dart_extensions/src/flutter/center.dart';
+export 'package:dart_extensions/src/flutter/context.dart';
 export 'package:dart_extensions/src/flutter/container.dart';
 export 'package:dart_extensions/src/flutter/gesture_detector.dart';
 export 'package:dart_extensions/src/flutter/navigation.dart';
@@ -28,3 +29,4 @@ export 'package:dart_extensions/src/search_algorithms.dart';
 export 'package:dart_extensions/src/sort_algorithms.dart';
 export 'package:dart_extensions/src/strings.dart';
 export 'package:dart_extensions/src/flutter/widgets.dart';
+ 

@@ -37,6 +37,8 @@ class Routes {
 }
 
 class Home extends StatefulWidget {
+  
+  
   @override
   _HomeState createState() => _HomeState();
 }
@@ -44,8 +46,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    /// For example purpose only
-
+   
+    print([1,2,3,4].mapList((f) => f.toDouble()));
     return Scaffold(
       body: Container(
         child: Stack(
