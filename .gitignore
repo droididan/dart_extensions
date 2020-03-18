@@ -111,3 +111,4 @@ coverage/
 !/dev/ci/**/Gemfile.lock
 .idea/workspace.xml
 .idea/libraries/Dart_Packages.xml
+.idea/workspace.xml
