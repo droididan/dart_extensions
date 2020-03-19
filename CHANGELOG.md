@@ -1,3 +1,8 @@
+## [1.0.0] - 19/03/20
+- `Context extensions`
+- `Text Extensions`
+- `Icon Extensions`
+- `List<Widget> Extensions`
 ## [0.3.4] 9/03/20
 - sortBy - Sorts elements in the array in-place according to natural sort order of the value returned by specified selector function.
 ## [0.3.3] 19/02/20

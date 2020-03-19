@@ -1,9 +1,12 @@
   
-[![](https://img.shields.io/badge/build-0.3.3-brightgreen)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
+[![](https://img.shields.io/badge/build-1.0.0-brightgreen)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
  
 ## What New 
 * `BuildContext` extensions 💪🏻
+* `List<Widget>` extensions 💪🏻
+* `Text` extensions 💪🏻
+* `Icon` extensions 💪🏻
 * `.sortBy` [0.3.5] Sorts elements in the array in-place according to natural sort order of the value returned by specified selector function.
 * `.withTooltip` Tooltips improve the accessibility of visual widgets by proving a textual representation of the widget
 
@@ -113,8 +116,6 @@ Returns a list containing all elements except first [n] elements.
 [1, 2, 3, 4].drop(1) // [2, 3, 4]
 ```
 
-
-
 ### .forEachIndexed()
 Performs the given action on each element on iterable, providing sequential `index` with the `element`.
 ```dart
@@ -212,6 +213,22 @@ context.widthPx // returns same as MediaQuery.of(context).size.width
 
 ```dart
 context.heightPx // returns same as MediaQuery.of(context).height
+```
+
+### Text Extensions
+```dart
+final text = Text('hello')
+     .bold()
+     .fontSize(25)
+     .italic();
+```
+
+### List<Widget> Extensions
+```dart
+    final someWidgetList = [
+      Text('hello'),
+      Text('world'),
+    ].toColumnWidget();  // toRowWidget(), toStackWidget()
 ```
 
 ### Widget extensions
@@ -424,6 +441,10 @@ Return this number if it's between the range
 - `container`
 - `padding`
 - `navigation`
+- `Context`
+- `Text`
+- `List<Widget>`
+- `Icon`
 
 ## Http Extensions
 - `httpGet`

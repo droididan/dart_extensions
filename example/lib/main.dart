@@ -46,7 +46,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-   
+    
     print([1,2,3,4].mapList((f) => f.toDouble()));
     return Scaffold(
       body: Container(
@@ -59,7 +59,6 @@ class _HomeState extends State<Home> {
                 .toCenter()
                 .paddingOnly(left: 10)
                 .paddingAll(20)
-
                 .onTap(
                   () async {
                     final result = await navigateByRouteName(Routes.login);
