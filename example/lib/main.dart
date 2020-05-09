@@ -82,7 +82,7 @@ class Login extends StatelessWidget {
       child: Center(
         child: MaterialButton(
           child: Text('Go Back'),
-          onPressed: () => navigateBack(context: context, result: "hello"),
+          onPressed: () => Navigator.pop(context),
         ),
       ),
     );
