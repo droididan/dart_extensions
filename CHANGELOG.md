@@ -50,3 +50,7 @@
 - toCharArray Strings extension + tests
 
  
+## [2.0.0] - 01/10/2020.
+- Fix Overflow with Clip to be compatible with flutter 1.22
+
+ 
