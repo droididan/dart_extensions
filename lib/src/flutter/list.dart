@@ -27,7 +27,7 @@ extension ListExtensions<E> on List<Widget> {
     AlignmentGeometry alignment = AlignmentDirectional.topStart,
     TextDirection textDirection,
     StackFit fit = StackFit.loose,
-    Overflow overflow = Overflow.clip,
+    Clip clip = Clip.hardEdge,
     List<Widget> children = const <Widget>[],
   }) =>
       Stack(
@@ -35,7 +35,7 @@ extension ListExtensions<E> on List<Widget> {
         alignment: alignment,
         textDirection: textDirection,
         fit: fit,
-        overflow: overflow,
+        clipBehavior: clip,
         children: this,
       );
 
