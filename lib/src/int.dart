@@ -23,7 +23,7 @@ extension IntExtensions on int {
     return this;
   }
 
-  bool get isNull => this == null;
+  bool get isNull => (this == null);
 
   /// Returns the absolute value
   get absolute => abs();

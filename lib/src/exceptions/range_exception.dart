@@ -17,13 +17,10 @@ class RException {
 
   RException.steps() : message = 'The range must be more then 0';
 
-  final String message;
+  final String? message;
 
   @override
   String toString() {
-    if (message != null) {
-      return 'RException: $message';
-    }
-    return 'RException';
+    return 'RException: ${message ?? ''}';
   }
 }
