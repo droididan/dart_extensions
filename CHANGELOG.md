@@ -1,3 +1,7 @@
+## [2.0.0] - 11/03/21
+- `Support flutter 2`
+- `Support null safety`
+- `add new extensions`
 ## [1.0.0] - 19/03/20
 - `Context extensions`
 - `Text Extensions`

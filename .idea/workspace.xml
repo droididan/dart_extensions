@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/model/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/model/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
     </list>
     <list id="5184f34c-81bf-45d3-bda8-acf5b9f79ed3" name="revert" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,57 +13,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/src/http.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#2991#0" expanded="true" />
-                <element signature="e#605#638#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/dart_extensions.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#1788#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/int_test.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#2013#0" expanded="true" />
-                <element signature="e#604#636#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -77,24 +20,9 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>toDoube</find>
-      <find>String</find>
-      <find>preferBelow</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/lib/main.dart" />
-      </list>
-    </option>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="CqnSSyen" />
@@ -113,49 +41,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1792" />
-    <option name="y" value="-247" />
-    <option name="width" value="3440" />
-    <option name="height" value="1440" />
-  </component>
   <component name="ProjectId" id="1WTnDMN9xdNWN023ICrObgVEKkF" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="dart_extension" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dart_extension" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dart_extension" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dart_extension" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dart_extension" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dart_extension" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dart_extension" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dart_extension" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -183,46 +69,42 @@
       <recent name="C:\Users\luci\Desktop\Projects\dart_extentions" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Flutter.main.dart">
-    <configuration name="intersect in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="intersect" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Flutter Test.date time">
     <configuration name="iterables in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
       <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
       <option name="testName" value="iterables" />
       <method v="2" />
     </configuration>
-    <configuration name="toMutableSet in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="toMutableSet" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="binarySearch" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="binarySearch" />
+    <configuration name="algo tests" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="algo tests" />
       <option name="testFile" value="$PROJECT_DIR$/test/algo_test.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="date time" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="date time" />
+      <option name="testFile" value="$PROJECT_DIR$/test/date_tests.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="first or null" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="first or null" />
+      <option name="testFile" value="$PROJECT_DIR$/test/iterable_tests.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mapList" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="mapList" />
+      <option name="testFile" value="$PROJECT_DIR$/test/iterable_tests.dart" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter Test.date time" />
+        <item itemvalue="Flutter Test.algo tests" />
+        <item itemvalue="Flutter Test.first or null" />
+        <item itemvalue="Flutter Test.mapList" />
+        <item itemvalue="Dart Test.iterables in iterable_tests.dart" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -568,35 +450,6 @@
     <option name="localTasksCounter" value="48" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="binarySearch - 2020.02.17 at 14h 45m 16s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 45m 49s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 46m 09s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 46m 30s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 47m 11s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 47m 38s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 47m 57s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 49m 10s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.19 at 13h 52m 09s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -606,42 +459,6 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="1792" y="-247" width="3440" height="1440" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09710744" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Dart Analysis" />
-      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" visible="true" weight="0.32864544" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32938564" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="right" id="Flutter Inspector" />
-      <window_info anchor="right" id="Flutter Outline" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout>
-  </component>
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
@@ -650,14 +467,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -676,6 +486,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="associate" />
@@ -706,21 +517,65 @@
     <option name="LAST_COMMIT_MESSAGE" value="update to 0.3.2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3065" y="163" width="1434" height="945" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615388932212">
-      <screen x="1792" y="-222" width="3440" height="1415" />
+    <state x="3065" y="-205" width="1434" height="945" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615453580346">
+      <screen x="1792" y="-590" width="3440" height="1415" />
     </state>
     <state x="3065" y="163" width="1434" height="945" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.-222.3440.1415/512.-695.1280.695/0.25.1792.1004@1792.-222.3440.1415" timestamp="1615388932212" />
+    <state x="3065" y="-205" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453580346" />
     <state x="3323" y="288" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1615388925580">
       <screen x="1792" y="-222" width="3440" height="1415" />
     </state>
     <state x="3323" y="288" key="#com.intellij.ide.util.TreeFileChooserDialog/1792.-222.3440.1415/512.-695.1280.695/0.25.1792.1004@1792.-222.3440.1415" timestamp="1615388925580" />
-    <state x="2607" y="-247" width="1173" height="1440" key="search.everywhere.popup" timestamp="1615386912012">
-      <screen x="1792" y="-247" width="3440" height="1440" />
+    <state x="3132" y="-197" key="AndroidProcessChooserDialog" timestamp="1615450731598">
+      <screen x="1792" y="-615" width="3440" height="1440" />
+    </state>
+    <state x="3132" y="-197" key="AndroidProcessChooserDialog/1792.-615.3440.1440/0.0.1792.1120@1792.-615.3440.1440" timestamp="1615450731598" />
+    <state width="3366" height="366" key="GridCell.Tab.0.bottom" timestamp="1615453225980">
+      <screen x="1792" y="-590" width="3440" height="1415" />
+    </state>
+    <state width="3366" height="384" key="GridCell.Tab.0.bottom/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615392084165" />
+    <state width="3366" height="366" key="GridCell.Tab.0.bottom/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453225980" />
+    <state width="3366" height="366" key="GridCell.Tab.0.center" timestamp="1615453225979">
+      <screen x="1792" y="-590" width="3440" height="1415" />
+    </state>
+    <state width="3366" height="384" key="GridCell.Tab.0.center/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615392084164" />
+    <state width="3366" height="366" key="GridCell.Tab.0.center/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453225979" />
+    <state width="3366" height="366" key="GridCell.Tab.0.left" timestamp="1615453225979">
+      <screen x="1792" y="-590" width="3440" height="1415" />
+    </state>
+    <state width="3366" height="384" key="GridCell.Tab.0.left/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615392084163" />
+    <state width="3366" height="366" key="GridCell.Tab.0.left/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453225979" />
+    <state width="3366" height="366" key="GridCell.Tab.0.right" timestamp="1615453225979">
+      <screen x="1792" y="-590" width="3440" height="1415" />
+    </state>
+    <state width="3366" height="384" key="GridCell.Tab.0.right/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615392084164" />
+    <state width="3366" height="366" key="GridCell.Tab.0.right/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453225979" />
+    <state x="1892" y="-515" width="3240" height="1240" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1615453907524">
+      <screen x="1792" y="-590" width="3440" height="1415" />
+    </state>
+    <state x="1892" y="-515" width="3240" height="1240" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453907524" />
+    <state x="3012" y="-284" width="999" height="818" key="find.popup" timestamp="1615452811704">
+      <screen x="1792" y="-590" width="3440" height="1415" />
+    </state>
+    <state x="3012" y="-284" width="999" height="818" key="find.popup/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615452811704" />
+    <state x="3012" y="-304" width="999" height="818" key="find.popup/1792.-615.3440.1440/0.0.1792.1120@1792.-615.3440.1440" timestamp="1615452222705" />
+    <state x="2607" y="-590" width="1173" height="1416" key="search.everywhere.popup" timestamp="1615453528464">
+      <screen x="1792" y="-590" width="3440" height="1415" />
     </state>
     <state x="2607" y="-222" width="1173" height="1972" key="search.everywhere.popup/1792.-222.3440.1415/512.-695.1280.695/0.25.1792.1004@1792.-222.3440.1415" timestamp="1615386562513" />
     <state x="2607" y="-247" width="1173" height="1440" key="search.everywhere.popup/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615386912012" />
+    <state x="2607" y="-590" width="1173" height="1416" key="search.everywhere.popup/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453528464" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/iterable.dart</url>
+          <line>362</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="DartTestRunConfigurationType">
         <watch expression="this" />
@@ -732,53 +587,5 @@
         <watch expression="e" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/int_test.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#2013#0" expanded="true" />
-            <element signature="e#604#636#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dart_extensions.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#1788#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/http.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#2991#0" expanded="true" />
-            <element signature="e#605#638#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
