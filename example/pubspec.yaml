@@ -19,7 +19,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-dependency_overrides:
-  test_api: ^0.2.19
+
 flutter:
   uses-material-design: true
