@@ -136,4 +136,9 @@ extension StyledText<T extends Text> on T {
       ) as T;
 
   T textWidthBasis(TextWidthBasis textWidthBasis) => this.copyWith(textWidthBasis: textWidthBasis) as T;
+
+  T withUnderLine() => this.copyWith(
+      style: (this.style ?? TextStyle())
+          .copyWith(decoration: TextDecoration.underline)
+  ) as T;
 }
