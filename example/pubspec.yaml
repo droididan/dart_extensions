@@ -14,11 +14,12 @@ dependencies:
   dart_extensions:
     path: ../
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+dependency_overrides:
+  test_api: ^0.2.19
 flutter:
   uses-material-design: true
