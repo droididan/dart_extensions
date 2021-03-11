@@ -13,7 +13,6 @@
 import 'dart:collection';
 import 'dart:math';
 
-import 'package:dart_extensions/src/utils.dart';
 import 'package:quiver/iterables.dart';
 
 import 'data_stractures/stack.dart';
@@ -25,10 +24,8 @@ extension CollectionsExtensions<T> on Iterable<T> {
   ///Sorts elements in the array in-place according to natural sort order of the value returned by specified [selector] function.
   Iterable<T> sortBy<TKey>(
     TKey Function(T) keySelector, {
-    EqualityComparer<TKey> keyComparer,
+    required EqualityComparer<TKey> keyComparer,
   }) {
-    checkNullError(this);
-    ArgumentError.checkNotNull(keySelector, 'keySelector');
     return InternalOrderedIterable(this, keySelector, keyComparer, false);
   }
 
@@ -44,7 +41,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
 
   /// Returns a set containing all elements that are contained
   /// by both this set and the specified collection.
-  Set<T> intersect(Iterable other) {
+  Set<T> intersect(Iterable<T> other) {
     final set = this.toMutableSet();
     set.addAll(other);
     return set;
@@ -60,7 +57,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
 
     for (final element in this) {
       var list = map.putIfAbsent(key(element as T), () => []);
-      list.add(element as T);
+      list.add(element);
     }
     return map;
   }
@@ -94,7 +91,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   List<T> takeOnly(int n) {
     if (n == 0) return [];
 
-    var list = List<T>();
+    var list = List<T>.empty();
     var thisList = this.toList();
     if (this is Iterable) {
       final resultSize = this.length - n;
@@ -112,7 +109,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   List<T> drop(int n) {
     if (n == 0) return [];
 
-    var list = List<T>();
+    var list = List<T>.empty();
     var originalList = this.toList();
     if (this is Iterable) {
       final resultSize = this.length - n;
@@ -153,16 +150,19 @@ extension CollectionsExtensions<T> on Iterable<T> {
   }
 
   /// get the first element return null
-  T get firstOrNull => _elementAtOrNull(0);
-
-  T firstOrNullWhere(bool predicate(T element)) {
-    return firstWhere(predicate, orElse: () => null);
-  }
+  T? get firstOrNull => _elementAtOrNull(0);
 
   /// get the last element if the list is not empty or return null
-  T get lastOrNull => isNotEmpty ? last : null;
+  T? get lastOrNull => isNotEmpty ? last : null;
 
   T lastOrDefault(T defaultValue) => lastOrNull ?? defaultValue;
+
+  T? firstOrNullWhere(bool predicate(T element)) {
+    for (T element in this) {
+      if (predicate(element)) return element;
+    }
+    return null;
+  }
 
   /// get the first element or provider default
   /// example:
@@ -214,7 +214,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   ///    User(45, "ronit"),
   ///    User(19, "amsalam"),
   ///  ].count((user) => user.age > 20); // 2
-  int count([bool predicate(T element)]) {
+  int count([bool predicate(T element)?]) {
     var count = 0;
     if (predicate == null) {
       return length;
@@ -250,7 +250,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// 36 Ran
   List<T> distinctBy(predicate(T selector)) {
     final set = HashSet();
-    final list = List<T>();
+    final list = List<T>.empty();
     toList().forEach((e) {
       final key = predicate(e);
       if (set.add(key)) {
@@ -262,11 +262,11 @@ extension CollectionsExtensions<T> on Iterable<T> {
   }
 
 // get an element at specific index or return null
-  T _elementAtOrNull(int index) {
+  T? _elementAtOrNull(int index) {
     return _elementOrNull(index, (_) => null);
   }
 
-  _elementOrNull(int index, T defaultElement(int index)) {
+  _elementOrNull(int index, T? defaultElement(int index)) {
 // if our index is smaller then 0 return the default
     if (index < 0) return defaultElement(index);
 
@@ -314,7 +314,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// the combination of them two.
   zip<T>(Iterable<T> iterable) sync* {
     if (iterable.isEmptyOrNull) return;
-    final iterables = List<Iterable>()..add(this)..add(iterable);
+    final iterables = List<Iterable>.empty()..add(this)..add(iterable);
 
     final iterators = iterables.map((e) => e.iterator).toList(growable: false);
     while (iterators.every((e) => e.moveNext())) {
@@ -350,7 +350,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
 
   /// Returns the first element matching the given [predicate], or `null`
   /// if element was not found.
-  T find(predicate(T selector)) {
+  T? find(predicate(T selector)) {
     for (final element in this) {
       if (predicate(element)) {
         return element;

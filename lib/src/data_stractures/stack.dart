@@ -30,7 +30,7 @@ class StackX<T> {
 
   top() => _list.last;
 
-  List<T> addAll(Iterable elements) {
+  List<T> addAll(Iterable<T> elements) {
     _list.addAll(elements);
     return _list.toList();
   }

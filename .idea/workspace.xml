@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/model/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/model/user.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <list id="5184f34c-81bf-45d3-bda8-acf5b9f79ed3" name="revert" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +19,57 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_29_x86" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/src/http.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#2991#0" expanded="true" />
+                <element signature="e#605#638#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/dart_extensions.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#1788#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/int_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#2013#0" expanded="true" />
+                <element signature="e#604#636#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -34,13 +88,20 @@
     <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/main.dart" />
+      </list>
+    </option>
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="CqnSSyen" />
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
-        <option value="$PROJECT_DIR$/.idea/dart_extentions.iml" />
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
         <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
@@ -52,20 +113,63 @@
       </list>
     </option>
   </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1792" />
+    <option name="y" value="-247" />
+    <option name="width" value="3440" />
+    <option name="height" value="1440" />
+  </component>
   <component name="ProjectId" id="1WTnDMN9xdNWN023ICrObgVEKkF" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dart_extension" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dart_extension" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dart_extension" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dart_extension" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dart_extension" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dart_extension" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dart_extension" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dart_extension" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../work/ugotitapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -119,15 +223,6 @@
       <option name="testFile" value="$PROJECT_DIR$/test/algo_test.dart" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Flutter.main.dart" />
-        <item itemvalue="Flutter Test.binarySearch" />
-        <item itemvalue="Dart Test.iterables in iterable_tests.dart" />
-        <item itemvalue="Dart Test.intersect in iterable_tests.dart" />
-        <item itemvalue="Dart Test.toMutableSet in iterable_tests.dart" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -511,6 +606,42 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
+  <component name="ToolWindowManager">
+    <frame x="1792" y="-247" width="3440" height="1440" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09710744" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Dart Analysis" />
+      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" visible="true" weight="0.32864544" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32938564" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="right" id="Flutter Inspector" />
+      <window_info anchor="right" id="Flutter Outline" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
@@ -520,7 +651,12 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
             </State>
           </value>
         </entry>
@@ -570,177 +706,79 @@
     <option name="LAST_COMMIT_MESSAGE" value="update to 0.3.2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="459" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579432835035">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state x="3065" y="163" width="1434" height="945" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615388932212">
+      <screen x="1792" y="-222" width="3440" height="1415" />
     </state>
-    <state x="459" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/91.0.1829.1080@91.0.1829.1080" timestamp="1579432835035" />
-    <state x="883" y="242" key="#xdebugger.evaluate" timestamp="1579433049871">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state x="3065" y="163" width="1434" height="945" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.-222.3440.1415/512.-695.1280.695/0.25.1792.1004@1792.-222.3440.1415" timestamp="1615388932212" />
+    <state x="3323" y="288" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1615388925580">
+      <screen x="1792" y="-222" width="3440" height="1415" />
     </state>
-    <state x="883" y="242" key="#xdebugger.evaluate/91.0.1829.1080@91.0.1829.1080" timestamp="1579433049871" />
-    <state x="259" y="0" width="1315" height="816" key="CommitChangelistDialog2" timestamp="1579855883680">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="3323" y="288" key="#com.intellij.ide.util.TreeFileChooserDialog/1792.-222.3440.1415/512.-695.1280.695/0.25.1792.1004@1792.-222.3440.1415" timestamp="1615388925580" />
+    <state x="2607" y="-247" width="1173" height="1440" key="search.everywhere.popup" timestamp="1615386912012">
+      <screen x="1792" y="-247" width="3440" height="1440" />
     </state>
-    <state x="259" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579855883680" />
-    <state x="428" y="0" key="CommitChangelistDialog2/126.0.1794.1080@126.0.1794.1080" timestamp="1579694988228" />
-    <state x="320" y="0" key="CommitChangelistDialog2/74.0.1462.864@74.0.1462.864" timestamp="1579178757948" />
-    <state x="391" y="0" key="CommitChangelistDialog2/81.0.1839.1080@81.0.1839.1080" timestamp="1579600619903" />
-    <state x="399" y="0" width="1315" height="816" key="CommitChangelistDialog2/91.0.1829.1080@91.0.1829.1080" timestamp="1579472770286" />
-    <state x="406" y="0" key="CommitChangelistDialog2/99.0.1821.1080@99.0.1821.1080" timestamp="1579550554756" />
-    <state width="465" height="466" key="DebuggerActiveHint" timestamp="1579684135117">
-      <screen x="126" y="0" width="1794" height="1080" />
-    </state>
-    <state width="465" height="466" key="DebuggerActiveHint/126.0.1794.1080@126.0.1794.1080" timestamp="1579684135117" />
-    <state width="473" height="466" key="DebuggerActiveHint/91.0.1829.1080@91.0.1829.1080" timestamp="1579302241773" />
-    <state width="471" height="466" key="DebuggerActiveHint/99.0.1821.1080@99.0.1821.1080" timestamp="1579596287672" />
-    <state x="785" y="294" key="FileChooserDialogImpl" timestamp="1579300329298">
-      <screen x="91" y="0" width="1829" height="1080" />
-    </state>
-    <state x="785" y="294" key="FileChooserDialogImpl/91.0.1829.1080@91.0.1829.1080" timestamp="1579300329298" />
-    <state width="1492" height="356" key="GridCell.Tab.0.bottom" timestamp="1579857085998">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1492" height="356" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579857085998" />
-    <state width="1751" height="492" key="GridCell.Tab.0.bottom/126.0.1794.1080@126.0.1794.1080" timestamp="1579691088083" />
-    <state width="1796" height="492" key="GridCell.Tab.0.bottom/81.0.1839.1080@81.0.1839.1080" timestamp="1579604514438" />
-    <state width="1786" height="479" key="GridCell.Tab.0.bottom/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662847" />
-    <state width="1573" height="259" key="GridCell.Tab.0.bottom/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
-    <state width="1492" height="356" key="GridCell.Tab.0.center" timestamp="1579857085997">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1492" height="356" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579857085997" />
-    <state width="1751" height="492" key="GridCell.Tab.0.center/126.0.1794.1080@126.0.1794.1080" timestamp="1579691088083" />
-    <state width="1796" height="492" key="GridCell.Tab.0.center/81.0.1839.1080@81.0.1839.1080" timestamp="1579604514437" />
-    <state width="1786" height="479" key="GridCell.Tab.0.center/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662846" />
-    <state width="1573" height="259" key="GridCell.Tab.0.center/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
-    <state width="1492" height="356" key="GridCell.Tab.0.left" timestamp="1579857085997">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1492" height="356" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579857085997" />
-    <state width="1751" height="492" key="GridCell.Tab.0.left/126.0.1794.1080@126.0.1794.1080" timestamp="1579691088083" />
-    <state width="1796" height="492" key="GridCell.Tab.0.left/81.0.1839.1080@81.0.1839.1080" timestamp="1579604514437" />
-    <state width="1786" height="479" key="GridCell.Tab.0.left/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662846" />
-    <state width="1573" height="259" key="GridCell.Tab.0.left/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
-    <state width="1492" height="356" key="GridCell.Tab.0.right" timestamp="1579857085997">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1492" height="356" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579857085997" />
-    <state width="1751" height="492" key="GridCell.Tab.0.right/126.0.1794.1080@126.0.1794.1080" timestamp="1579691088083" />
-    <state width="1796" height="492" key="GridCell.Tab.0.right/81.0.1839.1080@81.0.1839.1080" timestamp="1579604514437" />
-    <state width="1786" height="479" key="GridCell.Tab.0.right/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662846" />
-    <state width="1573" height="259" key="GridCell.Tab.0.right/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
-    <state x="759" y="250" key="RollbackChangesDialog" timestamp="1579297732868">
-      <screen x="91" y="0" width="1829" height="1080" />
-    </state>
-    <state x="759" y="250" key="RollbackChangesDialog/91.0.1829.1080@91.0.1829.1080" timestamp="1579297732868" />
-    <state x="506" y="182" key="SettingsEditor" timestamp="1579305259788">
-      <screen x="91" y="0" width="1829" height="1080" />
-    </state>
-    <state x="506" y="182" key="SettingsEditor/91.0.1829.1080@91.0.1829.1080" timestamp="1579305259788" />
-    <state x="600" y="282" key="VCS.EditChangelistDialog" timestamp="1579793335203">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="600" y="282" key="VCS.EditChangelistDialog/0.0.1536.824@0.0.1536.824" timestamp="1579793335203" />
-    <state x="342" y="145" key="Vcs.Push.Dialog.v2" timestamp="1579855885950">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="342" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1579855885950" />
-    <state x="525" y="190" key="Vcs.Push.Dialog.v2/126.0.1794.1080@126.0.1794.1080" timestamp="1579694989814" />
-    <state x="399" y="152" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1579178760180" />
-    <state x="490" y="190" key="Vcs.Push.Dialog.v2/81.0.1839.1080@81.0.1839.1080" timestamp="1579600621612" />
-    <state x="498" y="190" key="Vcs.Push.Dialog.v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579472772046" />
-    <state x="504" y="190" key="Vcs.Push.Dialog.v2/99.0.1821.1080@99.0.1821.1080" timestamp="1579550556415" />
-    <state x="183" y="92" width="1645" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579468968119">
-      <screen x="91" y="0" width="1829" height="1080" />
-    </state>
-    <state x="183" y="92" width="1645" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/91.0.1829.1080@91.0.1829.1080" timestamp="1579468968119" />
-    <state x="568" y="137" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579440423868">
-      <screen x="91" y="0" width="1829" height="1080" />
-    </state>
-    <state x="568" y="137" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/91.0.1829.1080@91.0.1829.1080" timestamp="1579440423868" />
-    <state x="835" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579694269495">
-      <screen x="126" y="0" width="1794" height="1080" />
-    </state>
-    <state x="835" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/126.0.1794.1080@126.0.1794.1080" timestamp="1579694269495" />
-    <state x="814" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579245981702" />
-    <state x="819" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/99.0.1821.1080@99.0.1821.1080" timestamp="1579595886226" />
-    <state x="702" y="145" width="607" height="789" key="find.popup" timestamp="1579441061615">
-      <screen x="91" y="0" width="1829" height="1080" />
-    </state>
-    <state x="702" y="145" width="607" height="789" key="find.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579441061615" />
-    <state x="480" y="191" width="565" height="517" key="run.anything.popup" timestamp="1579792036945">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="480" y="191" width="565" height="517" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1579792036945" />
-    <state x="662" y="250" width="672" height="677" key="run.anything.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579467030417" />
-    <state x="485" y="179" width="672" height="518" key="search.everywhere.popup" timestamp="1579852063159">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="485" y="179" width="672" height="518" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1579852063159" />
-    <state x="692" y="235" width="672" height="678" key="search.everywhere.popup/126.0.1794.1080@126.0.1794.1080" timestamp="1579683196863" />
-    <state x="668" y="235" width="672" height="678" key="search.everywhere.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579461357596" />
+    <state x="2607" y="-222" width="1173" height="1972" key="search.everywhere.popup/1792.-222.3440.1415/512.-695.1280.695/0.25.1792.1004@1792.-222.3440.1415" timestamp="1615386562513" />
+    <state x="2607" y="-247" width="1173" height="1440" key="search.everywhere.popup/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615386912012" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$USER_HOME$/Documents/flutter/bin/cache/pkg/sky_engine/lib/collection/queue.dart</url>
-          <line>719</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart</url>
-          <line>22</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart</url>
-          <line>33</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart</url>
-          <line>34</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/test/iterable_tests.dart</url>
-          <line>167</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/flutter/transforms/click_translate.dart</url>
-          <line>24</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/flutter/transforms/click_translate.dart</url>
-          <line>44</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/flutter/transforms/click_translate.dart</url>
-          <line>37</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-      </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="dart-exception" />
-      </default-breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="DartTestRunConfigurationType">
-        <watch expression="this" language="Dart" />
-        <watch expression="!test(element)" language="Dart" />
+        <watch expression="this" />
+        <watch expression="!test(element)" />
       </configuration>
       <configuration name="DartCommandLineRunConfigurationType">
-        <watch expression="set.add(key)" language="Dart" />
-        <watch expression="this.toList().addAll(iterable.toList())" language="Dart" />
-        <watch expression="e" language="Dart" />
+        <watch expression="set.add(key)" />
+        <watch expression="this.toList().addAll(iterable.toList())" />
+        <watch expression="e" />
       </configuration>
     </watches-manager>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/dart_extentions$files_dart.json" NAME="files.dart Coverage Results" MODIFIED="1579466363500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="DartCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="$PROJECT_DIR$/lib/files.dart" />
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/int_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#2013#0" expanded="true" />
+            <element signature="e#604#636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dart_extensions.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#1788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/http.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#2991#0" expanded="true" />
+            <element signature="e#605#638#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

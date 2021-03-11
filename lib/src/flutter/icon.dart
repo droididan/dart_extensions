@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 extension IconExtensions<T extends Icon> on T {
   Icon copyWith({
-    Color color,
-    double size,
-    String semanticLabel,
-    TextDirection textDirection,
+    Color? color,
+    double? size,
+    String? semanticLabel,
+    TextDirection? textDirection,
   }) {
     return Icon(
       this.icon,
@@ -16,7 +16,7 @@ extension IconExtensions<T extends Icon> on T {
     );
   }
 
-  T iconSize(double size) => this.copyWith(size: size);
+  T iconSize(double size) => this.copyWith(size: size) as T;
 
-  T iconColor(Color color) => this.copyWith(color: color);
+  T iconColor(Color color) => this.copyWith(color: color) as T;
 }

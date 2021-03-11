@@ -11,10 +11,10 @@
  * limitations under the License.
  */
 extension SearchAlgorithmExtensions on List<int> {
-  List<int> quickSort([int left, int right]) {
+  List<int> quickSort([int? left, int? right]) {
     var list = this;
-    if (left >= right) return [-1];
-    int pivot = left, i = left, j = right, direction = -1, temp = 0;
+    if ((left??0) >= (right??0)) return [-1];
+    int pivot = left!, i = left, j = right!, direction = -1, temp = 0;
     while (i < j) {
       if (direction == -1) {
         if (list[j] < list[pivot]) {

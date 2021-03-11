@@ -15,7 +15,7 @@ class User {
   final int age;
   final String name;
 
-  User(this.age, this.name);
+  User(this.age,this.name);
 
   @override
   String toString() {

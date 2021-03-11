@@ -31,7 +31,7 @@ main() {
     test('isNullOrEmpty', () {
       expect(''.isEmptyOrNull, true);
 
-      String nullStr;
+      String? nullStr;
       expect(nullStr.isEmptyOrNull, true);
       expect('not empty'.isEmptyOrNull, false);
     });
@@ -63,7 +63,7 @@ main() {
       expect('hello world'.isNotBlank, true);
       expect('hello world      '.isNotBlank, true);
       expect(''.isNotBlank, false);
-      final String test = null;
+      final String? test = null;
       expect(test.isNotBlank, false);
     });
 

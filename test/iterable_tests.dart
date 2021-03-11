@@ -28,6 +28,11 @@ main() {
       expect([].any((u) => u.name == 'Oded'), false);
     });
 
+    test("first or null", (){
+      final list= [1,45,6,9];
+      expect(null, list.firstWhere((element) => element == 7));
+    });
+
     test('filter', () {
       [null, 1, 2].where((n) => n == 2);
       final listWithNull = [null, User(1, "r"), User(2, "t")];
@@ -35,14 +40,14 @@ main() {
 
       expect(users.filter((u) => u.name == "Ronit"), [users[0], users[1]]);
       expect(numberList.filter((n) => n > 4), [5, 6]);
-      expect(listWithNull.filter((u) => u.name == "r"), [listWithNull[1]]);
+      expect(listWithNull.filter((u) => u?.name == "r"), [listWithNull[1]]);
     });
 
     test('filterNot', () {
       final listWithNull = [null, User(1, "r"), User(2, "t")];
       final numberList = [1, 2, 3, 4, 5, 6];
 
-      expect(listWithNull.filterNot((u) => u.name == "t"), [listWithNull[1]]);
+      expect(listWithNull.filterNot((u) => u?.name == "t"), [listWithNull[1]]);
       expect(numberList.filterNot((n) => n > 4), [1, 2, 3, 4]);
     });
 
@@ -168,7 +173,7 @@ main() {
         32: [users[3]]
       };
 
-      expect(users.groupBy((u) => u.age), expected);
+      expect(users.groupBy((User u) => u.age), expected);
     });
 
     test('gourpBy by name', () {
@@ -177,7 +182,7 @@ main() {
         'Oded': [users[2]],
         'Shimi': [users[3]]
       };
-      expect(users.groupBy((u) => u.name), expected);
+      expect(users.groupBy((User u) => u.name), expected);
     });
 
     test('toMutableSet', () {

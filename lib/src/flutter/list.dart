@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 extension ListExtensions<E> on List<Widget> {
   Widget toRowWidget({
-    Key key,
+    Key? key,
     MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
     MainAxisSize mainAxisSize = MainAxisSize.max,
     CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
-    TextDirection textDirection,
+    TextDirection? textDirection,
     VerticalDirection verticalDirection = VerticalDirection.down,
-    TextBaseline textBaseline,
+    TextBaseline? textBaseline,
     List<Widget> children = const <Widget>[],
   }) =>
       Row(
@@ -23,11 +23,11 @@ extension ListExtensions<E> on List<Widget> {
       );
 
   Widget toStackWidget({
-    Key key,
+    Key? key,
     AlignmentGeometry alignment = AlignmentDirectional.topStart,
-    TextDirection textDirection,
+    TextDirection? textDirection,
     StackFit fit = StackFit.loose,
-    Overflow overflow = Overflow.clip,
+    Clip clip = Clip.hardEdge,
     List<Widget> children = const <Widget>[],
   }) =>
       Stack(
@@ -35,18 +35,18 @@ extension ListExtensions<E> on List<Widget> {
         alignment: alignment,
         textDirection: textDirection,
         fit: fit,
-        overflow: overflow,
+        clipBehavior: clip,
         children: this,
       );
 
   Widget toColumnWidget({
-    Key key,
+    Key? key,
     MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
     MainAxisSize mainAxisSize = MainAxisSize.max,
     CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
-    TextDirection textDirection,
+    TextDirection? textDirection,
     VerticalDirection verticalDirection = VerticalDirection.down,
-    TextBaseline textBaseline,
+    TextBaseline? textBaseline,
     List<Widget> children = const <Widget>[],
   }) =>
       Column(
