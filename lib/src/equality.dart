@@ -23,9 +23,9 @@ class EqualityComparer<T> {
   final Sorter<T> sort;
 
   EqualityComparer({
-    Comparer<T> comparer,
-    Hasher<T> hasher,
-    Sorter<T> sorter,
+    Comparer<T>? comparer,
+    Hasher<T>? hasher,
+    Sorter<T>? sorter,
   })  : compare = comparer ?? _getDefaultComparer<T>(),
         hash = hasher ?? _getDefaultHasher<T>(),
         sort = sorter ?? _getDefaultSorter<T>();
@@ -37,7 +37,7 @@ class EqualityComparer<T> {
 
   static Sorter<T> _getDefaultSorter<T>() => (left, right) => 0;
 
-  static EqualityComparer<T> forType<T>() => _registeredEqualityComparers[T];
+  static EqualityComparer<T> forType<T>() => _registeredEqualityComparers[T] as EqualityComparer<T>;
 
   static final Map<Type, EqualityComparer> _registeredEqualityComparers = {
     dynamic: EqualityComparer<dynamic>(
@@ -94,6 +94,7 @@ abstract class OrderedIterable<T> extends Iterable<T> {
   Iterable<T> source;
 
   OrderedIterable(this.source);
+
   IterableSorter<T> getIterableSorter(IterableSorter<T> next);
 
   OrderedIterable<T> createOrderedIterable<TNewKey>(
@@ -108,10 +109,10 @@ abstract class OrderedIterable<T> extends Iterable<T> {
 }
 
 class InternalOrderedIterable<TValue, TKey> extends OrderedIterable<TValue> {
-  OrderedIterable<TValue> parent;
+  OrderedIterable<TValue>? parent;
   TKey Function(TValue) keySelector;
   EqualityComparer<TKey> keyComparer;
-  bool descending;
+  bool? descending;
 
   InternalOrderedIterable(Iterable<TValue> source, this.keySelector,
       this.keyComparer, this.descending)
@@ -121,6 +122,7 @@ class InternalOrderedIterable<TValue, TKey> extends OrderedIterable<TValue> {
 
   @override
   Iterator<TValue> get iterator => iterate().iterator;
+
   Iterable<TValue> iterate() sync* {
     final buffer = source.toList();
     if (buffer.isNotEmpty) {
@@ -131,16 +133,17 @@ class InternalOrderedIterable<TValue, TKey> extends OrderedIterable<TValue> {
   }
 
   @override
-  IterableSorter<TValue> getIterableSorter(IterableSorter<TValue> next) {
-    IterableSorter<TValue> sorter = InternalIterableSorter<TValue, TKey>(
-        keySelector, keyComparer, descending, next);
-    if (parent != null) sorter = parent.getIterableSorter(sorter);
+  IterableSorter<TValue> getIterableSorter(IterableSorter<TValue>? next) {
+    IterableSorter<TValue>? sorter = InternalIterableSorter<TValue, TKey>(
+        keySelector, keyComparer, next,descending: descending);
+    if (parent != null) sorter = parent!.getIterableSorter(sorter);
     return sorter;
   }
 }
 
 abstract class IterableSorter<T> {
   void computeKeys(List<T> elements, int count);
+
   int compareKeys(int idx1, int idx2);
 
   List<int> sort(List<T> elements, int count) {
@@ -183,38 +186,35 @@ abstract class IterableSorter<T> {
 }
 
 class InternalIterableSorter<TValue, TKey> extends IterableSorter<TValue> {
-  TKey Function(TValue) keySelector;
-  EqualityComparer<TKey> comparer;
-  bool descending;
-  IterableSorter<TValue> next;
-  List<TKey> keys;
+  late TKey Function(TValue) keySelector;
+  EqualityComparer<TKey>? comparer;
+  bool? descending;
+  IterableSorter<TValue>? next;
+  late List<TKey> keys;
 
   InternalIterableSorter(
     this.keySelector,
     this.comparer,
-    this.descending,
-    this.next,
-  ) {
+    this.next, {
+    this.descending = false,
+  }) {
     comparer ??= EqualityComparer.forType<TKey>();
   }
 
   @override
   void computeKeys(List<TValue> elements, int count) {
-    keys = List<TKey>(count);
-    for (var i = 0; i < count; i++) {
-      keys[i] = keySelector(elements[i]);
-    }
-    if (next != null) next.computeKeys(elements, count);
+    keys = List<TKey>.generate(count, (i) => keySelector(elements[i]));
+    if (next != null) next!.computeKeys(elements, count);
   }
 
   @override
   int compareKeys(int index1, int index2) {
-    final c = comparer.sort(keys[index1], keys[index2]);
+    final c = comparer?.sort(keys[index1], keys[index2]) ?? -1;
     if (c == 0) {
       if (next == null) return index1 - index2;
-      return next.compareKeys(index1, index2);
+      return next!.compareKeys(index1, index2);
     }
-    return descending ? -c : c;
+    return descending! ? -c : c;
   }
 }
 
@@ -226,6 +226,7 @@ class OrderedBuffer<T> extends Iterable<T> {
 
   @override
   Iterator<T> get iterator => iterate().iterator;
+
   Iterable<T> iterate() sync* {
     for (var index in orderedMap) {
       yield data[index];

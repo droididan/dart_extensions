@@ -14,7 +14,7 @@
 import 'package:flutter/material.dart';
 
 extension PaddingExtensions on Widget {
-  Padding paddingAll(double value, {Key key}) {
+  Padding paddingAll(double value, {Key? key}) {
     return Padding(
       key: key,
       padding: EdgeInsets.all(value),
@@ -27,7 +27,7 @@ extension PaddingExtensions on Widget {
     double top,
     double right,
     double bottom, {
-    Key key,
+    Key? key,
   }) =>
       Padding(
         key: key,
@@ -35,7 +35,7 @@ extension PaddingExtensions on Widget {
         child: this,
       );
 
-  Padding paddingSymmetric({Key key, double v = 0.0, double h = 0.0}) => Padding(
+  Padding paddingSymmetric({Key? key, double v = 0.0, double h = 0.0}) => Padding(
         key: key,
         padding: EdgeInsets.symmetric(
           vertical: v,
@@ -44,7 +44,7 @@ extension PaddingExtensions on Widget {
         child: this,
       );
 
-  Padding paddingOnly({Key key, double left = 0.0, double right = 0.0, double top = 0.0, double bottom = 0.0}) =>
+  Padding paddingOnly({Key? key, double left = 0.0, double right = 0.0, double top = 0.0, double bottom = 0.0}) =>
       Padding(
         key: key,
         padding: EdgeInsets.only(left: left, right: right, top: top, bottom: bottom),

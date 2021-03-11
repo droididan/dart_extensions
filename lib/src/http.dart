@@ -21,11 +21,16 @@ const _defaultHeaders = {"Content-type": "application/json"};
 extension HttpExtensions on String {
   /// Sends an HTTP GET request with the given headers to the given URL, which can
   /// be a [Uri] or a [String].
-  Future<dynamic> httpGet() async {
+  /// [endPoint] - end point of current url
+  /// example:
+  /// current string is www.mydomain.com
+  /// endpoint param - user
+  /// result request -> www.mydomain.com/user
+  Future<dynamic> httpGet(String endPoint) async {
     if (this.isEmptyOrNull) return;
 
     try {
-      final response = await http.get(this);
+      final response = await http.get(Uri.http(this, endPoint));
       return response.statusCode == 200
           ? convert.jsonDecode(response.body)
           : print('Request failed with status: ${response.statusCode}.');
@@ -36,11 +41,16 @@ extension HttpExtensions on String {
 
   /// Sends an HTTP POST request with the given headers and body to the given URL,
   /// which can be a [Uri] or a [String].
-  Future<dynamic> httpPost(String json, [Map<String, String> headers = _defaultHeaders]) async {
+  /// [endPoint] - end point of current url
+  /// example:
+  /// current string is www.mydomain.com
+  /// endpoint param - user
+  /// result request -> www.mydomain.com/user
+  Future<dynamic> httpPost(String endPoint,String json, [Map<String, String> headers = _defaultHeaders]) async {
     if (this.isEmptyOrNull) return;
 
     try {
-      final response = await http.post(this, headers: headers, body: json);
+      final response = await http.post(Uri.http(this, endPoint), headers: headers, body: json);
       return response.statusCode == 200
           ? convert.jsonDecode(response.body)
           : print('Request failed with status: ${response.statusCode}.');
@@ -51,11 +61,16 @@ extension HttpExtensions on String {
 
   /// Sends an HTTP PUT request with the given headers and body to the given URL,
   /// which can be a [Uri] or a [String].
-  Future<dynamic> httpPut(String json, [Map<String, String> headers = _defaultHeaders]) async {
+  /// [endPoint] - end point of current url
+  /// example:
+  /// current string is www.mydomain.com
+  /// endpoint param - user
+  /// result request -> www.mydomain.com/user
+  Future<dynamic> httpPut(String endPoint,String json, [Map<String, String> headers = _defaultHeaders]) async {
     if (this.isEmptyOrNull) return;
 
     try {
-      final response = await http.put(this, headers: headers, body: json);
+      final response = await http.put(Uri.http(this, endPoint), headers: headers, body: json);
       return response.statusCode == 200
           ? convert.jsonDecode(response.body)
           : print('Request failed with status: ${response.statusCode}.');
@@ -66,11 +81,16 @@ extension HttpExtensions on String {
 
   /// Sends an HTTP DELETE request with the given headers to the given URL, which
   /// can be a [Uri] or a [String].
-  Future<dynamic> httpDelete({Map<String, String> headers}) async {
+  /// [endPoint] - end point of current url
+  /// example:
+  /// current string is www.mydomain.com
+  /// endpoint param - user
+  /// result request -> www.mydomain.com/user
+  Future<dynamic> httpDelete(String endPoint,{Map<String, String>? headers}) async {
     if (this.isEmptyOrNull) return;
 
     try {
-      final response = await http.delete(this, headers: headers);
+      final response = await http.delete(Uri.http(this, endPoint), headers: headers);
       return response.statusCode == 200
           ? convert.jsonDecode(response.body)
           : print('Request failed with status: ${response.statusCode}.');

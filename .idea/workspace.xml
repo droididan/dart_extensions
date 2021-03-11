@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
     </list>
     <list id="5184f34c-81bf-45d3-bda8-acf5b9f79ed3" name="revert" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,20 +13,12 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_29_x86" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Dart File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>toDoube</find>
-      <find>String</find>
-      <find>preferBelow</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -40,7 +30,6 @@
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
-        <option value="$PROJECT_DIR$/.idea/dart_extentions.iml" />
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
         <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
@@ -55,17 +44,18 @@
   <component name="ProjectId" id="1WTnDMN9xdNWN023ICrObgVEKkF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../work/ugotitapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -79,53 +69,40 @@
       <recent name="C:\Users\luci\Desktop\Projects\dart_extentions" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Flutter.main.dart">
-    <configuration name="intersect in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="intersect" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Flutter Test.date time">
     <configuration name="iterables in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
       <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
       <option name="testName" value="iterables" />
       <method v="2" />
     </configuration>
-    <configuration name="toMutableSet in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="toMutableSet" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="binarySearch" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="binarySearch" />
+    <configuration name="algo tests" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="algo tests" />
       <option name="testFile" value="$PROJECT_DIR$/test/algo_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="date time" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="date time" />
+      <option name="testFile" value="$PROJECT_DIR$/test/date_tests.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="first or null" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="first or null" />
+      <option name="testFile" value="$PROJECT_DIR$/test/iterable_tests.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mapList" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="mapList" />
+      <option name="testFile" value="$PROJECT_DIR$/test/iterable_tests.dart" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter.main.dart" />
-        <item itemvalue="Flutter Test.binarySearch" />
+        <item itemvalue="Flutter Test.date time" />
+        <item itemvalue="Flutter Test.algo tests" />
+        <item itemvalue="Flutter Test.first or null" />
+        <item itemvalue="Flutter Test.mapList" />
         <item itemvalue="Dart Test.iterables in iterable_tests.dart" />
-        <item itemvalue="Dart Test.intersect in iterable_tests.dart" />
-        <item itemvalue="Dart Test.toMutableSet in iterable_tests.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -473,35 +450,6 @@
     <option name="localTasksCounter" value="48" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="binarySearch - 2020.02.17 at 14h 45m 16s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 45m 49s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 46m 09s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 46m 30s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 47m 11s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 47m 38s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 47m 57s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.17 at 14h 49m 10s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="binarySearch - 2020.02.19 at 13h 52m 09s.xml">
-      <configuration name="binarySearch" configurationId="FlutterTestConfigType" />
-    </history-entry>
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -519,9 +467,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -540,6 +486,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="associate" />
@@ -570,177 +517,75 @@
     <option name="LAST_COMMIT_MESSAGE" value="update to 0.3.2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="459" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579432835035">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state x="3065" y="-205" width="1434" height="945" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615453580346">
+      <screen x="1792" y="-590" width="3440" height="1415" />
     </state>
-    <state x="459" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/91.0.1829.1080@91.0.1829.1080" timestamp="1579432835035" />
-    <state x="883" y="242" key="#xdebugger.evaluate" timestamp="1579433049871">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state x="3065" y="163" width="1434" height="945" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.-222.3440.1415/512.-695.1280.695/0.25.1792.1004@1792.-222.3440.1415" timestamp="1615388932212" />
+    <state x="3065" y="-205" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453580346" />
+    <state x="3323" y="288" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1615388925580">
+      <screen x="1792" y="-222" width="3440" height="1415" />
     </state>
-    <state x="883" y="242" key="#xdebugger.evaluate/91.0.1829.1080@91.0.1829.1080" timestamp="1579433049871" />
-    <state x="259" y="0" width="1315" height="816" key="CommitChangelistDialog2" timestamp="1579855883680">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="3323" y="288" key="#com.intellij.ide.util.TreeFileChooserDialog/1792.-222.3440.1415/512.-695.1280.695/0.25.1792.1004@1792.-222.3440.1415" timestamp="1615388925580" />
+    <state x="3132" y="-197" key="AndroidProcessChooserDialog" timestamp="1615450731598">
+      <screen x="1792" y="-615" width="3440" height="1440" />
     </state>
-    <state x="259" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579855883680" />
-    <state x="428" y="0" key="CommitChangelistDialog2/126.0.1794.1080@126.0.1794.1080" timestamp="1579694988228" />
-    <state x="320" y="0" key="CommitChangelistDialog2/74.0.1462.864@74.0.1462.864" timestamp="1579178757948" />
-    <state x="391" y="0" key="CommitChangelistDialog2/81.0.1839.1080@81.0.1839.1080" timestamp="1579600619903" />
-    <state x="399" y="0" width="1315" height="816" key="CommitChangelistDialog2/91.0.1829.1080@91.0.1829.1080" timestamp="1579472770286" />
-    <state x="406" y="0" key="CommitChangelistDialog2/99.0.1821.1080@99.0.1821.1080" timestamp="1579550554756" />
-    <state width="465" height="466" key="DebuggerActiveHint" timestamp="1579684135117">
-      <screen x="126" y="0" width="1794" height="1080" />
+    <state x="3132" y="-197" key="AndroidProcessChooserDialog/1792.-615.3440.1440/0.0.1792.1120@1792.-615.3440.1440" timestamp="1615450731598" />
+    <state width="3366" height="366" key="GridCell.Tab.0.bottom" timestamp="1615453225980">
+      <screen x="1792" y="-590" width="3440" height="1415" />
     </state>
-    <state width="465" height="466" key="DebuggerActiveHint/126.0.1794.1080@126.0.1794.1080" timestamp="1579684135117" />
-    <state width="473" height="466" key="DebuggerActiveHint/91.0.1829.1080@91.0.1829.1080" timestamp="1579302241773" />
-    <state width="471" height="466" key="DebuggerActiveHint/99.0.1821.1080@99.0.1821.1080" timestamp="1579596287672" />
-    <state x="785" y="294" key="FileChooserDialogImpl" timestamp="1579300329298">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state width="3366" height="384" key="GridCell.Tab.0.bottom/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615392084165" />
+    <state width="3366" height="366" key="GridCell.Tab.0.bottom/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453225980" />
+    <state width="3366" height="366" key="GridCell.Tab.0.center" timestamp="1615453225979">
+      <screen x="1792" y="-590" width="3440" height="1415" />
     </state>
-    <state x="785" y="294" key="FileChooserDialogImpl/91.0.1829.1080@91.0.1829.1080" timestamp="1579300329298" />
-    <state width="1492" height="356" key="GridCell.Tab.0.bottom" timestamp="1579857085998">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="3366" height="384" key="GridCell.Tab.0.center/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615392084164" />
+    <state width="3366" height="366" key="GridCell.Tab.0.center/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453225979" />
+    <state width="3366" height="366" key="GridCell.Tab.0.left" timestamp="1615453225979">
+      <screen x="1792" y="-590" width="3440" height="1415" />
     </state>
-    <state width="1492" height="356" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579857085998" />
-    <state width="1751" height="492" key="GridCell.Tab.0.bottom/126.0.1794.1080@126.0.1794.1080" timestamp="1579691088083" />
-    <state width="1796" height="492" key="GridCell.Tab.0.bottom/81.0.1839.1080@81.0.1839.1080" timestamp="1579604514438" />
-    <state width="1786" height="479" key="GridCell.Tab.0.bottom/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662847" />
-    <state width="1573" height="259" key="GridCell.Tab.0.bottom/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
-    <state width="1492" height="356" key="GridCell.Tab.0.center" timestamp="1579857085997">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="3366" height="384" key="GridCell.Tab.0.left/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615392084163" />
+    <state width="3366" height="366" key="GridCell.Tab.0.left/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453225979" />
+    <state width="3366" height="366" key="GridCell.Tab.0.right" timestamp="1615453225979">
+      <screen x="1792" y="-590" width="3440" height="1415" />
     </state>
-    <state width="1492" height="356" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579857085997" />
-    <state width="1751" height="492" key="GridCell.Tab.0.center/126.0.1794.1080@126.0.1794.1080" timestamp="1579691088083" />
-    <state width="1796" height="492" key="GridCell.Tab.0.center/81.0.1839.1080@81.0.1839.1080" timestamp="1579604514437" />
-    <state width="1786" height="479" key="GridCell.Tab.0.center/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662846" />
-    <state width="1573" height="259" key="GridCell.Tab.0.center/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
-    <state width="1492" height="356" key="GridCell.Tab.0.left" timestamp="1579857085997">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="3366" height="384" key="GridCell.Tab.0.right/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615392084164" />
+    <state width="3366" height="366" key="GridCell.Tab.0.right/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453225979" />
+    <state x="1892" y="-515" width="3240" height="1240" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1615453907524">
+      <screen x="1792" y="-590" width="3440" height="1415" />
     </state>
-    <state width="1492" height="356" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579857085997" />
-    <state width="1751" height="492" key="GridCell.Tab.0.left/126.0.1794.1080@126.0.1794.1080" timestamp="1579691088083" />
-    <state width="1796" height="492" key="GridCell.Tab.0.left/81.0.1839.1080@81.0.1839.1080" timestamp="1579604514437" />
-    <state width="1786" height="479" key="GridCell.Tab.0.left/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662846" />
-    <state width="1573" height="259" key="GridCell.Tab.0.left/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
-    <state width="1492" height="356" key="GridCell.Tab.0.right" timestamp="1579857085997">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1892" y="-515" width="3240" height="1240" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453907524" />
+    <state x="3012" y="-284" width="999" height="818" key="find.popup" timestamp="1615452811704">
+      <screen x="1792" y="-590" width="3440" height="1415" />
     </state>
-    <state width="1492" height="356" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579857085997" />
-    <state width="1751" height="492" key="GridCell.Tab.0.right/126.0.1794.1080@126.0.1794.1080" timestamp="1579691088083" />
-    <state width="1796" height="492" key="GridCell.Tab.0.right/81.0.1839.1080@81.0.1839.1080" timestamp="1579604514437" />
-    <state width="1786" height="479" key="GridCell.Tab.0.right/91.0.1829.1080@91.0.1829.1080" timestamp="1579472662846" />
-    <state width="1573" height="259" key="GridCell.Tab.0.right/99.0.1821.1080@99.0.1821.1080" timestamp="1579596763035" />
-    <state x="759" y="250" key="RollbackChangesDialog" timestamp="1579297732868">
-      <screen x="91" y="0" width="1829" height="1080" />
+    <state x="3012" y="-284" width="999" height="818" key="find.popup/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615452811704" />
+    <state x="3012" y="-304" width="999" height="818" key="find.popup/1792.-615.3440.1440/0.0.1792.1120@1792.-615.3440.1440" timestamp="1615452222705" />
+    <state x="2607" y="-590" width="1173" height="1416" key="search.everywhere.popup" timestamp="1615453528464">
+      <screen x="1792" y="-590" width="3440" height="1415" />
     </state>
-    <state x="759" y="250" key="RollbackChangesDialog/91.0.1829.1080@91.0.1829.1080" timestamp="1579297732868" />
-    <state x="506" y="182" key="SettingsEditor" timestamp="1579305259788">
-      <screen x="91" y="0" width="1829" height="1080" />
-    </state>
-    <state x="506" y="182" key="SettingsEditor/91.0.1829.1080@91.0.1829.1080" timestamp="1579305259788" />
-    <state x="600" y="282" key="VCS.EditChangelistDialog" timestamp="1579793335203">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="600" y="282" key="VCS.EditChangelistDialog/0.0.1536.824@0.0.1536.824" timestamp="1579793335203" />
-    <state x="342" y="145" key="Vcs.Push.Dialog.v2" timestamp="1579855885950">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="342" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1579855885950" />
-    <state x="525" y="190" key="Vcs.Push.Dialog.v2/126.0.1794.1080@126.0.1794.1080" timestamp="1579694989814" />
-    <state x="399" y="152" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1579178760180" />
-    <state x="490" y="190" key="Vcs.Push.Dialog.v2/81.0.1839.1080@81.0.1839.1080" timestamp="1579600621612" />
-    <state x="498" y="190" key="Vcs.Push.Dialog.v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579472772046" />
-    <state x="504" y="190" key="Vcs.Push.Dialog.v2/99.0.1821.1080@99.0.1821.1080" timestamp="1579550556415" />
-    <state x="183" y="92" width="1645" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579468968119">
-      <screen x="91" y="0" width="1829" height="1080" />
-    </state>
-    <state x="183" y="92" width="1645" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/91.0.1829.1080@91.0.1829.1080" timestamp="1579468968119" />
-    <state x="568" y="137" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579440423868">
-      <screen x="91" y="0" width="1829" height="1080" />
-    </state>
-    <state x="568" y="137" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/91.0.1829.1080@91.0.1829.1080" timestamp="1579440423868" />
-    <state x="835" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579694269495">
-      <screen x="126" y="0" width="1794" height="1080" />
-    </state>
-    <state x="835" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/126.0.1794.1080@126.0.1794.1080" timestamp="1579694269495" />
-    <state x="814" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/91.0.1829.1080@91.0.1829.1080" timestamp="1579245981702" />
-    <state x="819" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/99.0.1821.1080@99.0.1821.1080" timestamp="1579595886226" />
-    <state x="702" y="145" width="607" height="789" key="find.popup" timestamp="1579441061615">
-      <screen x="91" y="0" width="1829" height="1080" />
-    </state>
-    <state x="702" y="145" width="607" height="789" key="find.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579441061615" />
-    <state x="480" y="191" width="565" height="517" key="run.anything.popup" timestamp="1579792036945">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="480" y="191" width="565" height="517" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1579792036945" />
-    <state x="662" y="250" width="672" height="677" key="run.anything.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579467030417" />
-    <state x="485" y="179" width="672" height="518" key="search.everywhere.popup" timestamp="1579852063159">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="485" y="179" width="672" height="518" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1579852063159" />
-    <state x="692" y="235" width="672" height="678" key="search.everywhere.popup/126.0.1794.1080@126.0.1794.1080" timestamp="1579683196863" />
-    <state x="668" y="235" width="672" height="678" key="search.everywhere.popup/91.0.1829.1080@91.0.1829.1080" timestamp="1579461357596" />
+    <state x="2607" y="-222" width="1173" height="1972" key="search.everywhere.popup/1792.-222.3440.1415/512.-695.1280.695/0.25.1792.1004@1792.-222.3440.1415" timestamp="1615386562513" />
+    <state x="2607" y="-247" width="1173" height="1440" key="search.everywhere.popup/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615386912012" />
+    <state x="2607" y="-590" width="1173" height="1416" key="search.everywhere.popup/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453528464" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$USER_HOME$/Documents/flutter/bin/cache/pkg/sky_engine/lib/collection/queue.dart</url>
-          <line>719</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart</url>
-          <line>22</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart</url>
-          <line>33</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/data_stractures/stack.dart</url>
-          <line>34</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/test/iterable_tests.dart</url>
-          <line>167</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/flutter/transforms/click_translate.dart</url>
-          <line>24</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/flutter/transforms/click_translate.dart</url>
-          <line>44</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/flutter/transforms/click_translate.dart</url>
-          <line>37</line>
-          <option name="timeStamp" value="59" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/iterable.dart</url>
+          <line>362</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="dart-exception" />
-      </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="DartTestRunConfigurationType">
-        <watch expression="this" language="Dart" />
-        <watch expression="!test(element)" language="Dart" />
+        <watch expression="this" />
+        <watch expression="!test(element)" />
       </configuration>
       <configuration name="DartCommandLineRunConfigurationType">
-        <watch expression="set.add(key)" language="Dart" />
-        <watch expression="this.toList().addAll(iterable.toList())" language="Dart" />
-        <watch expression="e" language="Dart" />
+        <watch expression="set.add(key)" />
+        <watch expression="this.toList().addAll(iterable.toList())" />
+        <watch expression="e" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/dart_extentions$files_dart.json" NAME="files.dart Coverage Results" MODIFIED="1579466363500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="DartCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="$PROJECT_DIR$/lib/files.dart" />
   </component>
 </project>

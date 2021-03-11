@@ -13,7 +13,7 @@
 
 extension DateString on String {
   /// Parse string to [DateTime]
-  DateTime toDateTime() {
+  DateTime? toDateTime() {
     try {
       return DateTime.tryParse(this);
     } on Exception catch (_) {
