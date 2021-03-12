@@ -67,11 +67,15 @@
       <recent name="C:\Users\luci\Desktop\Projects\dart_extentions" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.date time">
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="iterables in iterable_tests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/test/iterable_tests.dart" />
       <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
       <option name="testName" value="iterables" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
       <method v="2" />
     </configuration>
     <configuration name="algo tests" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
@@ -548,9 +552,10 @@
     </state>
     <state width="3366" height="384" key="GridCell.Tab.0.right/1792.-247.3440.1440/512.-720.1280.720/0.0.1792.1120@1792.-247.3440.1440" timestamp="1615392084164" />
     <state width="3366" height="366" key="GridCell.Tab.0.right/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453225979" />
-    <state x="1892" y="-515" width="3240" height="1240" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1615453907524">
-      <screen x="1792" y="-590" width="3440" height="1415" />
+    <state x="52" y="59" width="1688" height="982" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1615534315431">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="52" y="59" width="1688" height="982" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1615534315431" />
     <state x="1892" y="-515" width="3240" height="1240" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1792.-590.3440.1415/0.25.1792.1004@1792.-590.3440.1415" timestamp="1615453907524" />
     <state x="3012" y="-284" width="999" height="818" key="find.popup" timestamp="1615452811704">
       <screen x="1792" y="-590" width="3440" height="1415" />

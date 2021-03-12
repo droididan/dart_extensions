@@ -91,7 +91,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   List<T> takeOnly(int n) {
     if (n == 0) return [];
 
-    var list = List<T>.empty();
+    List<T> list = [];
     var thisList = this.toList();
     if (this is Iterable) {
       final resultSize = this.length - n;
@@ -109,7 +109,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   List<T> drop(int n) {
     if (n == 0) return [];
 
-    var list = List<T>.empty();
+    List<T> list = [];
     var originalList = this.toList();
     if (this is Iterable) {
       final resultSize = this.length - n;
@@ -250,7 +250,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// 36 Ran
   List<T> distinctBy(predicate(T selector)) {
     final set = HashSet();
-    final list = List<T>.empty();
+    final List<T> list = [];
     toList().forEach((e) {
       final key = predicate(e);
       if (set.add(key)) {
@@ -314,7 +314,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// the combination of them two.
   zip<T>(Iterable<T> iterable) sync* {
     if (iterable.isEmptyOrNull) return;
-    final iterables = List<Iterable>.empty()..add(this)..add(iterable);
+    final List<Iterable> iterables = []..add(this)..add(iterable);
 
     final iterators = iterables.map((e) => e.iterator).toList(growable: false);
     while (iterators.every((e) => e.moveNext())) {
