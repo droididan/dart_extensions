@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-    </list>
+    <list default="true" id="660b34bb-ba41-4f24-ab64-b2d6d8d5385b" name="Default Changelist" comment="" />
     <list id="5184f34c-81bf-45d3-bda8-acf5b9f79ed3" name="revert" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -578,6 +578,10 @@ the growing community of `dart_extensions.dart`.
     <td align="center"><a href="https://github.com/xamantra"><img src="https://avatars0.githubusercontent.com/u/37391380?s=400&v=4" width="64px;" alt=""/><br /><sub><b>Xamantra</b></sub></a><br /><a href="" title="Code">💻</a> <a href="" title="Documentation">📖</a> <a href="" title="Reviewed Pull Requests">👀</a></td>
   </a></td>
   </tr>
+  <tr>
+      <td align="center"><a href="https://github.com/saharvx9"><img src="https://avatars.githubusercontent.com/u/35892162?s=460&v=4" width="64px;" alt=""/><br /><sub><b>saharvx9</b></sub></a><br /><a href="" title="Code">💻</a> <a href="" title="Documentation">📖</a> <a href="" title="Reviewed Pull Requests">👀</a></td>
+   </a></td>
+   </tr>
 </table>
 
 
