@@ -18,22 +18,57 @@ import 'package:quiver/iterables.dart';
 import 'data_stractures/stack.dart';
 import 'equality.dart';
 
-extension CollectionsExtensions<T> on Iterable<T> {
-  
+extension CollectionsNullableExtension<T> on Iterable<T>? {
 
+ /// Returns this Iterable if it's not `null` and the empty list otherwise.
+  Iterable<T> orEmpty() => this ?? Iterable<T>.empty();
+
+  ///Returns `true` if this nullable iterable is either null or empty.
+  bool get isEmptyOrNull => this?.isEmpty ?? true;
+
+  /// Returns `true` if at least one element matches the given [predicate].
+  bool any(bool predicate(T element)) {
+    if (this.isEmptyOrNull) return false;
+    for (final element in this.orEmpty()) if (predicate(element)) return true;
+    return false;
+  }
+
+  /// Return a list concatenates the output of the current list and another [iterable]
+  List<T> concatWithSingleList(Iterable<T> iterable) {
+    if (isEmptyOrNull || iterable.isEmptyOrNull) return [];
+
+    return <T>[...this.orEmpty(), ...iterable];
+  }
+
+  /// Return a list concatenates the output of the current list and multiple [iterables]
+  List<T> concatWithMultipleList(List<Iterable<T>> iterables) {
+    if (isEmptyOrNull || iterables.isEmptyOrNull) return [];
+    final list = iterables.toList(growable: false).expand((i) => i);
+    return <T>[...this.orEmpty(), ...list];
+  }
+
+  /// Zip is used to combine multiple iterables into a single list that contains
+  /// the combination of them two.
+  zip<T>(Iterable<T> iterable) sync* {
+    if (iterable.isEmptyOrNull) return;
+    final iterables = List<Iterable>.empty()
+      ..add(this.orEmpty())
+      ..add(iterable);
+
+    final iterators = iterables.map((e) => e.iterator).toList(growable: false);
+    while (iterators.every((e) => e.moveNext())) {
+      yield iterators.map((e) => e.current).toList(growable: false);
+    }
+  }
+}
+
+extension CollectionsExtensions<T> on Iterable<T> {
   ///Sorts elements in the array in-place according to natural sort order of the value returned by specified [selector] function.
   Iterable<T> sortBy<TKey>(
     TKey Function(T) keySelector, {
     required EqualityComparer<TKey> keyComparer,
   }) {
     return InternalOrderedIterable(this, keySelector, keyComparer, false);
-  }
-
-  /// Returns `true` if at least one element matches the given [predicate].
-  bool any(bool predicate(T element)) {
-    if (this.isEmptyOrNull) return false;
-    for (final element in this) if (predicate(element)) return true;
-    return false;
   }
 
   /// Convert iterable to set
@@ -124,7 +159,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   }
 
   // Retuns map operation as a List
-   List<E> mapList<E>(E f(T e)) => this.map(f).toList();
+  List<E> mapList<E>(E f(T e)) => this.map(f).toList();
 
   // Takes the first half of a list
   List<T> firstHalf() => take(halfLength).toList();
@@ -308,20 +343,6 @@ extension CollectionsExtensions<T> on Iterable<T> {
     return stack;
   }
 
-  bool get isEmptyOrNull => this == null || isEmpty;
-
-  /// Zip is used to combine multiple iterables into a single list that contains
-  /// the combination of them two.
-  zip<T>(Iterable<T> iterable) sync* {
-    if (iterable.isEmptyOrNull) return;
-    final iterables = List<Iterable>.empty()..add(this)..add(iterable);
-
-    final iterators = iterables.map((e) => e.iterator).toList(growable: false);
-    while (iterators.every((e) => e.moveNext())) {
-      yield iterators.map((e) => e.current).toList(growable: false);
-    }
-  }
-
   /// Splits the Iterable into chunks of the specified size
   ///
   /// example:
@@ -329,20 +350,6 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// result:
   /// ([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
   Iterable<List<T>> chunks(int size) => partition(this, size);
-
-  /// Return a list concatenates the output of the current list and another [iterable]
-  List<T> concatWithSingleList(Iterable<T> iterable) {
-    if (isEmptyOrNull || iterable.isEmptyOrNull) return [];
-
-    return <T>[...this, ...iterable];
-  }
-
-  /// Return a list concatenates the output of the current list and multiple [iterables]
-  List<T> concatWithMultipleList(List<Iterable<T>> iterables) {
-    if (isEmptyOrNull || iterables.isEmptyOrNull) return [];
-    final list = iterables.toList(growable: false).expand((i) => i);
-    return <T>[...this, ...list];
-  }
 
   /// Creates a Map instance in which the keys and values are computed from the iterable.
   Map<dynamic, dynamic> associate(key(element), value(element)) =>
