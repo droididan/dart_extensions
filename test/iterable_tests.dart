@@ -194,5 +194,21 @@ main() {
       expect(Set.from([1, 2, 3, 4]).intersect(Set.from([3, 4, 5, 6])), [1, 2, 3, 4, 5, 6]);
       expect(Set.from([-1, -2, -3, 4]).intersect(Set.from([3, 4, 5, 6])), [-1, -2, -3, 4, 3, 5, 6]);
     });
+
+    test('orEmpty',(){
+      List<int>? list;
+      expect(list.orEmpty(), List<int>.empty());
+      list= [1,2,3];
+      expect(list.orEmpty(), [1,2,3]);
+    });
+
+    test('isEmptyOrNull',(){
+      List<int>? list;
+      expect(list.isEmptyOrNull, true);
+      list= [];
+      expect(list.isEmptyOrNull, true);
+      list= [1,2,3];
+      expect(list.isEmptyOrNull, false);
+    });
   });
 }
