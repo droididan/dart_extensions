@@ -19,14 +19,13 @@ import 'data_stractures/stack.dart';
 import 'equality.dart';
 
 extension CollectionsExtensions<T> on Iterable<T> {
-  
-
   ///Sorts elements in the array in-place according to natural sort order of the value returned by specified [selector] function.
   Iterable<T> sortBy<TKey>(
     TKey Function(T) keySelector, {
-    required EqualityComparer<TKey> keyComparer,
+    EqualityComparer<TKey>? keyComparer,
   }) {
-    return InternalOrderedIterable(this, keySelector, keyComparer, false);
+    return InternalOrderedIterable(
+        this, keySelector, keyComparer ?? EqualityComparer<TKey>(), false);
   }
 
   /// Returns `true` if at least one element matches the given [predicate].
@@ -124,7 +123,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   }
 
   // Retuns map operation as a List
-   List<E> mapList<E>(E f(T e)) => this.map(f).toList();
+  List<E> mapList<E>(E f(T e)) => this.map(f).toList();
 
   // Takes the first half of a list
   List<T> firstHalf() => take(halfLength).toList();
