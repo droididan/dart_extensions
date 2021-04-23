@@ -18,6 +18,8 @@ import 'package:quiver/iterables.dart';
 import 'data_stractures/stack.dart';
 import 'equality.dart';
 
+typedef IndexedPredicate<T> = bool Function(int index, T);
+
 extension CollectionsExtensions<T> on Iterable<T> {
   ///Sorts elements in the array in-place according to natural sort order of the value returned by specified [selector] function.
   Iterable<T> sortBy<TKey>(
@@ -168,6 +170,9 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// var name = [].firstOrDefault["jack"]; // jack
   T firstOrDefault(T defaultValue) => firstOrNull ?? defaultValue;
 
+  /// Will retrun new [Iterable] with all elements that satisfy the predicate [predicate],
+  Iterable<T> whereIndexed(IndexedPredicate<T> predicate) => _IndexedWhereIterable(this, predicate);
+
   ///
   /// Performs the given action on each element on iterable, providing sequential index with the element.
   /// [item] the element on the current iteration
@@ -228,13 +233,12 @@ extension CollectionsExtensions<T> on Iterable<T> {
   }
 
   /// Returns `true` if all elements match the given predicate.
-  /// Example: 
+  /// Example:
   /// [5, 19, 2].all(isEven), isFalse)
   /// [6, 12, 2].all(isEven), isTrue)
   bool all(bool predicate(T pred)?) {
     for (var e in this) {
-      if (!predicate!(e))
-       return false;
+      if (!predicate!(e)) return false;
     }
     return true;
   }
@@ -368,4 +372,37 @@ extension CollectionsExtensions<T> on Iterable<T> {
 
     return null;
   }
+}
+
+// A lazy [Iterable] skip elements do **NOT** match the predicate [_f].
+class _IndexedWhereIterable<E> extends Iterable<E> {
+  final Iterable<E> _iterable;
+  final IndexedPredicate<E> _f;
+
+  _IndexedWhereIterable(this._iterable, this._f);
+
+  @override
+  Iterator<E> get iterator => _IndexedWhereIterator<E>(_iterable.iterator, _f);
+}
+
+/// [Iterator] for [_IndexedWhereIterable]
+class _IndexedWhereIterator<E> extends Iterator<E> {
+  final Iterator<E> _iterator;
+  final IndexedPredicate<E> _f;
+  int _index = 0;
+
+  _IndexedWhereIterator(this._iterator, this._f);
+
+  @override
+  bool moveNext() {
+    while (_iterator.moveNext()) {
+      if (_f(_index++, _iterator.current)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  @override
+  E get current => _iterator.current;
 }

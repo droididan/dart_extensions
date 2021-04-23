@@ -3,6 +3,8 @@
   
  
 ## What New 
+* `Iterables` -> `all` -> Returns `true` if all elements match the given predicate.
+* `Iterables` -> `whereIndexed` ->  Will retrun new [Iterable] with all elements that satisfy the predicate
 * `Strings` -> `wrapString(int afterWords)` -> break the text in 2 lines (good to format titles and stuff like that)   
 * `enum` -> convert enum item into text. 
 * `SizedBox` extension - convert to percents 💪🏻
