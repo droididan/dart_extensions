@@ -18,8 +18,16 @@ main() {
   final users = [User(22, "Ronit"), User(23, "Ronit"), User(22, "Oded"), User(32, "Shimi")];
 
   group('iterables', () {
+  
+    test('if all elements match the predicate', () {
+      final isEven = (x) => x % 2 == 0;
+      expect([5, 19, 2].all(isEven), isFalse);
+      expect([6, 12, 2].all(isEven), isTrue);
+      expect([].all(isEven), isTrue);
+    });
+
     test('mapList', () {
-      expect([3,4,5,6,7].mapList((item) => item.toDouble()), [3.0, 4.0, 5.0, 6.0, 7.0]);
+      expect([3, 4, 5, 6, 7].mapList((item) => item.toDouble()), [3.0, 4.0, 5.0, 6.0, 7.0]);
     });
 
     test('any', () {
@@ -28,8 +36,8 @@ main() {
       expect([].any((u) => u.name == 'Oded'), false);
     });
 
-    test("first or null", (){
-      final list= [1,45,6,9];
+    test("first or null", () {
+      final list = [1, 45, 6, 9];
       expect(null, list.firstWhere((element) => element == 7));
     });
 

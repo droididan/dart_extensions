@@ -1,4 +1,5 @@
-/*
+
+  /*
  * Copyright 2020 Idan Ayalon. All rights reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,6 +26,30 @@ class Message {
 }
 
 extension StringExtensions on String? {
+
+    // Will add new line if the sentence is bigger the 2 words.
+  /// [afterWords] will add new line after the selected word
+  /// Example
+  /// 'Hi, my name is'.wrapString(2)
+  /// 
+  /// will print:
+  /// Hi, my
+  /// name is
+  
+  String wrapString(int afterWords) {
+    
+    final wordsArr = this?.split(' ') ?? [];
+
+    if (wordsArr.length > 2) {
+      final int middle = (this?.indexOf(wordsArr[afterWords]) ?? 0) - 1;
+      final prefix = this?.substring(0, middle);
+      final postfix = this?.substring(middle + 1);
+      return '$prefix\n$postfix';
+    }
+
+    return this ?? '';
+  }
+
   String generateMessageByGender({Gender? gender, Message? message}) => Intl.gender(gender.toString(),
       male: '$this ${message?.male}', female: '$this ${message?.female}', other: '$this ${message?.other}');
 

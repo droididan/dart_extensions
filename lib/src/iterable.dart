@@ -19,8 +19,6 @@ import 'data_stractures/stack.dart';
 import 'equality.dart';
 
 extension CollectionsExtensions<T> on Iterable<T> {
-  
-
   ///Sorts elements in the array in-place according to natural sort order of the value returned by specified [selector] function.
   Iterable<T> sortBy<TKey>(
     TKey Function(T) keySelector, {
@@ -124,7 +122,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   }
 
   // Retuns map operation as a List
-   List<E> mapList<E>(E f(T e)) => this.map(f).toList();
+  List<E> mapList<E>(E f(T e)) => this.map(f).toList();
 
   // Takes the first half of a list
   List<T> firstHalf() => take(halfLength).toList();
@@ -229,6 +227,18 @@ extension CollectionsExtensions<T> on Iterable<T> {
     return count;
   }
 
+  /// Returns `true` if all elements match the given predicate.
+  /// Example: 
+  /// [5, 19, 2].all(isEven), isFalse)
+  /// [6, 12, 2].all(isEven), isTrue)
+  bool all(bool predicate(T pred)?) {
+    for (var e in this) {
+      if (!predicate!(e))
+       return false;
+    }
+    return true;
+  }
+
   /// Returns a list containing only the elements from given collection having distinct keys.
   ///
   /// Basically it's just like distinct function but with a predicate
@@ -308,7 +318,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
     return stack;
   }
 
-  bool get isEmptyOrNull => this == null || isEmpty;
+  bool get isEmptyOrNull => isEmpty;
 
   /// Zip is used to combine multiple iterables into a single list that contains
   /// the combination of them two.
@@ -345,8 +355,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   }
 
   /// Creates a Map instance in which the keys and values are computed from the iterable.
-  Map<dynamic, dynamic> associate(key(element), value(element)) =>
-      Map.fromIterable(this, key: key, value: value);
+  Map<dynamic, dynamic> associate(key(element), value(element)) => Map.fromIterable(this, key: key, value: value);
 
   /// Returns the first element matching the given [predicate], or `null`
   /// if element was not found.

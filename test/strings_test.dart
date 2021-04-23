@@ -12,10 +12,15 @@
  */
 
 import 'package:test/test.dart';
-import 'package:dart_extensions/src/strings.dart';
+import 'package:dart_extensions/src/string_ext.dart';
 
 main() {
   group('strings', () {
+    test('it should wrap a string', () {
+      expect('one two three four'.wrapString(2), 'one two\nthree four');
+      expect('one two three four'.wrapString(3), 'one two three\nfour');
+    });
+
     test('validateEmail', () {
       expect('name@domain.com'.validateEmail(), true);
       expect('name@domain'.validateEmail(), false);

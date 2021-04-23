@@ -3,6 +3,8 @@
   
  
 ## What New 
+* `Strings` -> `wrapString(int afterWords)` -> break the text in 2 lines (good to format titles and stuff like that)   
+* `enum` -> convert enum item into text. 
 * `SizedBox` extension - convert to percents 💪🏻
 * `Sound null-safety` added! 💪🏻
 * `BuildContext` extensions 💪🏻
