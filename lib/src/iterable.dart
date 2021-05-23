@@ -264,7 +264,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// 36 Ran
   List<T> distinctBy(predicate(T selector)) {
     final set = HashSet();
-    final list = List<T>.empty();
+    final List<T> list = [];
     toList().forEach((e) {
       final key = predicate(e);
       if (set.add(key)) {
