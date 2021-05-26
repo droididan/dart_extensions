@@ -1,21 +1,23 @@
   
-[![](https://img.shields.io/badge/ver-2.0.4-brightgreen)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
+[![](https://img.shields.io/badge/ver-2.0.5-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
  
 ## What New 
-* `Iterables` -> `all` -> Returns `true` if all elements match the given predicate.
-* `Iterables` -> `whereIndexed` ->  Will retrun new [Iterable] with all elements that satisfy the predicate
-* `Strings` -> `wrapString(int afterWords)` -> break the text in 2 lines (good to format titles and stuff like that)   
-* `enum` -> convert enum item into text. 
-* `SizedBox` extension - convert to percents 💪🏻
-* `Sound null-safety` added! 💪🏻
-* `BuildContext` extensions 💪🏻
-* `List<Widget>` extensions 💪🏻
-* `Text` extensions 💪🏻
-* `Icon` extensions 💪🏻
-* `.sortBy` [0.3.5] Sorts elements in the array in-place according to natural sort order of the value returned by specified selector function.
-* `.withTooltip` Tooltips improve the accessibility of visual widgets by proving a textual representation of the widget
+* `Iterables` -> `all` -> Returns `true` if all elements match the given  
+* `isVideo` - Checks if string is an video file.
+* `isAudio` - Checks if string is an audio file.
+* `isImage` - Checks if string is an image file.
+* `isNumericOnly` - Check if the string has any number in it.
+* `isAlphabetOnly` - Checks if string consist only Alphabet. (No Whitespace)
+* `hasCapitalletter` - Checks if string contains at least one Capital Letter.
+* `isHTML` - Checks if string is an html file. 
+* `isEmail` -  Checks if string is email..
+* `isPhoneNumber` -  Checks if string is phone number, good for login checks.
+* `isUsername` - Checks if string is a valid username, good for login checks.
+* `isCurrency` - Checks if string is Currency.
+* `isPalindrom` - Checks if string is Palindrom. (good to know for interviews 
 
+as well)
 Why Method Extensions? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
   
   *let me know if you want something specific or you found a bug at bar.idan@gmail.com*  
