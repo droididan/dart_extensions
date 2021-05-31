@@ -19,7 +19,7 @@ main() {
 
   test('result of whereIndex', () {
     final result = users.whereIndexed((index, _) => index == 2);
-    expect(result, [User(22, "Oded")]);
+    expect(result.toList(), [User(22, "Oded")]);
   });
 
   test('if all elements match the predicate', () {
@@ -41,7 +41,10 @@ main() {
 
   test("first or null", () {
     final list = [1, 45, 6, 9];
-    expect(null, list.firstWhere((element) => element == 7));
+    expect(1, list.firstOrNull);
+    final list2 =List.empty();
+    expect(null, list2.firstOrNull);
+
   });
 
   test('filter', () {

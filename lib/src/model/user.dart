@@ -17,6 +17,19 @@ class User {
 
   User(this.age,this.name);
 
+
+  @override
+  bool operator ==(other) {
+    return (other is User)
+        && other.name == name
+        && other.age == age;
+  }
+
+
+  @override
+  int get hashCode => age.hashCode ^ name.hashCode;
+
+
   @override
   String toString() {
     return "$age, $name";
