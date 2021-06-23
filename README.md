@@ -53,14 +53,14 @@ ResponsiveApp(
 AnimatedList(
               key: chatListKey,
               reverse: true,
-              padding: EdgeInsets.only(top: 10.hResponsive),
+              padding: EdgeInsets.only(top: 10.textSizeResponsive),
               shrinkWrap: true,
 ```
 Also the text should be responsive, no problem
 ```dart
 Text(
   'Note added by ${message.from ?? ''}',
-  style: avanirBook.copyWith(fontSize: 8.sp),
+  style: avanirBook.copyWith(fontSize: 8.responsiveText),
 ),
 ```
 
