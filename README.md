@@ -33,7 +33,28 @@ dependencies:
  ```
   
 3. click the packages get button or *flutter pub get*  
+## Responsivce UI
+Very common way to calculate size in percentage is using the MediaQuery like so:
+```dart
+MediaQuery.of(context).size.width * 0.1
+```
 
+Instead of the boilerplate we can use this awesome extension and get the same results.
+
+```dart
+AnimatedList(
+              key: chatListKey,
+              reverse: true,
+              padding: EdgeInsets.only(top: 10.hResponsive),
+              shrinkWrap: true,
+```
+Also the text should be responsive, no problem
+```dart
+Text(
+  'Note added by ${message.from ?? ''}',
+  style: avanirBook.copyWith(fontSize: 8.sp),
+),
+```
 
 ## Iterable Extensions
 

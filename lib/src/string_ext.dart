@@ -50,6 +50,7 @@ extension StringExtensions on String? {
 
   /// Checks if string is Palindrom.
   bool isPalindrom(String string) {
+
     final cleanString = string.toLowerCase().replaceAll(RegExp(r"\s+"), '').replaceAll(RegExp(r"[^0-9a-zA-Z]+"), "");
 
     for (var i = 0; i < cleanString.length; i++) {
