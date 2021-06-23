@@ -41,6 +41,14 @@ MediaQuery.of(context).size.width * 0.1
 
 Instead of the boilerplate we can use this awesome extension and get the same results.
 
+Wrap your Application with:
+```dart
+ResponsiveApp(
+      builder: (BuildContext context, Orientation orientation, DeviceType deviceType) {
+        return YourAppWidget()
+)
+```
+
 ```dart
 AnimatedList(
               key: chatListKey,
