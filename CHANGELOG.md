@@ -1,5 +1,5 @@
 ## [2.0.5] - 11/03/21
-- `delay` await 3.seconds.delay(() { some code }
+- `delay`extension for delay, example: await 3.seconds.delay(() { some code }
 - `added getTextSize` - A good use-case will be drawing a divider with the exect width of the text above it.
 - `isVideo` - Checks if string is an video file.
 - `isAudio` - Checks if string is an audio file.
@@ -17,7 +17,7 @@
 
 ## [2.0.0] - 11/03/21
 - `Support flutter 2`
-- `Support null safety`
+- `Support null safety` 
 - `add new extensions`
 ## [1.0.0] - 19/03/20
 - `Context extensions`
