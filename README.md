@@ -1,8 +1,9 @@
   
-[![](https://img.shields.io/badge/ver-2.0.5-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
+[![](https://img.shields.io/badge/ver-2.1.0-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
  
 ## What New 
+* Responsive UI tools 💪🏻💪🏻💪🏻
 * `Iterables` -> `all` -> Returns `true` if all elements match the given  
 * `isVideo` - Checks if string is an video file.
 * `isAudio` - Checks if string is an audio file.
