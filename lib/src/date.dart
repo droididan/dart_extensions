@@ -35,7 +35,82 @@ extension DateInt on int {
 }
 
 extension DateExtensions on DateTime {
+  /// Adds this DateTime and Duration and returns the sum as a new DateTime object.
+  DateTime operator +(Duration duration) => add(duration);
 
+  /// Subtracts the Duration from this DateTime returns the difference as a new DateTime object.
+  DateTime operator -(Duration duration) => subtract(duration);
+
+  /// Returns true if [other] is in the same year as [this].
+  ///
+  /// Does not account for timezones.
+  bool isAtSameYearAs(DateTime other) => year == other.year;
+
+  /// Returns true if [other] is in the same month as [this].
+  ///
+  /// This means the exact month, including year.
+  ///
+  /// Does not account for timezones.
+  bool isAtSameMonthAs(DateTime other) =>
+      isAtSameYearAs(other) && month == other.month;
+
+  /// Returns true if [other] is on the same day as [this].
+  ///
+  /// This means the exact day, including year and month.
+  ///
+  /// Does not account for timezones.
+  bool isAtSameDayAs(DateTime other) =>
+      isAtSameMonthAs(other) && day == other.day;
+
+  /// Returns true if [other] is at the same hour as [this].
+  ///
+  /// This means the exact hour, including year, month and day.
+  ///
+  /// Does not account for timezones.
+  bool isAtSameHourAs(DateTime other) =>
+      isAtSameDayAs(other) && hour == other.hour;
+
+  /// Returns true if [other] is at the same minute as [this].
+  ///
+  /// This means the exact minute, including year, month, day and hour.
+  ///
+  /// Does not account for timezones.
+  bool disAtSameMinuteAs(DateTime other) =>
+      isAtSameHourAs(other) && minute == other.minute;
+
+  /// Returns true if [other] is at the same minute as [this].
+  ///
+  /// This means the exact minute, including year, month, day and hour.
+  ///
+  /// Does not account for timezones.
+  bool isAtSameMinuteAs(DateTime other) =>
+      isAtSameHourAs(other) && minute == other.minute;
+
+  /// Returns true if [other] is at the same second as [this].
+  ///
+  /// This means the exact second, including year, month, day, hour and minute.
+  ///
+  /// Does not account for timezones.
+  bool isAtSameSecondAs(DateTime other) =>
+      isAtSameMinuteAs(other) && second == other.second;
+
+  /// Returns true if [other] is at the same millisecond as [this].
+  ///
+  /// This means the exact millisecond,
+  /// including year, month, day, hour, minute and second.
+  ///
+  /// Does not account for timezones.
+  bool isAtSameMillisecondAs(DateTime other) =>
+      isAtSameSecondAs(other) && millisecond == other.millisecond;
+
+  /// Returns true if [other] is at the same microsecond as [this].
+  ///
+  /// This means the exact microsecond,
+  /// including year, month, day, hour, minute, second and millisecond.
+  ///
+  /// Does not account for timezones.
+  bool isAtSameMicrosecondAs(DateTime other) =>
+      isAtSameMillisecondAs(other) && microsecond == other.microsecond;
 
   bool get isYesterday {
     final nowDate = DateTime.now();
@@ -165,6 +240,7 @@ extension DateExtensions on DateTime {
   /// Whether or not two times are on the same day.
   static bool isSameDay(DateTime a, DateTime b) =>
       a.year == b.year && a.month == b.month && a.day == b.day;
+
   /// return true if the date is today
   bool isToday() {
     final now = DateTime.now();
@@ -210,14 +286,6 @@ extension DateExtensions on DateTime {
 
   DateTime startOfYear() => DateTime(year);
 
-  /// DateTime `+` operator
-  DateTime operator +(DateTime time) => add(Duration(
-      days: time.day, hours: time.hour, minutes: time.minute, seconds: time.second, milliseconds: time.millisecond));
-
-  /// DateTime `-` operator
-  DateTime operator -(DateTime time) => subtract(Duration(
-      days: time.day, hours: time.hour, minutes: time.minute, seconds: time.second, milliseconds: time.millisecond));
-
   /// next day
   DateTime tomorrow() => DateTime(year, month, day + 1);
 
@@ -225,9 +293,12 @@ extension DateExtensions on DateTime {
   DateTime yesterday() => DateTime(year, month, day - 1);
 
   /// return the smaller date between
-  DateTime min(DateTime that) => (millisecondsSinceEpoch < that.millisecondsSinceEpoch) ? this : that;
+  DateTime min(DateTime that) =>
+      (millisecondsSinceEpoch < that.millisecondsSinceEpoch) ? this : that;
 
-  DateTime max(DateTime that) => (millisecondsSinceEpoch > that.millisecondsSinceEpoch) ? this : that;
+  DateTime max(DateTime that) =>
+      (millisecondsSinceEpoch > that.millisecondsSinceEpoch) ? this : that;
 
-  bool get isLeapYear => (year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0));
+  bool get isLeapYear =>
+      (year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0));
 }

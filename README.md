@@ -4,6 +4,7 @@
  
 ## What New 
 * Responsive UI tools 💪🏻💪🏻💪🏻
+* `flatJson` -> Flatten a nested Map into a single level map
 * `Iterables` -> `all` -> Returns `true` if all elements match the given  
 * `isVideo` - Checks if string is an video file.
 * `isAudio` - Checks if string is an audio file.
@@ -16,7 +17,7 @@
 * `isPhoneNumber` -  Checks if string is phone number, good for login checks.
 * `isUsername` - Checks if string is a valid username, good for login checks.
 * `isCurrency` - Checks if string is Currency.
-* `isPalindrom` - Checks if string is Palindrom. (good to know for interviews 
+* `isPalindrom` - Checks if string is Palindrome. (good to know for interviews 
 
 as well)
 Why Method Extensions? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
@@ -33,11 +34,33 @@ dependencies:
  ```
   
 3. click the packages get button or *flutter pub get*  
-## Responsivce UI
+## Responsive UI
 Very common way to calculate size in percentage is using the MediaQuery like so:
 ```dart
 MediaQuery.of(context).size.width * 0.1
 ```
+
+
+Flatten a nested Map into a single level map
+```dart
+response.flatJson({
+  'key1': {'keyA': 'valueI'},
+  'key2': {'keyB': 'valueII'},
+  'key3': {
+    'a': {
+      'b': {'c': 2}
+    }
+  }
+});
+
+The result you can also specify max depth, its the maximum number of nested objects to flatten.
+```
+// {
+//   'key1.keyA': 'valueI',
+//   'key2.keyB': 'valueII',
+//   'key3.a.b.c': 2
+// };
+
 
 Instead of the boilerplate we can use this awesome extension and get the same results.
 
