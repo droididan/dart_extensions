@@ -18,14 +18,13 @@ import 'package:quiver/iterables.dart';
 import 'data_stractures/stack.dart';
 import 'equality.dart';
 
-typedef IndexedPredicate<T> = bool Function(int index, T);
+extension CollectionsNullableExtension<T> on Iterable<T>? {
 
-extension CollectionsExtensions<T> on Iterable<T> {
-  /// Returns this Iterable if it's not `null` and the empty list otherwise.
-  Iterable<T> orEmpty() => this;
+ /// Returns this Iterable if it's not `null` and the empty list otherwise.
+  Iterable<T> orEmpty() => this ?? Iterable<T>.empty();
 
   ///Returns `true` if this nullable iterable is either null or empty.
-  bool get isEmptyOrNull => this.isEmpty;
+  bool get isEmptyOrNull => this?.isEmpty ?? true;
 
   /// Returns `true` if at least one element matches the given [predicate].
   bool any(bool predicate(T element)) {
@@ -52,14 +51,20 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// the combination of them two.
   zip<T>(Iterable<T> iterable) sync* {
     if (iterable.isEmptyOrNull) return;
-    final iterables = List<Iterable>.empty()..add(this.orEmpty())..add(iterable);
+    final iterables = List<Iterable>.empty(growable: true)
+      ..add(this.orEmpty())
+      ..add(iterable);
 
     final iterators = iterables.map((e) => e.iterator).toList(growable: false);
     while (iterators.every((e) => e.moveNext())) {
       yield iterators.map((e) => e.current).toList(growable: false);
     }
   }
+}
 
+typedef IndexedPredicate<T> = bool Function(int index, T);
+
+extension CollectionsExtensions<T> on Iterable<T> {
   ///Sorts elements in the array in-place according to natural sort order of the value returned by specified [selector] function.
   Iterable<T> sortBy<TKey>(
     TKey Function(T) keySelector, {
@@ -123,7 +128,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   List<T> takeOnly(int n) {
     if (n == 0) return [];
 
-    var list = List<T>.empty();
+    var list = List<T>.empty(growable: true);
     var thisList = this.toList();
     if (this is Iterable) {
       final resultSize = this.length - n;
@@ -141,7 +146,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   List<T> drop(int n) {
     if (n == 0) return [];
 
-    var list = List<T>.empty();
+    var list = List<T>.empty(growable: true);
     var originalList = this.toList();
     if (this is Iterable) {
       final resultSize = this.length - n;

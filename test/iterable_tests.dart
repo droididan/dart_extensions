@@ -19,7 +19,7 @@ main() {
 
   test('result of whereIndex', () {
     final result = users.whereIndexed((index, _) => index == 2);
-    expect(result, [User(22, "Oded")]);
+    expect(result.toList(), [User(22, "Oded")]);
   });
 
   test('if all elements match the predicate', () {
@@ -41,7 +41,10 @@ main() {
 
   test("first or null", () {
     final list = [1, 45, 6, 9];
-    expect(null, list.firstWhere((element) => element == 7));
+    expect(1, list.firstOrNull);
+    final list2 =List.empty();
+    expect(null, list2.firstOrNull);
+
   });
 
   test('filter', () {
@@ -201,8 +204,44 @@ main() {
     expect(["a", "b", "a"].toMutableSet(), ["a", "b"]);
   });
 
+    test('intersect', () {
+      expect(Set.from([1, 2, 3, 4]).intersect(Set.from([3, 4, 5, 6])), [1, 2, 3, 4, 5, 6]);
+      expect(Set.from([-1, -2, -3, 4]).intersect(Set.from([3, 4, 5, 6])), [-1, -2, -3, 4, 3, 5, 6]);
+    });
+
+    test('orEmpty',(){
+      List<int>? list;
+      expect(list.orEmpty(), List<int>.empty());
+      list= [1,2,3];
+      expect(list.orEmpty(), [1,2,3]);
+    });
+
+    test('isEmptyOrNull',(){
+      List<int>? list;
+      expect(list.isEmptyOrNull, true);
+      list= [];
+      expect(list.isEmptyOrNull, true);
+      list= [1,2,3];
+      expect(list.isEmptyOrNull, false);
+    });
   test('intersect', () {
     expect(Set.from([1, 2, 3, 4]).intersect(Set.from([3, 4, 5, 6])), [1, 2, 3, 4, 5, 6]);
     expect(Set.from([-1, -2, -3, 4]).intersect(Set.from([3, 4, 5, 6])), [-1, -2, -3, 4, 3, 5, 6]);
+
+    test('orEmpty',(){
+      List<int>? list;
+      expect(list.orEmpty(), List<int>.empty());
+      list= [1,2,3];
+      expect(list.orEmpty(), [1,2,3]);
+    });
+
+    test('isEmptyOrNull',(){
+      List<int>? list;
+      expect(list.isEmptyOrNull, true);
+      list= [];
+      expect(list.isEmptyOrNull, true);
+      list= [1,2,3];
+      expect(list.isEmptyOrNull, false);
+    });
   });
 }
