@@ -21,6 +21,11 @@ main() {
       expect('one two three four'.wrapString(3), 'one two three\nfour');
     });
 
+    test('capitalize a string', () {
+      expect('string'.capitalize(), 'String');
+      expect('hello world'.capitalize(), 'Hello world');
+    });
+
     test('validateEmail', () {
       expect('name@domain.com'.validateEmail(), true);
       expect('name@domain'.validateEmail(), false);
