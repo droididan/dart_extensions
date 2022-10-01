@@ -28,6 +28,11 @@ class Message {
 extension StringExtensions on String? {
   bool isNull(dynamic value) => value == null;
 
+  /// Return a capitalized string
+  String capitalize() {
+    return "${this?[0].toUpperCase()}${this?.substring(1).toLowerCase()}";
+  }
+
   /// Returns whether a dynamic value PROBABLY
   /// has the isEmpty getter/method by checking
   /// standard dart types that contains it.
@@ -43,14 +48,11 @@ extension StringExtensions on String? {
     return false;
   }
 
-
-
   /// Checks if string is a valid username.
   bool isUsername(String s) => hasMatch(s, r'^[a-zA-Z0-9][a-zA-Z0-9_.]+[a-zA-Z0-9]$');
 
   /// Checks if string is Palindrom.
   bool isPalindrom(String string) {
-
     final cleanString = string.toLowerCase().replaceAll(RegExp(r"\s+"), '').replaceAll(RegExp(r"[^0-9a-zA-Z]+"), "");
 
     for (var i = 0; i < cleanString.length; i++) {
@@ -73,47 +75,32 @@ extension StringExtensions on String? {
   }
 
   /// Checks if string is email.
-  bool isEmail(String s) => hasMatch(s,
-      r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
+  bool isEmail(String s) => hasMatch(s, r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
 
   /// Checks if string is an html file.
   bool isHTML(String filePath) {
     return filePath.toLowerCase().endsWith(".html");
   }
 
-    /// Checks if string is an video file.
+  /// Checks if string is an video file.
   bool isVideo(String filePath) {
     var ext = filePath.toLowerCase();
 
-    return ext.endsWith(".mp4") ||
-        ext.endsWith(".avi") ||
-        ext.endsWith(".wmv") ||
-        ext.endsWith(".rmvb") ||
-        ext.endsWith(".mpg") ||
-        ext.endsWith(".mpeg") ||
-        ext.endsWith(".3gp");
+    return ext.endsWith(".mp4") || ext.endsWith(".avi") || ext.endsWith(".wmv") || ext.endsWith(".rmvb") || ext.endsWith(".mpg") || ext.endsWith(".mpeg") || ext.endsWith(".3gp");
   }
-  
+
   /// Checks if string is an audio file.
   bool isAudio(String filePath) {
     final ext = filePath.toLowerCase();
 
-    return ext.endsWith(".mp3") ||
-        ext.endsWith(".wav") ||
-        ext.endsWith(".wma") ||
-        ext.endsWith(".amr") ||
-        ext.endsWith(".ogg");
+    return ext.endsWith(".mp3") || ext.endsWith(".wav") || ext.endsWith(".wma") || ext.endsWith(".amr") || ext.endsWith(".ogg");
   }
 
   /// Checks if string is an image file.
   bool isImage(String filePath) {
     final ext = filePath.toLowerCase();
 
-    return ext.endsWith(".jpg") ||
-        ext.endsWith(".jpeg") ||
-        ext.endsWith(".png") ||
-        ext.endsWith(".gif") ||
-        ext.endsWith(".bmp");
+    return ext.endsWith(".jpg") || ext.endsWith(".jpeg") || ext.endsWith(".png") || ext.endsWith(".gif") || ext.endsWith(".bmp");
   }
 
   bool hasMatch(String? value, String pattern) {
@@ -177,16 +164,15 @@ extension StringExtensions on String? {
     return this ?? '';
   }
 
-  String generateMessageByGender({Gender? gender, Message? message}) => Intl.gender(gender.toString(),
-      male: '$this ${message?.male}', female: '$this ${message?.female}', other: '$this ${message?.other}');
+  String generateMessageByGender({Gender? gender, Message? message}) =>
+      Intl.gender(gender.toString(), male: '$this ${message?.male}', female: '$this ${message?.female}', other: '$this ${message?.other}');
 
   bool validateEmail() {
     if (this == null) return false;
     return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(this!);
   }
 
-  bool equalsIgnoreCase(String? other) =>
-      (this == null && other == null) || (this != null && other != null && this!.toLowerCase() == other.toLowerCase());
+  bool equalsIgnoreCase(String? other) => (this == null && other == null) || (this != null && other != null && this!.toLowerCase() == other.toLowerCase());
 
   /// Return the string only if the delimiter exists in both ends, otherwise it will return the current string
   String? removeSurrounding(String delimiter) {
