@@ -32,4 +32,4 @@ export 'package:dart_extensions/src/search_algorithms.dart';
 export 'package:dart_extensions/src/sort_algorithms.dart';
 export 'package:dart_extensions/src/string_ext.dart';
 export 'package:dart_extensions/src/flutter/widgets.dart';
- 
+export 'package:dart_extensions/src/enum.dart';
