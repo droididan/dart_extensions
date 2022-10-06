@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
 extension ContextExtensions on BuildContext {
-  // Reruens the Theme
+  // Returns the Theme
   ThemeData get theme => Theme.of(this);
+
+  // Returns the ScaffoldMessengerState
+  ScaffoldMessengerState get scaffoldMessenger => ScaffoldMessenger.of(this);
+
+  // Show Snackbar
+  ScaffoldFeatureController<SnackBar, SnackBarClosedReason> showSnackBar(SnackBar snackBar) => scaffoldMessenger.showSnackBar(snackBar);
 
   // Returns the MediaQuery
   MediaQueryData get mq => MediaQuery.of(this);
