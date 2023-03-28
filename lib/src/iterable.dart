@@ -20,14 +20,14 @@ import 'equality.dart';
 
 typedef IndexedPredicate<T> = bool Function(int index, T);
 
-extension CollectionsExtensions<T> on Iterable<T> {
+extension CollectionsNullableExtensions<T> on Iterable<T>? {
   /// Returns this Iterable if it's not `null` and the empty list otherwise.
-  Iterable<T> orEmpty() => this;
+  Iterable<T> orEmpty() => this ?? [];
 
   ///Returns `true` if this nullable iterable is either null or empty.
-  bool get isEmptyOrNull => this.isEmpty;
+  bool get isEmptyOrNull => (this?.isEmpty ?? true);
 
-  /// Returns `true` if at least one element matches the given [predicate].
+    /// Returns `true` if at least one element matches the given [predicate].
   bool any(bool predicate(T element)) {
     if (this.isEmptyOrNull) return false;
     for (final element in this.orEmpty()) if (predicate(element)) return true;
@@ -59,7 +59,9 @@ extension CollectionsExtensions<T> on Iterable<T> {
       yield iterators.map((e) => e.current).toList(growable: false);
     }
   }
+}
 
+extension CollectionsExtensions<T> on Iterable<T> {
   ///Sorts elements in the array in-place according to natural sort order of the value returned by specified [selector] function.
   Iterable<T> sortBy<TKey>(
     TKey Function(T) keySelector, {
