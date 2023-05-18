@@ -1,3 +1,5 @@
+## [2.2.1] - 17/05/23
+- Flutter 3.1 ready
 ## [2.0.5] - 11/03/21
 - `delay`extension for delay, example: await 3.seconds.delay(() { some code }
 - `added getTextSize` - A good use-case will be drawing a divider with the exect width of the text above it.
