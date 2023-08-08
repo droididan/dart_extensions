@@ -12,8 +12,7 @@
  */
 
 import 'dart:convert' as convert;
-
-import 'package:dart_extensions/src/strings.dart';
+import '../src/string_ext.dart';
 import 'package:http/http.dart' as http;
 
 const _defaultHeaders = {"Content-type": "application/json"};
@@ -46,7 +45,7 @@ extension HttpExtensions on String {
   /// current string is www.mydomain.com
   /// endpoint param - user
   /// result request -> www.mydomain.com/user
-  Future<dynamic> httpPost(String endPoint,String json, [Map<String, String> headers = _defaultHeaders]) async {
+  Future<dynamic> httpPost(String endPoint, String json, [Map<String, String> headers = _defaultHeaders]) async {
     if (this.isEmptyOrNull) return;
 
     try {
@@ -66,7 +65,7 @@ extension HttpExtensions on String {
   /// current string is www.mydomain.com
   /// endpoint param - user
   /// result request -> www.mydomain.com/user
-  Future<dynamic> httpPut(String endPoint,String json, [Map<String, String> headers = _defaultHeaders]) async {
+  Future<dynamic> httpPut(String endPoint, String json, [Map<String, String> headers = _defaultHeaders]) async {
     if (this.isEmptyOrNull) return;
 
     try {
@@ -86,7 +85,7 @@ extension HttpExtensions on String {
   /// current string is www.mydomain.com
   /// endpoint param - user
   /// result request -> www.mydomain.com/user
-  Future<dynamic> httpDelete(String endPoint,{Map<String, String>? headers}) async {
+  Future<dynamic> httpDelete(String endPoint, {Map<String, String>? headers}) async {
     if (this.isEmptyOrNull) return;
 
     try {

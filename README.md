@@ -1,17 +1,25 @@
   
-[![](https://img.shields.io/badge/ver-2.0.1-brightgreen)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
+[![](https://img.shields.io/badge/ver-2.1.0-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
  
 ## What New 
-* `SizedBox` extension - convert to percents 💪🏻
-* `Sound null-safety` added! 💪🏻
-* `BuildContext` extensions 💪🏻
-* `List<Widget>` extensions 💪🏻
-* `Text` extensions 💪🏻
-* `Icon` extensions 💪🏻
-* `.sortBy` [0.3.5] Sorts elements in the array in-place according to natural sort order of the value returned by specified selector function.
-* `.withTooltip` Tooltips improve the accessibility of visual widgets by proving a textual representation of the widget
+* Responsive UI tools 💪🏻💪🏻💪🏻
+* `flatJson` -> Flatten a nested Map into a single level map
+* `Iterables` -> `all` -> Returns `true` if all elements match the given  
+* `isVideo` - Checks if string is an video file.
+* `isAudio` - Checks if string is an audio file.
+* `isImage` - Checks if string is an image file.
+* `isNumericOnly` - Check if the string has any number in it.
+* `isAlphabetOnly` - Checks if string consist only Alphabet. (No Whitespace)
+* `hasCapitalletter` - Checks if string contains at least one Capital Letter.
+* `isHTML` - Checks if string is an html file. 
+* `isEmail` -  Checks if string is email..
+* `isPhoneNumber` -  Checks if string is phone number, good for login checks.
+* `isUsername` - Checks if string is a valid username, good for login checks.
+* `isCurrency` - Checks if string is Currency.
+* `isPalindrom` - Checks if string is Palindrome. (good to know for interviews 
 
+as well)
 Why Method Extensions? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
   
   *let me know if you want something specific or you found a bug at bar.idan@gmail.com*  
@@ -26,7 +34,58 @@ dependencies:
  ```
   
 3. click the packages get button or *flutter pub get*  
+## Responsive UI
+Very common way to calculate size in percentage is using the MediaQuery like so:
+```dart
+MediaQuery.of(context).size.width * 0.1
+```
 
+
+Flatten a nested Map into a single level map
+```dart
+response.flatJson({
+  'key1': {'keyA': 'valueI'},
+  'key2': {'keyB': 'valueII'},
+  'key3': {
+    'a': {
+      'b': {'c': 2}
+    }
+  }
+});
+
+The result you can also specify max depth, its the maximum number of nested objects to flatten.
+```
+// {
+//   'key1.keyA': 'valueI',
+//   'key2.keyB': 'valueII',
+//   'key3.a.b.c': 2
+// };
+
+
+Instead of the boilerplate we can use this awesome extension and get the same results.
+
+Wrap your Application with:
+```dart
+ResponsiveApp(
+      builder: (BuildContext context, Orientation orientation, DeviceType deviceType) {
+        return YourAppWidget()
+)
+```
+
+```dart
+AnimatedList(
+              key: chatListKey,
+              reverse: true,
+              padding: EdgeInsets.only(top: 10.textSizeResponsive),
+              shrinkWrap: true,
+```
+Also the text should be responsive, no problem
+```dart
+Text(
+  'Note added by ${message.from ?? ''}',
+  style: avanirBook.copyWith(fontSize: 8.responsiveText),
+),
+```
 
 ## Iterable Extensions
 

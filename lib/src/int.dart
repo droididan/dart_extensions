@@ -23,6 +23,7 @@ extension IntExtensions on int {
     return this;
   }
 
+  // ignore: unnecessary_null_comparison
   bool get isNull => (this == null);
 
   /// Returns the absolute value

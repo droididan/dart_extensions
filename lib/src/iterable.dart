@@ -18,6 +18,51 @@ import 'package:quiver/iterables.dart';
 import 'data_stractures/stack.dart';
 import 'equality.dart';
 
+typedef IndexedPredicate<T> = bool Function(int index, T);
+
+extension CollectionsNullableExtensions<T> on Iterable<T>? {
+  /// Returns this Iterable if it's not `null` and the empty list otherwise.
+  Iterable<T> orEmpty() => this ?? [];
+
+  ///Returns `true` if this nullable iterable is either null or empty.
+  bool get isEmptyOrNull => (this?.isEmpty ?? true);
+
+  /// Returns `true` if at least one element matches the given [predicate].
+  bool any(bool predicate(T element)) {
+    if (this.isEmptyOrNull) return false;
+    for (final element in this.orEmpty()) if (predicate(element)) return true;
+    return false;
+  }
+
+  /// Return a list concatenates the output of the current list and another [iterable]
+  List<T> concatWithSingleList(Iterable<T> iterable) {
+    if (isEmptyOrNull || iterable.isEmptyOrNull) return [];
+
+    return <T>[...this.orEmpty(), ...iterable];
+  }
+
+  /// Return a list concatenates the output of the current list and multiple [iterables]
+  List<T> concatWithMultipleList(List<Iterable<T>> iterables) {
+    if (isEmptyOrNull || iterables.isEmptyOrNull) return [];
+    final list = iterables.toList(growable: false).expand((i) => i);
+    return <T>[...this.orEmpty(), ...list];
+  }
+
+  /// Zip is used to combine multiple iterables into a single list that contains
+  /// the combination of them two.
+  zip<T>(Iterable<T> iterable) sync* {
+    if (iterable.isEmptyOrNull) return;
+    final iterables = List<Iterable>.empty()
+      ..add(this.orEmpty())
+      ..add(iterable);
+
+    final iterators = iterables.map((e) => e.iterator).toList(growable: false);
+    while (iterators.every((e) => e.moveNext())) {
+      yield iterators.map((e) => e.current).toList(growable: false);
+    }
+  }
+}
+
 extension CollectionsExtensions<T> on Iterable<T> {
   ///Sorts elements in the array in-place according to natural sort order of the value returned by specified [selector] function.
   Iterable<T> sortBy<TKey>(
@@ -26,13 +71,6 @@ extension CollectionsExtensions<T> on Iterable<T> {
   }) {
     return InternalOrderedIterable(
         this, keySelector, keyComparer ?? EqualityComparer<TKey>(), false);
-  }
-
-  /// Returns `true` if at least one element matches the given [predicate].
-  bool any(bool predicate(T element)) {
-    if (this.isEmptyOrNull) return false;
-    for (final element in this) if (predicate(element)) return true;
-    return false;
   }
 
   /// Convert iterable to set
@@ -169,6 +207,10 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// var name = [].firstOrDefault["jack"]; // jack
   T firstOrDefault(T defaultValue) => firstOrNull ?? defaultValue;
 
+  /// Will retrun new [Iterable] with all elements that satisfy the predicate [predicate],
+  Iterable<T> whereIndexed(IndexedPredicate<T> predicate) =>
+      _IndexedWhereIterable(this, predicate);
+
   ///
   /// Performs the given action on each element on iterable, providing sequential index with the element.
   /// [item] the element on the current iteration
@@ -228,6 +270,17 @@ extension CollectionsExtensions<T> on Iterable<T> {
     return count;
   }
 
+  /// Returns `true` if all elements match the given predicate.
+  /// Example:
+  /// [5, 19, 2].all(isEven), isFalse)
+  /// [6, 12, 2].all(isEven), isTrue)
+  bool all(bool predicate(T pred)?) {
+    for (var e in this) {
+      if (!predicate!(e)) return false;
+    }
+    return true;
+  }
+
   /// Returns a list containing only the elements from given collection having distinct keys.
   ///
   /// Basically it's just like distinct function but with a predicate
@@ -249,7 +302,7 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// 36 Ran
   List<T> distinctBy(predicate(T selector)) {
     final set = HashSet();
-    final list = List<T>.empty();
+    final List<T> list = [];
     toList().forEach((e) {
       final key = predicate(e);
       if (set.add(key)) {
@@ -307,20 +360,6 @@ extension CollectionsExtensions<T> on Iterable<T> {
     return stack;
   }
 
-  bool get isEmptyOrNull => this == null || isEmpty;
-
-  /// Zip is used to combine multiple iterables into a single list that contains
-  /// the combination of them two.
-  zip<T>(Iterable<T> iterable) sync* {
-    if (iterable.isEmptyOrNull) return;
-    final iterables = List<Iterable>.empty()..add(this)..add(iterable);
-
-    final iterators = iterables.map((e) => e.iterator).toList(growable: false);
-    while (iterators.every((e) => e.moveNext())) {
-      yield iterators.map((e) => e.current).toList(growable: false);
-    }
-  }
-
   /// Splits the Iterable into chunks of the specified size
   ///
   /// example:
@@ -328,20 +367,6 @@ extension CollectionsExtensions<T> on Iterable<T> {
   /// result:
   /// ([1, 2, 3], [4, 5, 6], [7, 8, 9], [10])
   Iterable<List<T>> chunks(int size) => partition(this, size);
-
-  /// Return a list concatenates the output of the current list and another [iterable]
-  List<T> concatWithSingleList(Iterable<T> iterable) {
-    if (isEmptyOrNull || iterable.isEmptyOrNull) return [];
-
-    return <T>[...this, ...iterable];
-  }
-
-  /// Return a list concatenates the output of the current list and multiple [iterables]
-  List<T> concatWithMultipleList(List<Iterable<T>> iterables) {
-    if (isEmptyOrNull || iterables.isEmptyOrNull) return [];
-    final list = iterables.toList(growable: false).expand((i) => i);
-    return <T>[...this, ...list];
-  }
 
   /// Creates a Map instance in which the keys and values are computed from the iterable.
   Map<dynamic, dynamic> associate(key(element), value(element)) =>
@@ -358,4 +383,37 @@ extension CollectionsExtensions<T> on Iterable<T> {
 
     return null;
   }
+}
+
+// A lazy [Iterable] skip elements do **NOT** match the predicate [_f].
+class _IndexedWhereIterable<E> extends Iterable<E> {
+  final Iterable<E> _iterable;
+  final IndexedPredicate<E> _f;
+
+  _IndexedWhereIterable(this._iterable, this._f);
+
+  @override
+  Iterator<E> get iterator => _IndexedWhereIterator<E>(_iterable.iterator, _f);
+}
+
+/// [Iterator] for [_IndexedWhereIterable]
+class _IndexedWhereIterator<E> extends Iterator<E> {
+  final Iterator<E> _iterator;
+  final IndexedPredicate<E> _f;
+  int _index = 0;
+
+  _IndexedWhereIterator(this._iterator, this._f);
+
+  @override
+  bool moveNext() {
+    while (_iterator.moveNext()) {
+      if (_f(_index++, _iterator.current)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  @override
+  E get current => _iterator.current;
 }

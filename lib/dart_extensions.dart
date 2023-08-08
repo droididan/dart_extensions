@@ -31,5 +31,5 @@ export 'package:dart_extensions/src/iterable.dart';
 export 'package:dart_extensions/src/ranges.dart';
 export 'package:dart_extensions/src/search_algorithms.dart';
 export 'package:dart_extensions/src/sort_algorithms.dart';
-export 'package:dart_extensions/src/strings.dart';
+export 'package:dart_extensions/src/string_ext.dart';
 export 'package:dart_extensions/src/flutter/widgets.dart';
