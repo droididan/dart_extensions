@@ -3,23 +3,8 @@
   
  
 ## What New 
-* Responsive UI tools 💪🏻💪🏻💪🏻
-* `flatJson` -> Flatten a nested Map into a single level map
-* `Iterables` -> `all` -> Returns `true` if all elements match the given  
-* `isVideo` - Checks if string is an video file.
-* `isAudio` - Checks if string is an audio file.
-* `isImage` - Checks if string is an image file.
-* `isNumericOnly` - Check if the string has any number in it.
-* `isAlphabetOnly` - Checks if string consist only Alphabet. (No Whitespace)
-* `hasCapitalletter` - Checks if string contains at least one Capital Letter.
-* `isHTML` - Checks if string is an html file. 
-* `isEmail` -  Checks if string is email..
-* `isPhoneNumber` -  Checks if string is phone number, good for login checks.
-* `isUsername` - Checks if string is a valid username, good for login checks.
-* `isCurrency` - Checks if string is Currency.
-* `isPalindrom` - Checks if string is Palindrome. (good to know for interviews 
+* Sliver extensions
 
-as well)
 Why Method Extensions? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
   
   *let me know if you want something specific or you found a bug at bar.idan@gmail.com*  

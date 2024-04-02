@@ -27,7 +27,7 @@ extension CollectionsNullableExtensions<T> on Iterable<T>? {
   ///Returns `true` if this nullable iterable is either null or empty.
   bool get isEmptyOrNull => (this?.isEmpty ?? true);
 
-    /// Returns `true` if at least one element matches the given [predicate].
+  /// Returns `true` if at least one element matches the given [predicate].
   bool any(bool predicate(T element)) {
     if (this.isEmptyOrNull) return false;
     for (final element in this.orEmpty()) if (predicate(element)) return true;
@@ -52,7 +52,9 @@ extension CollectionsNullableExtensions<T> on Iterable<T>? {
   /// the combination of them two.
   zip<T>(Iterable<T> iterable) sync* {
     if (iterable.isEmptyOrNull) return;
-    final iterables = List<Iterable>.empty()..add(this.orEmpty())..add(iterable);
+    final iterables = List<Iterable>.empty()
+      ..add(this.orEmpty())
+      ..add(iterable);
 
     final iterators = iterables.map((e) => e.iterator).toList(growable: false);
     while (iterators.every((e) => e.moveNext())) {
@@ -127,16 +129,14 @@ extension CollectionsExtensions<T> on Iterable<T> {
 
     var list = List<T>.empty();
     var thisList = this.toList();
-    if (this is Iterable) {
-      final resultSize = this.length - n;
-      if (resultSize <= 0) return [];
-      if (resultSize == 1) return [this.last];
+    final resultSize = this.length - n;
+    if (resultSize <= 0) return [];
+    if (resultSize == 1) return [this.last];
 
-      List.generate(n, (index) {
-        list.add(thisList[index]);
-      });
-    }
-    return list;
+    List.generate(n, (index) {
+      list.add(thisList[index]);
+    });
+      return list;
   }
 
   /// Returns a list containing all elements except first [n] elements.
@@ -145,16 +145,14 @@ extension CollectionsExtensions<T> on Iterable<T> {
 
     var list = List<T>.empty();
     var originalList = this.toList();
-    if (this is Iterable) {
-      final resultSize = this.length - n;
-      if (resultSize <= 0) return [];
-      if (resultSize == 1) return [this.last];
+    final resultSize = this.length - n;
+    if (resultSize <= 0) return [];
+    if (resultSize == 1) return [this.last];
 
-      originalList.removeRange(0, n);
+    originalList.removeRange(0, n);
 
-      originalList.forEach((element) => list.add(element));
-    }
-    return list;
+    originalList.forEach((element) => list.add(element));
+      return list;
   }
 
   // Retuns map operation as a List
@@ -205,7 +203,8 @@ extension CollectionsExtensions<T> on Iterable<T> {
   T firstOrDefault(T defaultValue) => firstOrNull ?? defaultValue;
 
   /// Will retrun new [Iterable] with all elements that satisfy the predicate [predicate],
-  Iterable<T> whereIndexed(IndexedPredicate<T> predicate) => _IndexedWhereIterable(this, predicate);
+  Iterable<T> whereIndexed(IndexedPredicate<T> predicate) =>
+      _IndexedWhereIterable(this, predicate);
 
   ///
   /// Performs the given action on each element on iterable, providing sequential index with the element.
@@ -365,7 +364,8 @@ extension CollectionsExtensions<T> on Iterable<T> {
   Iterable<List<T>> chunks(int size) => partition(this, size);
 
   /// Creates a Map instance in which the keys and values are computed from the iterable.
-  Map<dynamic, dynamic> associate(key(element), value(element)) => Map.fromIterable(this, key: key, value: value);
+  Map<dynamic, dynamic> associate(key(element), value(element)) =>
+      Map.fromIterable(this, key: key, value: value);
 
   /// Returns the first element matching the given [predicate], or `null`
   /// if element was not found.
@@ -392,7 +392,7 @@ class _IndexedWhereIterable<E> extends Iterable<E> {
 }
 
 /// [Iterator] for [_IndexedWhereIterable]
-class _IndexedWhereIterator<E> extends Iterator<E> {
+class _IndexedWhereIterator<E> implements Iterator<E> {
   final Iterator<E> _iterator;
   final IndexedPredicate<E> _f;
   int _index = 0;

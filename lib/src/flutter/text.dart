@@ -16,7 +16,7 @@ extension StyledText<T extends Text> on T {
     TextWidthBasis? textWidthBasis,
   }) =>
       Text(
-        data ?? this.data??"",
+        data ?? this.data ?? "",
         style: style ?? this.style,
         strutStyle: strutStyle ?? this.strutStyle,
         textAlign: textAlign ?? this.textAlign,
@@ -26,7 +26,7 @@ extension StyledText<T extends Text> on T {
         semanticsLabel: semanticsLabel ?? this.semanticsLabel,
         softWrap: softWrap ?? this.softWrap,
         textDirection: textDirection ?? this.textDirection,
-        textScaleFactor: textScaleFactor ?? this.textScaleFactor,
+        textScaler: TextScaler.linear(textScaleFactor ?? 0),
         textWidthBasis: textWidthBasis ?? this.textWidthBasis,
       );
 
@@ -127,7 +127,8 @@ extension StyledText<T extends Text> on T {
 
   T textAlignment(TextAlign align) => this.copyWith(textAlign: align) as T;
 
-  T textDirection(TextDirection direction) => this.copyWith(textDirection: direction) as T;
+  T textDirection(TextDirection direction) =>
+      this.copyWith(textDirection: direction) as T;
 
   T textBaseline(TextBaseline textBaseline) => this.copyWith(
         style: (this.style ?? TextStyle()).copyWith(
@@ -135,10 +136,10 @@ extension StyledText<T extends Text> on T {
         ),
       ) as T;
 
-  T textWidthBasis(TextWidthBasis textWidthBasis) => this.copyWith(textWidthBasis: textWidthBasis) as T;
+  T textWidthBasis(TextWidthBasis textWidthBasis) =>
+      this.copyWith(textWidthBasis: textWidthBasis) as T;
 
   T withUnderLine() => this.copyWith(
       style: (this.style ?? TextStyle())
-          .copyWith(decoration: TextDecoration.underline)
-  ) as T;
+          .copyWith(decoration: TextDecoration.underline)) as T;
 }
