@@ -1,8 +1,8 @@
   
-[![](https://img.shields.io/badge/ver-2.1.0-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
+[![](https://img.shields.io/badge/ver-2.2.4-green)](https://github.com/droididan/dart_extentions)   ![](https://img.shields.io/badge/Code%20Coverage-96%25-green) ![](https://img.shields.io/badge/Bitrise-Pass-green)  
   
  
-## What New 
+## What New (2.2.4)
 * Sliver extensions
 
 Why Method Extensions? When you’re using someone else’s API or when you implement a library that’s widely used, it’s often impractical or impossible to change the API. But you might still want to add some functionality.  
